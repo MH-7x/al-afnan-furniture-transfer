@@ -1,26 +1,318 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0c141f;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #1a776f;
+  --primary-foreground: #ffffff;
+  --secondary: #f0ad4e;
+  --secondary-foreground: #0c141f;
+  --muted: #fef0dc;
+  --muted-foreground: #737373;
+  --accent: #f5f5f5;
+  --accent-foreground: #171717;
+  --destructive: #e7000b;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #a1a1a1;
+  --chart-1: #d4d4d4;
+  --chart-2: #737373;
+  --chart-3: #525252;
+  --chart-4: #404040;
+  --chart-5: #262626;
+  --radius: 0.875rem;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #0a0a0a;
+  --sidebar-primary: #171717;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #171717;
+  --sidebar-border: #e5e5e5;
+  --sidebar-ring: #a1a1a1;
+
+  --shadow-2xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 8px 10px -1px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 1px 3px 0px rgb(0 0 0 / 0.25);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #fafafa;
+  --popover: #171717;
+  --popover-foreground: #fafafa;
+  --primary: #e5e5e5;
+  --primary-foreground: #171717;
+  --secondary: #262626;
+  --secondary-foreground: #fafafa;
+  --muted: #262626;
+  --muted-foreground: #a1a1a1;
+  --accent: #262626;
+  --accent-foreground: #fafafa;
+  --destructive: #ff6467;
+  --border: #ffffff1a;
+  --input: #ffffff26;
+  --ring: #737373;
+  --chart-1: #d4d4d4;
+  --chart-2: #737373;
+  --chart-3: #525252;
+  --chart-4: #404040;
+  --chart-5: #262626;
+  --sidebar: #171717;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: #1447e6;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #262626;
+  --sidebar-accent-foreground: #fafafa;
+  --sidebar-border: #ffffff1a;
+  --sidebar-ring: #737373;
+
+  --shadow-2xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 8px 10px -1px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 1px 3px 0px rgb(0 0 0 / 0.25);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-foreground;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  main {
+    @apply max-w-350 mx-auto flex flex-col md:gap-y-28 gap-y-16 overflow-hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ─── Service Page: Left-column content styles ───────────────────────────── */
+.service-content {
+  @apply text-sm sm:text-base text-muted-foreground leading-relaxed;
 }
+
+/* h2 — large section title with a short primary underline accent */
+.service-content h2 {
+  @apply text-2xl sm:text-3xl font-extrabold text-foreground mt-10 mb-1 first:mt-0
+         pb-3 border-b border-border/60;
+}
+
+/* h3 — subsection title with a left primary border */
+.service-content h3 {
+  @apply text-xl sm:text-2xl font-semibold text-foreground mt-8 mb-3
+         pl-4 border-l-[3px] border-primary;
+}
+
+/* h4 — minor heading, subtle primary color */
+.service-content h4 {
+  @apply text-base sm:text-lg font-semibold text-primary mt-6 mb-2;
+}
+
+.service-content p {
+  @apply mb-4 leading-relaxed;
+}
+
+.service-content p:last-child {
+  @apply mb-0;
+}
+
+/* ── Unordered list — card-row style ── */
+.service-content ul {
+  @apply mb-6 space-y-2 pl-0 list-none;
+}
+
+.service-content ul li {
+  @apply flex items-start gap-3
+         rounded-xl border border-border/60 bg-card
+         px-4 py-3
+         transition-colors hover:border-primary/30 hover:bg-primary/[0.03];
+}
+
+/* Remove the ::before dot since we now use an icon-style indicator inside the card */
+.service-content ul li::before {
+  content: "";
+  @apply mt-[6px] size-2 shrink-0 rounded-full bg-primary/80;
+}
+
+/* ── Ordered list — numbered with accent color ── */
+.service-content ol {
+  @apply mb-6 space-y-2.5 pl-0 list-none;
+  counter-reset: service-ol;
+}
+
+.service-content ol li {
+  @apply flex items-start gap-3.5
+         rounded-xl border border-border/60 bg-card
+         px-4 py-3
+         transition-colors hover:border-primary/30 hover:bg-primary/[0.03];
+  counter-increment: service-ol;
+}
+
+.service-content ol li::before {
+  content: counter(service-ol);
+  @apply flex shrink-0 size-6 rounded-full bg-primary/10 text-primary
+         text-xs font-semibold items-center justify-center mt-0.5;
+}
+
+.service-content strong {
+  @apply font-semibold text-foreground;
+}
+
+.service-content a {
+  @apply text-primary underline underline-offset-2 hover:text-primary/80 transition-colors;
+}
+
+.service-content hr {
+  @apply my-8 border-border/50;
+}
+
+/* ── Images inside service content ── */
+.service-content figure {
+  @apply my-7;
+}
+
+/* Aspect-ratio wrappers — use .img-wide (16/9), .img-square (1/1), .img-portrait (4/3) */
+.service-content .img-wide {
+  @apply relative w-full overflow-hidden rounded-2xl border border-border/70 shadow-sm;
+  aspect-ratio: 16 / 9;
+}
+
+.service-content .img-square {
+  @apply relative w-full overflow-hidden rounded-2xl border border-border/70 shadow-sm;
+  aspect-ratio: 1 / 1;
+}
+
+.service-content .img-portrait {
+  @apply relative w-full overflow-hidden rounded-2xl border border-border/70 shadow-sm;
+  aspect-ratio: 4 / 3;
+}
+
+.service-content .img-wide img,
+.service-content .img-square img,
+.service-content .img-portrait img {
+  @apply absolute inset-0 h-full w-full object-cover transition-transform duration-500 hover:scale-[1.02];
+}
+
+.service-content figcaption {
+  @apply mt-2.5 text-center text-xs text-muted-foreground/60 italic;
+}
+
+/* ── Inline callout / highlight box ── */
+.service-content .callout {
+  @apply my-6 rounded-xl border border-primary/25 bg-primary/6
+         border-l-[3px] border-l-primary px-5 py-4
+         text-sm text-foreground/80 leading-relaxed;
+}
+
+/* ── ol li nested content (e.g. process steps with title + paragraph) ── */
+.service-content ol li p {
+  @apply mt-1 mb-0 text-sm text-muted-foreground;
+}
+
+/* ── Pricing / data table ── */
+.service-content .service-table-wrap {
+  @apply my-7 w-full overflow-x-auto rounded-2xl border border-border/70 shadow-xs;
+}
+
+.service-content .service-table-wrap table {
+  @apply w-full min-w-[560px] border-collapse text-sm;
+}
+
+.service-content .service-table-wrap thead tr {
+  @apply bg-primary text-primary-foreground;
+}
+
+.service-content .service-table-wrap thead th {
+  @apply px-4 py-3.5 text-left text-xs font-semibold uppercase tracking-wider whitespace-nowrap;
+}
+
+.service-content .service-table-wrap tbody tr {
+  @apply border-t border-border/60 bg-card transition-colors hover:bg-primary/[0.03];
+}
+
+.service-content .service-table-wrap tbody tr:nth-child(even) {
+  @apply bg-muted/30;
+}
+
+.service-content .service-table-wrap tbody td {
+  @apply px-4 py-3.5 text-sm text-foreground/80 align-top;
+}
+
+.service-content .price-badge {
+  @apply inline-flex items-center rounded-lg bg-secondary/15 border border-secondary/30
+         px-2.5 py-1 text-xs font-semibold text-foreground whitespace-nowrap;
+}
+/* ─────────────────────────────────────────────────────────────────────────── */
