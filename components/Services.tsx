@@ -125,7 +125,7 @@ export function Services({
     >
       {/* Section Header */}
       <div className="flex flex-col items-center max-w-3xl mx-auto">
-        <h2 className="text-3xl lg:text-[2.65rem] text-center font-extrabold ">
+        <h2 className="text-2xl lg:text-[2.65rem] text-center font-extrabold ">
           {title || "Our Moving Services in Sharjah"}
         </h2>
 

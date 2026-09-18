@@ -366,10 +366,10 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-14">
             <h2
               id="why-choose-us-title"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
             >
               Why Choose Al Afnan for{" "}
-              <span className="block">Your Move in Ajman?</span>
+              <span className="md:block">Your Move in Ajman?</span>
             </h2>
             <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
               Moving companies make big promises. We prefer to show you why
@@ -435,7 +435,8 @@ export default function AjmanPage() {
               id="specialized-furniture-heading"
               className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
             >
-              Specialized Furniture Moving <br /> Services in Ajman
+              Specialized Furniture Moving <br className="md:block hidden" />{" "}
+              Services in Ajman
             </h2>
             <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
               Your furniture deserves movers who treat it like their own. Here’s
@@ -688,7 +689,7 @@ export default function AjmanPage() {
           </div>
 
           {/* Moving Between Ajman and Other Emirates Feature Block */}
-          <div className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 lg:p-10 shadow-xs relative overflow-hidden">
+          <div className="md:rounded-2xl md:border border-border/80 bg-card p-0 sm:p-8 lg:p-10 shadow-xs relative overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Text Content Column */}
               <div className="lg:col-span-7">
@@ -839,7 +840,7 @@ export default function AjmanPage() {
           </div>
 
           {/* How We Give You A Fixed Price Box */}
-          <div className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 lg:p-10 shadow-xs">
+          <div className="md:rounded-2xl md:border border-border/80 bg-card pt-6 sm:p-8 lg:p-10 shadow-xs">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               {/* Left Column: Bulleted Process */}
               <div className="lg:col-span-6 space-y-4">
@@ -902,10 +903,7 @@ export default function AjmanPage() {
             </div>
           </div>
         </section>
-        <FAQSection
-          faqs={AjmanFaqs}
-          title="Frequently Asked Questions About Moving in Ajman"
-        />
+        <FAQSection faqs={AjmanFaqs} title="Questions About Moving in Ajman" />
         <CTASection
           heading="Ready to Move in Ajman?"
           paragraph="Available 24/7 for moves across Ajman. Get your free quote: Call 056 7277536 and talk it through with the team."

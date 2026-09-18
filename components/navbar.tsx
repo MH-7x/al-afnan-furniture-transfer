@@ -7,7 +7,6 @@ const locations = [
   { name: "Movers in Dubai", href: "#" },
   { name: "Movers in Ajman", href: "#" },
   { name: "Movers in Ras Al Khaimah", href: "#" },
-  { name: "Long Distance Movers", href: "#" },
 ];
 
 const services = [
