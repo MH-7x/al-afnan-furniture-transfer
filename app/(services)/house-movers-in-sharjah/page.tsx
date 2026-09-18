@@ -241,7 +241,7 @@ export default function HouseMoversPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/house-movers-in-sharjah-al-afnan-furniture-transfer.jpg"
+                    src="/house-moving-services-by-al-afnan.jpg"
                     alt="House movers in Sharjah carefully handling household furniture during a residential move — Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -382,7 +382,7 @@ export default function HouseMoversPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/villa-movers-in-sharjah-al-afnan-furniture-transfer.jpg"
+                      src="/villa-moving-services.jpg"
                       alt="Villa movers in Sharjah unloading furniture at the new property"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"

@@ -22,7 +22,7 @@ const servicesData: ServiceItem[] = [
     title: "House Movers in Sharjah",
     category: "Home Relocation",
     number: "01",
-    image: "/house-movers-in-sharjah-al-afnan-furniture-transfer.jpg",
+    image: "/house-moving-services-by-al-afnan.jpg",
     imageAlt:
       "House movers in Sharjah carefully handling household furniture during a residential move by Al Afnan Furniture Transfer",
     paragraphs: [
@@ -37,7 +37,7 @@ const servicesData: ServiceItem[] = [
     title: "Flat & Apartment Movers in Sharjah",
     category: "Apartment Shifting",
     number: "02",
-    image: "/flat-apartment-movers-in-sharjah-al-afnan.jpg",
+    image: "/flat-apartment-movers.jpg",
     imageAlt:
       "Apartment movers in Sharjah carefully moving wrapped furniture through a residential building corridor",
     paragraphs: [
@@ -52,7 +52,7 @@ const servicesData: ServiceItem[] = [
     title: "Villa Movers in Sharjah",
     category: "Villa Relocation",
     number: "03",
-    image: "/villa-movers-in-sharjah-al-afnan-furniture-transfer.jpg",
+    image: "/villa-moving-services.jpg",
     imageAlt:
       "Villa movers in Sharjah professionally handling furniture and household belongings during a large residential relocation",
     paragraphs: [
@@ -67,7 +67,7 @@ const servicesData: ServiceItem[] = [
     title: "Commercial & Office Movers in Sharjah",
     category: "Office & Business",
     number: "04",
-    image: "/commercial-office-movers-in-sharjah-al-afnan.jpg",
+    image: "/commercial-office-movers.jpg",
     imageAlt:
       "Commercial office movers in Sharjah carefully relocating desks, office furniture and equipment",
     paragraphs: [
@@ -82,7 +82,7 @@ const servicesData: ServiceItem[] = [
     title: "Furniture Moving & Transfer in Sharjah",
     category: "Specialized Transfer",
     number: "05",
-    image: "/furniture-moving-transfer-in-sharjah-al-afnan.jpg",
+    image: "/furniture-moving-transfer.jpg",
     imageAlt:
       "Furniture movers in Sharjah carefully wrapping and transporting individual furniture items",
     paragraphs: [
@@ -97,7 +97,7 @@ const servicesData: ServiceItem[] = [
     title: "Packing and Moving Services in Sharjah",
     category: "Full Packaging",
     number: "06",
-    image: "/packing-and-moving-services-in-sharjah-al-afnan.jpg",
+    image: "/packing-and-moving-services.jpg",
     imageAlt:
       "Professional packing and moving team in Sharjah wrapping household furniture with protective packing materials",
     paragraphs: [

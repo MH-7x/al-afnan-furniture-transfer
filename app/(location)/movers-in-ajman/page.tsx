@@ -9,7 +9,6 @@ import {
   Star,
   Languages,
   FileCheck,
-  MapPin,
   Phone,
   Check,
 } from "lucide-react";
@@ -17,12 +16,14 @@ import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/footer";
 import Services from "@/components/Services";
 import MovingProcess from "@/components/MovingProcess";
+import { FAQSection } from "@/components/FaqsSection";
+import { AjmanFaqs } from "@/lib/FaqsData";
+import { CTASection } from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title:
-    "Movers in Ajman — Professional Movers and Packers Services | Al Afnan",
+  title: "Movers in Ajman Services By Al Afnan Furniture Transfer",
   description:
-    "Al Afnan Furniture Transfer has been trusted movers in ajman for over 10 years, handling moves across Ajman and the rest of the UAE. Call 056 7277536.",
+    "Trusted movers in ajman. Al Afnan Furniture Transfer provide moving services for houses, offices & furniture. Call 056 7277536 for a free moving quote.",
 };
 
 const footerSearches = [
@@ -80,6 +81,151 @@ const whyChooseUsPillars = [
     span: "lg:col-span-4",
   },
 ];
+const servicesData = [
+  {
+    id: "house-movers",
+    title: "House Movers in Ajman",
+    category: "Home Relocation",
+    number: "01",
+    image: "/house-moving-services-by-al-afnan.jpg",
+    imageAlt:
+      "House movers in Ajman carefully handling household furniture and packing room-by-room during a residential move by Al Afnan Furniture Transfer",
+    paragraphs: [
+      "We pack room-by-room using labeled boxes, disconnect/reconnect appliances (like washing machines), and protect floors/walls with runners.",
+      "For Ajman houses in Al Nuaimiya or Al Zahya, we handle yard equipment (lawnmowers, grills), garage organization, and shed disassembly—items apartments don’t have.",
+    ],
+    cta: "House Moving Services",
+    href: "/house-movers-in-sharjah",
+  },
+  {
+    id: "studio-movers",
+    title: "Studio Movers in Ajman",
+    category: "Studio Shifting",
+    number: "02",
+    image: "/studio-moving-services.jpg",
+    imageAlt:
+      "Studio movers in Ajman navigating narrow corridors and carefully angling furniture during a studio relocation",
+    paragraphs: [
+      "We specialize in studio moves in Al Jurf and Emirates City towers.",
+      "Narrow corridors require precise furniture angling—we measure doorways before lifting anything.",
+    ],
+    cta: "Studio Moving Services",
+    href: "/",
+  },
+  {
+    id: "apartment-movers",
+    title: "Apartment Movers in Ajman",
+    category: "Apartment Shifting",
+    number: "03",
+    image: "/flat-apartment-movers.jpg",
+    imageAlt:
+      "Apartment movers in Ajman securing building permits and moving wrapped furniture through a residential corridor",
+    paragraphs: [
+      "For 2BHKs in Al Rashidiya and Al Zahya, we secure parking permits and coordinate elevator bookings with building management to avoid delays and fines.",
+    ],
+    cta: "Apartment Moving Services",
+    href: "/apartment-movers-in-sharjah",
+  },
+  {
+    id: "villa-movers",
+    title: "Villa Movers in Ajman",
+    category: "Villa Relocation",
+    number: "04",
+    image: "/villa-moving-services.jpg",
+    imageAlt:
+      "Villa movers in Ajman professionally handling heavy items, custom crating marble, and navigating narrow gates",
+    paragraphs: [
+      "We handle heavy items (safes, pianos, gym equipment) with proper lifting gear, wrap marble/glass surfaces in custom crating, and reassemble outdoor furniture at your new villa.",
+      "We’ve moved villas in Al Mowaihat and Al Nuaimiya where narrow gates required specialized maneuvering—our crew plans the route before touching a single item.",
+    ],
+    cta: "Villa Moving Services",
+    href: "/villa-movers-in-sharjah",
+  },
+  {
+    id: "commercial-movers",
+    title: "Office Movers in Ajman",
+    category: "Office & Business",
+    number: "05",
+    image: "/commercial-office-movers.jpg",
+    imageAlt:
+      "Commercial office movers in Ajman relocating workstations, anti-static IT equipment, and office furniture",
+    paragraphs: [
+      "We dismantle workstations, pack IT equipment in anti-static boxes, and file documents in labeled, sealable crates.",
+      "After delivery, we rebuild cubicles and place furniture per your floor plan—critical for minimizing downtime in Ajman’s business districts like the Free Zone or near City Centre.",
+    ],
+    cta: "Commercial Moving Services",
+    href: "/office-movers-in-sharjah",
+  },
+  {
+    id: "furniture-movers",
+    title: "Furniture Movers in Ajman",
+    category: "Specialized Transfer",
+    number: "06",
+    image: "/furniture-moving-transfer.jpg",
+    imageAlt:
+      "Furniture movers in Ajman carefully wrapping beds, wardrobes, and tables using furniture pads and stretch film",
+    paragraphs: [
+      "Crews disassemble beds, wardrobes, and tables using labeled hardware bags, wrap each piece in furniture pads + stretch film, and reload them exactly as they came apart.",
+      "We use hanger boxes for clothes so suits/dresses arrive wrinkle-free no ironing needed. This is why Ajman families with vintage or custom furniture specifically request us.",
+    ],
+    cta: "Furniture Moving Services",
+    href: "/furniture-transfer-in-sharjah",
+  },
+  {
+    id: "packing-services",
+    title: "Packing & Unpacking Services in Ajman",
+    category: "Full Packaging",
+    number: "07",
+    image: "/packing-and-moving-services.jpg",
+    imageAlt:
+      "Professional packing and unpacking team in Ajman packing fragile items with bubble wrap and custom boxes",
+    paragraphs: [
+      "We bring all materials (boxes, tape, bubble wrap, mattress covers) and pack fragile items (glassware, electronics, art) using industry-standard techniques.",
+      "Unpacking includes placing items in designated rooms, removing all debris, and reassembling furniture so your new home feels livable same-day.",
+    ],
+    cta: "Packing Services",
+    href: "/packing-services-in-sharjah",
+  },
+];
+
+const processSteps = [
+  {
+    number: "01",
+    title: "Free Survey And Fixed Quote",
+    paragraphs: [
+      "You call or message us. We come to your home or office in Ajman. We see what needs moving. We note special items like pianos or antiques.",
+      "We give you a written price that day. No hidden fees. No obligation.",
+    ],
+  },
+  {
+    number: "02",
+    title: "Professional Packing And Protection",
+    paragraphs: [
+      "Our team arrives on schedule. We bring all materials.",
+      <>
+        We wrap furniture in pads and stretch film. We use hanger boxes for
+        clothes. We pack glassware in bubble wrap. We label every box by room.
+        We protect floors and walls.
+      </>,
+    ],
+  },
+  {
+    number: "03",
+    title: "Careful Loading Transport And Delivery",
+    paragraphs: [
+      "We load the truck carefully. Heavy items go on first. We secure everything with straps.",
+      "We drive safely to your new place in Ajman or another emirate. We unload room by room. We place boxes where you ask.",
+    ],
+  },
+  {
+    number: "04",
+    title: "Placement Reassembly And Cleanup",
+    paragraphs: [
+      "We put furniture where you want it. We reassemble beds wardrobes and tables.",
+      "We remove all packing materials. We sweep the floors. We leave your new space clean and ready.",
+    ],
+  },
+];
 
 export default function AjmanPage() {
   return (
@@ -131,7 +277,7 @@ export default function AjmanPage() {
                   id="hero-title"
                   className="font-extrabold text-3xl sm:text-4xl leading-[1.12] "
                 >
-                  Movers in Ajman
+                  Movers in Ajman{" "}
                   <span className="block text-primary mt-1.5 ">
                     Professional Movers and Packers Services
                   </span>
@@ -186,7 +332,7 @@ export default function AjmanPage() {
                 >
                   {/* Active high-res visual placeholder — swap file name when your Ajman-specific photo is ready */}
                   <Image
-                    src="/movers-and-packers-in-sharjah.jpg"
+                    src="/movers-in-ajman.jpg"
                     alt="Movers in Ajman — Professional Movers and Packers Services by Al Afnan"
                     fill
                     priority
@@ -263,10 +409,13 @@ export default function AjmanPage() {
           desc={
             <>
               <p>
-                As your trusted movers and packers in ajman, we handle every
-                step of your move so you don’t have to juggle multiple movers.
-                Here’s exactly what each service includes, based on how we
-                actually operate in Ajman.
+                As your trusted movers and packers in ajman,{" "}
+                <Link href="/" className="text-primary">
+                  Al Afnan Furniture Transfer
+                </Link>{" "}
+                handle every step of your move so you don’t have to juggle
+                multiple movers. Here’s exactly what each service includes,
+                based on how we actually operate in Ajman.
               </p>
             </>
           }
@@ -383,7 +532,7 @@ export default function AjmanPage() {
         <MovingProcess
           process={processSteps}
           title="Movers in Ajman Work Process"
-          desc="We keep the moving process in sharjah simple. Four clear steps to understand how our movers team work in ajman."
+          desc="We keep the moving process simple. Four clear steps to understand how our movers team work in ajman."
         />
 
         {/* ════════════════════════════════════════════
@@ -503,10 +652,13 @@ export default function AjmanPage() {
               We serve all neighborhoods in Ajman. Our team moves customers
               regularly in:
             </p>
+            <h3 className="mt-5 font-semibold">
+              We Serve All Neighborhoods in Ajman
+            </h3>
           </div>
 
           {/* Neighborhood Badges Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 mb-12 sm:mb-14">
+          <div className="flex flex-wrap gap-3 sm:gap-4 mb-12 sm:mb-14">
             {[
               "Al Nuaimiya Ajman",
               "Al Rashidiya Ajman",
@@ -526,15 +678,11 @@ export default function AjmanPage() {
             ].map((area) => (
               <div
                 key={area}
-                className="flex items-center gap-2.5 p-3.5 sm:p-4 rounded-xl bg-card border border-border/80 shadow-2xs hover:border-primary/40 hover:shadow-xs transition-all"
+                className="p-3 rounded-xl bg-card border border-border/80 "
               >
-                <MapPin
-                  aria-hidden="true"
-                  className="size-4 text-primary shrink-0"
-                />
-                <span className="text-xs sm:text-sm font-semibold text-foreground tracking-tight">
-                  {area}
-                </span>
+                <h4 className="text-sm font-medium text-foreground tracking-tight">
+                  Movers in {area}
+                </h4>
               </div>
             ))}
           </div>
@@ -595,7 +743,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-16 mx-auto text-center">
             <h2
               id="moving-cost-factors-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
+              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-foreground"
             >
               What Affects Your <br /> Moving Cost in Ajman
             </h2>
@@ -754,170 +902,17 @@ export default function AjmanPage() {
             </div>
           </div>
         </section>
+        <FAQSection
+          faqs={AjmanFaqs}
+          title="Frequently Asked Questions About Moving in Ajman"
+        />
+        <CTASection
+          heading="Ready to Move in Ajman?"
+          paragraph="Available 24/7 for moves across Ajman. Get your free quote: Call 056 7277536 and talk it through with the team."
+        />
       </main>
 
       <Footer searches={footerSearches} />
     </>
   );
 }
-
-const servicesData = [
-  {
-    id: "house-movers",
-    title: "House Movers in Ajman",
-    category: "Home Relocation",
-    number: "01",
-    image: "/house-movers-in-sharjah-al-afnan-furniture-transfer.jpg",
-    imageAlt:
-      "House movers in Ajman carefully handling household furniture and packing room-by-room during a residential move by Al Afnan Furniture Transfer",
-    paragraphs: [
-      "We pack room-by-room using labeled boxes, disconnect/reconnect appliances (like washing machines), and protect floors/walls with runners.",
-      "For Ajman houses in Al Nuaimiya or Al Zahya, we handle yard equipment (lawnmowers, grills), garage organization, and shed disassembly—items apartments don’t have.",
-    ],
-    cta: "House Moving Services",
-    href: "#",
-  },
-  {
-    id: "studio-movers",
-    title: "Studio Movers in Ajman",
-    category: "Studio Shifting",
-    number: "02",
-    image: "/flat-apartment-movers-in-sharjah-al-afnan.jpg",
-    imageAlt:
-      "Studio movers in Ajman navigating narrow corridors and carefully angling furniture during a studio relocation",
-    paragraphs: [
-      "We specialize in studio moves in Al Jurf and Emirates City towers.",
-      "Narrow corridors require precise furniture angling—we measure doorways before lifting anything.",
-    ],
-    cta: "Studio Moving Services",
-    href: "#",
-  },
-  {
-    id: "apartment-movers",
-    title: "Apartment Movers in Ajman",
-    category: "Apartment Shifting",
-    number: "03",
-    image: "/flat-apartment-movers-in-sharjah-al-afnan.jpg",
-    imageAlt:
-      "Apartment movers in Ajman securing building permits and moving wrapped furniture through a residential corridor",
-    paragraphs: [
-      "For 2BHKs in Al Rashidiya and Al Zahya, we secure parking permits and coordinate elevator bookings with building management to avoid delays and fines.",
-    ],
-    cta: "Apartment Moving Services",
-    href: "#",
-  },
-  {
-    id: "villa-movers",
-    title: "Villa Movers in Ajman",
-    category: "Villa Relocation",
-    number: "04",
-    image: "/villa-movers-in-sharjah-al-afnan-furniture-transfer.jpg",
-    imageAlt:
-      "Villa movers in Ajman professionally handling heavy items, custom crating marble, and navigating narrow gates",
-    paragraphs: [
-      "We handle heavy items (safes, pianos, gym equipment) with proper lifting gear, wrap marble/glass surfaces in custom crating, and reassemble outdoor furniture at your new villa.",
-      "We’ve moved villas in Al Mowaihat and Al Nuaimiya where narrow gates required specialized maneuvering—our crew plans the route before touching a single item.",
-    ],
-    cta: "Villa Moving Services",
-    href: "#",
-  },
-  {
-    id: "commercial-movers",
-    title: "Office Movers in Ajman",
-    category: "Office & Business",
-    number: "05",
-    image: "/commercial-office-movers-in-sharjah-al-afnan.jpg",
-    imageAlt:
-      "Commercial office movers in Ajman relocating workstations, anti-static IT equipment, and office furniture",
-    paragraphs: [
-      "We dismantle workstations, pack IT equipment in anti-static boxes, and file documents in labeled, sealable crates.",
-      "After delivery, we rebuild cubicles and place furniture per your floor plan—critical for minimizing downtime in Ajman’s business districts like the Free Zone or near City Centre.",
-    ],
-    cta: "Commercial Moving Services",
-    href: "#",
-  },
-  {
-    id: "furniture-movers",
-    title: "Furniture Movers in Ajman",
-    category: "Specialized Transfer",
-    number: "06",
-    image: "/furniture-moving-transfer-in-sharjah-al-afnan.jpg",
-    imageAlt:
-      "Furniture movers in Ajman carefully wrapping beds, wardrobes, and tables using furniture pads and stretch film",
-    paragraphs: [
-      "Crews disassemble beds, wardrobes, and tables using labeled hardware bags, wrap each piece in furniture pads + stretch film, and reload them exactly as they came apart.",
-      "We use hanger boxes for clothes so suits/dresses arrive wrinkle-free no ironing needed. This is why Ajman families with vintage or custom furniture specifically request us.",
-    ],
-    cta: "Furniture Moving Services",
-    href: "#",
-  },
-  {
-    id: "packing-services",
-    title: "Packing & Unpacking Services in Ajman",
-    category: "Full Packaging",
-    number: "07",
-    image: "/packing-and-moving-services-in-sharjah-al-afnan.jpg",
-    imageAlt:
-      "Professional packing and unpacking team in Ajman packing fragile items with bubble wrap and custom boxes",
-    paragraphs: [
-      "We bring all materials (boxes, tape, bubble wrap, mattress covers) and pack fragile items (glassware, electronics, art) using industry-standard techniques.",
-      "Unpacking includes placing items in designated rooms, removing all debris, and reassembling furniture so your new home feels livable same-day.",
-    ],
-    cta: "Packing Services",
-    href: "#",
-  },
-  {
-    id: "sameday-movers",
-    title: "Same-Day & Emergency Moving in Ajman",
-    category: "Emergency Relocation",
-    number: "08",
-    image: "/packing-and-moving-services-in-sharjah-al-afnan.jpg",
-    imageAlt:
-      "Same-day and emergency moving crew in Ajman deployed rapidly for urgent relocations",
-    paragraphs: [
-      "For urgent moves like evictions, sudden relocations, we deploy a crew within 2 hours of your call same pricing as scheduled moves.",
-      "We’ve handled emergency shifts during off-hours because our teams are based in Sharjah and stay on standby. Note: Same-day depends on crew availability—we’ll confirm honestly when you call.",
-    ],
-    cta: "Same-Day Moving Services",
-    href: "#",
-  },
-];
-
-const processSteps = [
-  {
-    number: "01",
-    title: "Free Survey And Fixed Quote",
-    paragraphs: [
-      "You call or message us. We come to your home or office in Ajman. We see what needs moving. We note special items like pianos or antiques.",
-      "We give you a written price that day. No hidden fees. No obligation.",
-    ],
-  },
-  {
-    number: "02",
-    title: "Professional Packing And Protection",
-    paragraphs: [
-      "Our team arrives on schedule. We bring all materials.",
-      <>
-        We wrap furniture in pads and stretch film. We use hanger boxes for
-        clothes. We pack glassware in bubble wrap. We label every box by room.
-        We protect floors and walls.
-      </>,
-    ],
-  },
-  {
-    number: "03",
-    title: "Careful Loading Transport And Delivery",
-    paragraphs: [
-      "We load the truck carefully. Heavy items go on first. We secure everything with straps.",
-      "We drive safely to your new place in Ajman or another emirate. We unload room by room. We place boxes where you ask.",
-    ],
-  },
-  {
-    number: "04",
-    title: "Placement Reassembly And Cleanup",
-    paragraphs: [
-      "We put furniture where you want it. We reassemble beds wardrobes and tables.",
-      "We remove all packing materials. We sweep the floors. We leave your new space clean and ready.",
-    ],
-  },
-];

@@ -220,7 +220,7 @@ export default function OfficeMoversPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/commercial-office-movers-in-sharjah-al-afnan.jpg"
+                    src="/commercial-office-movers.jpg"
                     alt="Office movers in Sharjah professionally handling commercial relocation, desks, and office equipment — Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -311,7 +311,7 @@ export default function OfficeMoversPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/furniture-moving-transfer-in-sharjah-al-afnan.jpg"
+                      src="/furniture-moving-transfer.jpg"
                       alt="Office furniture dismantling and packing in Sharjah"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"
@@ -324,7 +324,7 @@ export default function OfficeMoversPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/packing-and-moving-services-in-sharjah-al-afnan.jpg"
+                      src="/packing-and-moving-services.jpg"
                       alt="Office packing and IT protection in Sharjah"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"

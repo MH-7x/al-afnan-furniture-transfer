@@ -146,3 +146,134 @@ export const HomePageFAQs = [
     ),
   },
 ];
+
+export const AjmanFaqs = [
+  {
+    question: "How much does it cost to hire movers in Ajman?",
+    answer: (
+      <>
+        <p>
+          We provide a free survey and a fixed price quote based on your home
+          size, distance, and the services you need. Costs vary because every
+          move is different.
+        </p>
+        <p>
+          Call us at <a href="tel:0567277536">056 7277536</a> or use our website
+          to get an accurate, no-obligation estimate for your specific
+          situation.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Can you move from Ajman to Dubai on the same day?",
+    answer: (
+      <>
+        <p>
+          Yes, we offer same-day moves between Ajman and Dubai when crew
+          availability allows. We are based in Sharjah, which lets us respond
+          quickly.
+        </p>
+        <p>
+          When you call, we check our schedule and confirm if we can meet your
+          timing.
+        </p>
+      </>
+    ),
+  },
+  {
+    question:
+      "Do you provide packing materials and dismantling/reassembly services?",
+    answer: (
+      <>
+        <p>
+          Absolutely. Our team brings professional packing materials such as
+          furniture pads, stretch film, bubble wrap, and hanger boxes for
+          clothes.
+        </p>
+        <p>
+          Our trained carpenters handle furniture dismantling and reassembly to
+          ensure your items are protected and set up correctly in your new
+          space.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Are my belongings insured during the move?",
+    answer: (
+      <p>
+        We are a licensed and insured moving company authorized to operate
+        across all seven emirates. Your belongings are covered under our
+        insurance policy while they are in our care. This is part of our
+        commitment to providing a trustworthy service.
+      </p>
+    ),
+  },
+  {
+    question: "How far in advance should I book my move in Ajman?",
+    answer: (
+      <>
+        <p>
+          For guaranteed timing, we recommend booking at least 24 to 48 hours
+          ahead.
+        </p>
+        <p>
+          However, we also accommodate same-day and emergency moves when our
+          schedule permits. The best way to know your options is to call us
+          directly.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "What areas of Ajman do you cover?",
+    answer: (
+      <>
+        <p>We serve every neighborhood in Ajman, including:</p>
+        <ul>
+          <li>Al Nuaimiya, Al Rashidiya, and Al Jurf</li>
+          <li>Al Mowaihat, Al Zahya, and Al Manama</li>
+          <li>Emirates City, City of Ajman, and Ajman Corniche</li>
+          <li>Industrial Area, Old Town, and Marina</li>
+          <li>University Area, Al Helio 2, and the Free Zone</li>
+        </ul>
+        <p>
+          If you are unsure whether we cover your location, just share your
+          address and we will confirm.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Do you offer office moving services in Ajman?",
+    answer: (
+      <>
+        <p>
+          Yes, we specialize in office relocations for businesses across Ajman.
+        </p>
+        <p>
+          Our service includes dismantling workstations, securely packing IT
+          equipment, and reassembling cubicles and furniture according to your
+          floor plan to minimize downtime.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: "Is there an extra charge for weekend or after-hours moves?",
+    answer: (
+      <>
+        <p>
+          No, we do not add rush fees, weekend surcharges, or after-hours
+          premiums. Our pricing remains the same regardless of when your move
+          takes place.
+        </p>
+        <p>
+          The price we quote after your free survey is the price you pay,
+          provided the scope of work does not change.
+        </p>
+      </>
+    ),
+  },
+];

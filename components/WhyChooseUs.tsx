@@ -125,7 +125,7 @@ export function WhyChooseUs() {
         <div className="lg:col-span-5">
           <div className="relative aspect-4/3 w-full rounded-2xl overflow-hidden bg-muted/20 border border-border/80 shadow-xs group">
             <Image
-              src="/house-movers-in-sharjah-al-afnan-furniture-transfer.jpg"
+              src="/house-moving-services-by-al-afnan.jpg"
               alt="Al Afnan Furniture Transfer Professional Moving Team in Sharjah"
               width={700}
               height={523}

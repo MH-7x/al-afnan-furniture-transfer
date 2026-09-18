@@ -227,7 +227,7 @@ export default function PackingServicesPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/packing-and-moving-services-in-sharjah-al-afnan.jpg"
+                    src="/packing-and-moving-services.jpg"
                     alt="Professional packing services in Sharjah by Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -333,7 +333,7 @@ export default function PackingServicesPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/furniture-moving-transfer-in-sharjah-al-afnan.jpg"
+                      src="/furniture-moving-transfer.jpg"
                       alt="Furniture wrapping and protective cushioning"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"

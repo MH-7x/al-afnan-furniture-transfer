@@ -19,12 +19,12 @@ export interface FAQProps {
 export const FAQItem: React.FC<{ faq: FAQData }> = ({ faq }) => {
   return (
     <details className="group border-b border-border [&_summary::-webkit-details-marker]:hidden">
-      <summary className="flex cursor-pointer items-center justify-between gap-4 py-5 sm:py-6 text-left select-none list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">
-        <span className="text-base sm:text-lg font-semibold text-foreground group-hover:text-primary transition-colors pr-2">
+      <summary className="flex cursor-pointer items-center justify-between gap-4 py-5 sm:py-6 text-left select-none list-none ">
+        <h3 className="text-base sm:text-lg font-semibold  pr-2">
           {faq.question}
-        </span>
+        </h3>
         <ChevronDown
-          className="size-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180 group-hover:text-primary"
+          className="size-5 shrink-0 text-muted-foreground transition-transform duration-300 group-open:rotate-180 "
           aria-hidden="true"
         />
       </summary>

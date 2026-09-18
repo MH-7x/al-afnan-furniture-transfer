@@ -203,7 +203,7 @@ export default function ApartmentMoversPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/flat-apartment-movers-in-sharjah-al-afnan.jpg"
+                    src="/flat-apartment-movers.jpg"
                     alt="Apartment movers in Sharjah handling flat and apartment relocation — Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -306,7 +306,7 @@ export default function ApartmentMoversPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/furniture-moving-transfer-in-sharjah-al-afnan.jpg"
+                      src="/furniture-moving-transfer.jpg"
                       alt="Apartment furniture dismantling and packing in Sharjah"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"
@@ -319,7 +319,7 @@ export default function ApartmentMoversPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/packing-and-moving-services-in-sharjah-al-afnan.jpg"
+                      src="/packing-and-moving-services.jpg"
                       alt="Apartment packing services in Sharjah"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"

@@ -213,7 +213,7 @@ export default function VillaMoversPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/villa-movers-in-sharjah-al-afnan-furniture-transfer.jpg"
+                    src="/villa-moving-services.jpg"
                     alt="Villa movers in Sharjah professionally handling furniture and household belongings during a residential move — Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -310,7 +310,7 @@ export default function VillaMoversPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/furniture-moving-transfer-in-sharjah-al-afnan.jpg"
+                      src="/furniture-moving-transfer.jpg"
                       alt="Villa furniture dismantling and safe handling in Sharjah"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"

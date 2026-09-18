@@ -223,7 +223,7 @@ export default function FurnitureTransferPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/furniture-moving-transfer-in-sharjah-al-afnan.jpg"
+                    src="/furniture-moving-transfer.jpg"
                     alt="Furniture transfer and movers in Sharjah handling single-item and partial furniture moves — Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -273,7 +273,7 @@ export default function FurnitureTransferPage() {
                 <figure className="!my-0">
                   <div className="img-portrait">
                     <Image
-                      src="/packing-and-moving-services-in-sharjah-al-afnan.jpg"
+                      src="/packing-and-moving-services.jpg"
                       alt="Careful protective wrapping for furniture transfer in Sharjah"
                       fill
                       sizes="(max-width: 640px) 100vw, 50vw"
