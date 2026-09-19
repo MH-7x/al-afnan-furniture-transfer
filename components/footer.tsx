@@ -13,7 +13,7 @@ export function Footer({ searches }: { searches?: string[] }) {
             <div className="flex flex-col md:col-span-3">
               <Link
                 href="/"
-                className="inline-block shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary rounded-lg"
+                className="inline-block shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg"
                 aria-label="Al Afan Furniture Transfer Home"
               >
                 <Image
@@ -114,7 +114,7 @@ export function Footer({ searches }: { searches?: string[] }) {
                 Locations
               </h3>
               <div
-                className="w-10 h-1 bg-secondary rounded-full mt-2 mb-5"
+                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
                 aria-hidden="true"
               />
               <ul className="space-y-3">
@@ -167,7 +167,7 @@ export function Footer({ searches }: { searches?: string[] }) {
                 Useful Links
               </h3>
               <div
-                className="w-10 h-1 bg-secondary rounded-full mt-2 mb-5"
+                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
                 aria-hidden="true"
               />
               <ul className="space-y-3">
@@ -220,7 +220,7 @@ export function Footer({ searches }: { searches?: string[] }) {
                 Contact Us
               </h3>
               <div
-                className="w-10 h-1 bg-secondary rounded-full mt-2 mb-5"
+                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
                 aria-hidden="true"
               />
               <address className="not-italic space-y-4">
@@ -238,7 +238,7 @@ export function Footer({ searches }: { searches?: string[] }) {
                     </span>
                     <a
                       href="tel:0567277536"
-                      className="text-sm font-semibold text-white hover:text-secondary transition-colors mt-0.5"
+                      className="text-sm font-semibold text-white hover:text-white/80 hover:underline transition-colors mt-0.5"
                     >
                       056 7277536
                     </a>
@@ -259,7 +259,7 @@ export function Footer({ searches }: { searches?: string[] }) {
                     </span>
                     <a
                       href="mailto:afanfurnituretransfer@gmail.com"
-                      className="text-sm font-semibold text-white hover:text-secondary transition-colors mt-0.5 break-all"
+                      className="text-sm font-semibold text-white hover:text-white/80 hover:underline transition-colors mt-0.5 break-all"
                     >
                       afanfurnituretransfer@gmail.com
                     </a>
@@ -282,7 +282,7 @@ export function Footer({ searches }: { searches?: string[] }) {
                       href="https://maps.google.com/?q=Jamal+Abdul+Naser+St+near+Al+Majaz+2+Al+Majaz+Sharjah"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm font-semibold text-white hover:text-secondary transition-colors leading-snug mt-0.5"
+                      className="text-sm font-semibold text-white hover:text-white/80 hover:underline transition-colors leading-snug mt-0.5"
                     >
                       Jamal Abdul Naser St, near Al Majaz 2 - Al Majaz 2 - Al
                       Majaz, Sharjah

@@ -342,7 +342,7 @@ export default function AjmanPage() {
 
                   {/* Elegant bottom gradient overlay with caption */}
                   <figcaption className="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-gradient-to-t from-black/85 via-black/50 to-transparent text-white flex flex-col justify-end">
-                    <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-secondary">
+                    <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-primary">
                       Al Afnan Furniture Transfer
                     </span>
                     <span className="text-sm sm:text-base font-semibold text-white mt-0.5">
@@ -562,7 +562,7 @@ export default function AjmanPage() {
             {/* Pillar 1 */}
             <div className="rounded-2xl bg-primary/95 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="text-xl font-semibold border-b-2 border-secondary pb-2 text-white mb-3">
+                <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                   Same-Day Service Depends On Crew Availability
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed">
@@ -578,7 +578,7 @@ export default function AjmanPage() {
             {/* Pillar 2 */}
             <div className="rounded-2xl bg-primary/95 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="text-xl font-semibold border-b-2 border-secondary pb-2 text-white mb-3">
+                <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                   Emergency Moves For Urgent Situations
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed">
@@ -594,7 +594,7 @@ export default function AjmanPage() {
             {/* Pillar 3 */}
             <div className="rounded-2xl bg-primary/95 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="text-xl font-semibold border-b-2 border-secondary pb-2 text-white mb-3">
+                <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                   No Extra Charge For Urgent Service
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed">
@@ -763,7 +763,7 @@ export default function AjmanPage() {
                 <span className="text-xs font-mono font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md mb-4 inline-block">
                   Factor 01
                 </span>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-secondary/60 pb-2 mb-3">
+                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Distance And Access Details
                 </h3>
                 <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
@@ -789,7 +789,7 @@ export default function AjmanPage() {
                 <span className="text-xs font-mono font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md mb-4 inline-block">
                   Factor 02
                 </span>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-secondary/60 pb-2 mb-3">
+                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   What You’re Moving And How Much
                 </h3>
                 <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
@@ -818,7 +818,7 @@ export default function AjmanPage() {
                 <span className="text-xs font-mono font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md mb-4 inline-block">
                   Factor 03
                 </span>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-secondary/60 pb-2 mb-3">
+                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Your Service Choices Directly Shape The Price
                 </h3>
                 <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
@@ -884,7 +884,7 @@ export default function AjmanPage() {
 
                 <div className="pt-2">
                   <Button
-                    variant="secondary"
+                    variant="default"
                     size="lg"
                     render={
                       <a
@@ -893,7 +893,7 @@ export default function AjmanPage() {
                         rel="noopener noreferrer"
                       />
                     }
-                    className="w-full sm:w-auto font-semibold shadow-sm"
+                    className="w-full sm:w-auto font-semibold shadow-sm hover:shadow-md transition-all cursor-pointer"
                   >
                     <span>Book Your Free Moving Survey</span>
                     <ArrowRight className="size-4 ml-1.5" />

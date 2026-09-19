@@ -66,9 +66,9 @@ export function CTASection({
                   {heading}{" "}
                 </h2>
 
-                <p className="mt-4 sm:mt-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="mt-4 sm:mt-5 text-muted-foreground text-sm sm:text-base leading-relaxed">
                   {paragraph}
-                </p>
+                </div>
 
                 {/* Direct Call Button */}
                 <div className="mt-6 flex flex-wrap items-center gap-3.5 sm:gap-4">
@@ -269,9 +269,9 @@ export function CTASection({
                     {/* Submit Button */}
                     <Button
                       type="submit"
-                      variant="secondary"
+                      variant="default"
                       size="lg"
-                      className="w-full py-5.5 font-semibold text-secondary-foreground shadow-md hover:brightness-105 active:scale-95 transition-all cursor-pointer mt-1"
+                      className="w-full py-5.5 font-semibold text-primary-foreground shadow-md hover:brightness-105 active:scale-95 transition-all cursor-pointer mt-1"
                     >
                       <span>{quoteButtonText}</span>
                       <Send className="size-4 ml-1.5" />

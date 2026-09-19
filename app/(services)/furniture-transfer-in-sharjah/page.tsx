@@ -119,7 +119,7 @@ export default function FurnitureTransferPage() {
               aria-hidden="true"
             />
             <div
-              className="pointer-events-none absolute -bottom-20 left-1/4 size-64 rounded-full bg-secondary/10 blur-3xl"
+              className="pointer-events-none absolute -bottom-20 left-1/4 size-64 rounded-full bg-primary/8 blur-3xl"
               aria-hidden="true"
             />
 
@@ -167,18 +167,19 @@ export default function FurnitureTransferPage() {
               {/* CTA Buttons */}
               <div className="mt-7 flex flex-wrap items-center gap-3.5">
                 <Button
-                  variant="secondary"
+                  variant="default"
                   size="lg"
                   render={<Link href="#estimate" />}
-                  className="py-6 px-6"
+                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get a Free Furniture Transfer Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" />
                 </Button>
                 <Button
+                  variant="secondary"
                   size="lg"
                   render={<a href="tel:0567277536" />}
-                  className="py-6 px-6"
+                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />

@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 const locations = [
   { name: "Movers in Dubai", href: "#" },
-  { name: "Movers in Ajman", href: "#" },
-  { name: "Movers in Ras Al Khaimah", href: "#" },
+  { name: "Movers in Ajman", href: "/movers-in-ajman" },
+  { name: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
 ];
 
 const services = [
@@ -119,7 +119,7 @@ export function Navbar() {
             <li>
               <Link
                 href="/"
-                className="font-semibold text-sm xl:text-base text-white hover:text-secondary transition-colors"
+                className="font-semibold text-sm xl:text-base text-white hover:text-white/80 transition-colors"
               >
                 Home
               </Link>
@@ -129,7 +129,7 @@ export function Navbar() {
             <li>
               <Link
                 href="#"
-                className="font-semibold text-sm xl:text-base text-white hover:text-secondary transition-colors"
+                className="font-semibold text-sm xl:text-base text-white hover:text-white/80 transition-colors"
               >
                 About Us
               </Link>
@@ -139,7 +139,7 @@ export function Navbar() {
             <li className="relative group">
               <button
                 type="button"
-                className="inline-flex items-center gap-1.5 font-semibold text-sm xl:text-base text-white hover:text-secondary transition-colors cursor-pointer py-1"
+                className="inline-flex items-center gap-1.5 font-semibold text-sm xl:text-base text-white hover:text-white/80 transition-colors cursor-pointer py-1"
                 aria-haspopup="true"
               >
                 <span>Locations</span>
@@ -167,7 +167,7 @@ export function Navbar() {
             <li className="relative group">
               <button
                 type="button"
-                className="inline-flex items-center gap-1.5 font-semibold text-sm xl:text-base text-white hover:text-secondary transition-colors cursor-pointer py-1"
+                className="inline-flex items-center gap-1.5 font-semibold text-sm xl:text-base text-white hover:text-white/80 transition-colors cursor-pointer py-1"
                 aria-haspopup="true"
               >
                 <span>Services</span>
@@ -195,7 +195,7 @@ export function Navbar() {
             <li>
               <Link
                 href="#"
-                className="font-semibold text-sm xl:text-base text-white hover:text-secondary transition-colors"
+                className="font-semibold text-sm xl:text-base text-white hover:text-white/80 transition-colors"
               >
                 Contact Us
               </Link>
@@ -216,7 +216,7 @@ export function Navbar() {
                   <li>
                     <Link
                       href="/"
-                      className="block py-2 text-base font-semibold text-white hover:text-secondary transition-colors"
+                      className="block py-2 text-base font-semibold text-white hover:text-white/80 transition-colors"
                     >
                       Home
                     </Link>
@@ -224,7 +224,7 @@ export function Navbar() {
                   <li>
                     <Link
                       href="#"
-                      className="block py-2 text-base font-semibold text-white hover:text-secondary transition-colors"
+                      className="block py-2 text-base font-semibold text-white hover:text-white/80 transition-colors"
                     >
                       About Us
                     </Link>
@@ -237,12 +237,12 @@ export function Navbar() {
                         <span>Locations</span>
                         <ChevronDown className="size-4 transition-transform duration-200 group-open/loc:rotate-180" />
                       </summary>
-                      <ul className="mt-1 pl-3 space-y-1.5 border-l-2 border-secondary/60 ml-1">
+                      <ul className="mt-1 pl-3 space-y-1.5 border-l-2 border-white/30 ml-1">
                         {locations.map((item, idx) => (
                           <li key={`mobile-${item.name}-${idx}`}>
                             <Link
                               href={item.href}
-                              className="block py-1 text-sm text-white/90 hover:text-secondary transition-colors"
+                              className="block py-1 text-sm text-white/90 hover:text-white transition-colors"
                             >
                               {item.name}
                             </Link>
@@ -259,12 +259,12 @@ export function Navbar() {
                         <span>Services</span>
                         <ChevronDown className="size-4 transition-transform duration-200 group-open/srv:rotate-180" />
                       </summary>
-                      <ul className="mt-1 pl-3 space-y-1.5 border-l-2 border-secondary/60 ml-1">
+                      <ul className="mt-1 pl-3 space-y-1.5 border-l-2 border-white/30 ml-1">
                         {services.map((item, idx) => (
                           <li key={`mobile-${item.name}-${idx}`}>
                             <Link
                               href={item.href}
-                              className="block py-1 text-sm text-white/90 hover:text-secondary transition-colors"
+                              className="block py-1 text-sm text-white/90 hover:text-white transition-colors"
                             >
                               {item.name}
                             </Link>
@@ -277,7 +277,7 @@ export function Navbar() {
                   <li className="border-t border-white/10 pt-2">
                     <Link
                       href="#"
-                      className="block py-2 text-base font-semibold text-white hover:text-secondary transition-colors"
+                      className="block py-2 text-base font-semibold text-white hover:text-white/80 transition-colors"
                     >
                       Contact Us
                     </Link>
@@ -285,7 +285,7 @@ export function Navbar() {
 
                   {/* Mobile Hours Info */}
                   <li className="border-t border-white/10 pt-3 text-xs text-white/80 md:hidden">
-                    <p className="font-semibold text-secondary">
+                    <p className="font-semibold text-white">
                       Opening Hours:
                     </p>
                     <p className="mt-0.5">
@@ -299,9 +299,9 @@ export function Navbar() {
 
           {/* CTA "Get A Quote" Button */}
           <div className="shrink-0">
-            <Button variant="secondary" size="lg" render={<Link href="#" />}>
+            <Button variant="white" size="lg" render={<Link href="#" />}>
               <span>WhatsApp Us</span>
-              <ArrowRight className="size-4 ml-1" />
+              <ArrowRight className="size-4 ml-1 text-primary" />
             </Button>
           </div>
         </nav>

@@ -125,7 +125,7 @@ export function ServiceSidebar({
               >
                 <span className="flex items-center gap-2">
                   <span
-                    className="size-1.5 shrink-0 rounded-full bg-secondary/60 transition-colors group-hover:bg-secondary"
+                    className="size-1.5 shrink-0 rounded-full bg-primary/60 transition-colors group-hover:bg-primary"
                     aria-hidden="true"
                   />
                   {loc.label}

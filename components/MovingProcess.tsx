@@ -122,10 +122,10 @@ export function MovingProcess({
             </p>
 
             <Button
-              variant="secondary"
+              variant="default"
               size="lg"
               render={<Link href="#" />}
-              className="w-fit mt-6 font-semibold shadow-sm"
+              className="w-fit mt-6 font-semibold shadow-sm cursor-pointer"
             >
               <span>Start Your Move Today</span>
               <ArrowRight className="size-4 ml-1.5" />
@@ -150,7 +150,7 @@ export function MovingProcess({
                 </div>
                 {index < steps.length - 1 && (
                   <div
-                    className="w-0.5 flex-1 bg-gradient-to-b from-primary via-primary/50 to-secondary/60 my-1"
+                    className="w-0.5 flex-1 bg-gradient-to-b from-primary via-primary/50 to-primary/20 my-1"
                     aria-hidden="true"
                   />
                 )}

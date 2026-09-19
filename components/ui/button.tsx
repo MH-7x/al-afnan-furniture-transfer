@@ -7,13 +7,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/80",
-        outline: "border-secondary bg-background hover:bg-muted ",
+        default:
+          "bg-primary text-primary-foreground hover:bg-primary/90 shadow-xs active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+        outline:
+          "border border-border bg-background text-foreground hover:bg-muted hover:border-foreground/20 active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] ",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-xs active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2",
+        white:
+          "bg-white text-secondary hover:bg-white/90 shadow-sm active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary font-semibold",
         ghost:
           "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
-
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {

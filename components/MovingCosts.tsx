@@ -185,13 +185,13 @@ export function MovingCosts() {
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto shrink-0">
             <Button
-              variant="secondary"
+              variant="white"
               size="lg"
               render={<Link href="#" />}
-              className="py-6 px-6 font-semibold shadow-xs"
+              className="py-6 px-6 font-semibold shadow-xs hover:shadow-md cursor-pointer transition-all"
             >
               <span>Request Free Estimate</span>
-              <ArrowRight className="size-4 ml-1.5" />
+              <ArrowRight className="size-4 ml-1.5 text-primary" />
             </Button>
           </div>
         </div>

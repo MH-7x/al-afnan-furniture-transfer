@@ -64,18 +64,19 @@ export default function Home() {
 
               <div className="mt-7 sm:mt-8 flex flex-wrap items-center justify-center md:justify-start gap-3.5 sm:gap-4">
                 <Button
-                  variant="secondary"
+                  variant="default"
                   size="lg"
                   render={<Link href="#" />}
-                  className="py-6 px-6 "
+                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get Your Free Sharjah Moving Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" />
                 </Button>
                 <Button
+                  variant="secondary"
                   size="lg"
                   render={<Link href="tel:0567277536" />}
-                  className="py-6 px-6 "
+                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -257,10 +258,10 @@ export default function Home() {
                 </p>
               </div>
               <Button
-                variant="secondary"
+                variant="white"
                 size="lg"
                 render={<Link href="#" />}
-                className="py-6 px-6 font-semibold text-secondary-foreground shadow-md hover:brightness-105 active:scale-95 transition-all shrink-0"
+                className="py-6 px-6 font-semibold shadow-md hover:brightness-105 active:scale-95 transition-all shrink-0 cursor-pointer"
               >
                 <span>Get Inter-Emirate Quote</span>
               </Button>
