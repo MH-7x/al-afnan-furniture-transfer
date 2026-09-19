@@ -194,7 +194,7 @@ export function Navbar() {
             {/* Contact Us */}
             <li>
               <Link
-                href="#"
+                href="/contact-us"
                 className="font-semibold text-sm xl:text-base text-white hover:text-white/80 transition-colors"
               >
                 Contact Us
@@ -211,7 +211,7 @@ export function Navbar() {
               </summary>
 
               {/* Mobile Drawer */}
-              <div className="absolute left-0 right-0 top-full mt-2 mx-4 z-50 rounded-2xl bg-primary text-white p-5 shadow-2xl border border-white/20">
+              <div className="absolute left-0 right-0 top-full mt-2 mx-4 z-50 rounded-2xl bg-secondary text-white p-5 shadow-2xl border border-white/20">
                 <ul className="flex flex-col gap-2">
                   <li>
                     <Link
@@ -276,7 +276,7 @@ export function Navbar() {
 
                   <li className="border-t border-white/10 pt-2">
                     <Link
-                      href="#"
+                      href="/contact-us"
                       className="block py-2 text-base font-semibold text-white hover:text-white/80 transition-colors"
                     >
                       Contact Us
@@ -285,9 +285,7 @@ export function Navbar() {
 
                   {/* Mobile Hours Info */}
                   <li className="border-t border-white/10 pt-3 text-xs text-white/80 md:hidden">
-                    <p className="font-semibold text-white">
-                      Opening Hours:
-                    </p>
+                    <p className="font-semibold text-white">Opening Hours:</p>
                     <p className="mt-0.5">
                       Sun To Fri, Open 24 hours. Sat, 9 AM–5 PM
                     </p>
