@@ -26,8 +26,8 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
   return (
     <>
       {/* Info strip: hours and phone. Scrolls away; the header below stays. */}
-      <div data-surface="dark" className="bg-ink text-fog t-small">
-        <div className="wrap flex min-h-10 items-center justify-center sm:justify-between gap-6 py-1.5">
+      <div data-surface="dark" className="bg-ink text-white/90 t-small">
+        <div className="wrap flex min-h-10 items-center justify-center sm:justify-between gap-6 py-2">
           <p className="hidden sm:flex items-center gap-2">
             <Clock className="size-4 text-signal-bright" aria-hidden="true" />
             <span>{HOURS}</span>
@@ -45,7 +45,10 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
       </div>
 
       <header className="sticky top-0 z-50 w-full border-b border-line bg-white">
-        <nav aria-label="Main Navigation" className="wrap relative flex h-18 lg:h-20 items-center gap-6">
+        <nav
+          aria-label="Main Navigation"
+          className="wrap relative flex h-18 lg:h-20 items-center gap-6"
+        >
           <Link
             href="/"
             className="shrink-0 flex items-center rounded-sm"
@@ -74,7 +77,11 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
               </Link>
             </li>
             <li className="relative group">
-              <button type="button" className={`${navLink} cursor-pointer`} aria-haspopup="true">
+              <button
+                type="button"
+                className={`${navLink} cursor-pointer`}
+                aria-haspopup="true"
+              >
                 <span>Locations</span>
                 <ChevronDown
                   className="size-4 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180"
@@ -97,7 +104,11 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
               </div>
             </li>
             <li className="relative group">
-              <button type="button" className={`${navLink} cursor-pointer`} aria-haspopup="true">
+              <button
+                type="button"
+                className={`${navLink} cursor-pointer`}
+                aria-haspopup="true"
+              >
                 <span>Services</span>
                 <ChevronDown
                   className="size-4 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180"
@@ -118,7 +129,13 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
           </ul>
 
           <Button
-            render={<a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" />}
+            render={
+              <a
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
             className="hidden sm:inline-flex ms-auto lg:ms-0"
           >
             <WhatsAppIcon />
@@ -131,8 +148,14 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
               aria-label="Menu"
               className="list-none flex size-12 items-center justify-center rounded-md border border-ink/20 text-ink cursor-pointer select-none hover:border-ink"
             >
-              <Menu className="size-6 group-open/mobile:hidden" aria-hidden="true" />
-              <X className="size-6 hidden group-open/mobile:block" aria-hidden="true" />
+              <Menu
+                className="size-6 group-open/mobile:hidden"
+                aria-hidden="true"
+              />
+              <X
+                className="size-6 hidden group-open/mobile:block"
+                aria-hidden="true"
+              />
             </summary>
 
             <div className="absolute inset-x-0 top-full border-b border-line bg-white shadow-xl">
@@ -143,7 +166,10 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
                   </Link>
                 </li>
                 <li className="border-t border-line">
-                  <Link href="/about-us" className="block py-3 font-semibold text-ink">
+                  <Link
+                    href="/about-us"
+                    className="block py-3 font-semibold text-ink"
+                  >
                     About Us
                   </Link>
                 </li>
@@ -151,12 +177,18 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
                   <details className="group/loc [&_summary::-webkit-details-marker]:hidden">
                     <summary className="flex items-center justify-between py-3 font-semibold text-ink cursor-pointer list-none select-none">
                       <span>Locations</span>
-                      <ChevronDown className="size-5 transition-transform group-open/loc:rotate-180" aria-hidden="true" />
+                      <ChevronDown
+                        className="size-5 transition-transform group-open/loc:rotate-180"
+                        aria-hidden="true"
+                      />
                     </summary>
                     <ul className="mb-3 ms-1 border-s-2 border-signal ps-4 text-base">
                       {locations.map((item) => (
                         <li key={item.href}>
-                          <Link href={item.href} className="block py-2 text-ink hover:text-signal">
+                          <Link
+                            href={item.href}
+                            className="block py-2 text-ink hover:text-signal"
+                          >
                             {item.name}
                           </Link>
                         </li>
@@ -168,7 +200,10 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
                   <details className="group/srv [&_summary::-webkit-details-marker]:hidden">
                     <summary className="flex items-center justify-between py-3 font-semibold text-ink cursor-pointer list-none select-none">
                       <span>Services</span>
-                      <ChevronDown className="size-5 transition-transform group-open/srv:rotate-180" aria-hidden="true" />
+                      <ChevronDown
+                        className="size-5 transition-transform group-open/srv:rotate-180"
+                        aria-hidden="true"
+                      />
                     </summary>
                     <ul className="mb-3 ms-1 border-s-2 border-signal ps-4 text-base">
                       <ServicesLinks variant="mobile" region={region} />
@@ -176,7 +211,10 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
                   </details>
                 </li>
                 <li className="border-t border-line">
-                  <Link href="/contact-us" className="block py-3 font-semibold text-ink">
+                  <Link
+                    href="/contact-us"
+                    className="block py-3 font-semibold text-ink"
+                  >
                     Contact Us
                   </Link>
                 </li>

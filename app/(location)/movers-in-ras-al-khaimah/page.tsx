@@ -240,31 +240,41 @@ export default function RasAlKhaimahPage() {
         current="Movers in Ras Al Khaimah"
         title={
           <>
-            Movers in Ras Al Khaimah <br /> Professional Moving &amp;
-            Packing Services
+            Movers in Ras Al Khaimah{" "}
+            <span className="block mt-2 text-signal-bright text-[0.6em] leading-[1.02]">
+              Professional Moving &amp; Packing Services
+            </span>
           </>
         }
         image="/movers-in-ras-al-khaimah.jpg"
         imageAlt="Movers in Ras Al Khaimah — Professional Moving &amp; Packing Services by Al Afnan"
       >
-        <h2 className="mt-6 t-h3 font-medium text-paper measure">
-          Trusted Movers and Packers in Ras Al Khaimah | House, Villa,
-          Apartment &amp; Office Moves Across All Seven Emirates
+        <h2 className="mt-6 t-h3 font-medium text-paper measure text-2xl">
+          Trusted Movers and Packers in Ras Al Khaimah | House, Villa, Apartment
+          &amp; Office Moves Across All Seven Emirates
         </h2>
-        <p className="mt-5 t-lead text-paper measure">
-          Looking for reliable movers in Ras Al Khaimah? Al Afnan
-          Furniture Transfer has been handling house moves, villa
-          relocations, apartment shifts, and office moves across all
-          seven UAE Emirates for over 10 years.
+        <p className="mt-5 t-body text-paper measure">
+          Looking for reliable movers in Ras Al Khaimah? Al Afnan Furniture
+          Transfer has been handling house moves, villa relocations, apartment
+          shifts, and office moves across all seven UAE Emirates for over 10
+          years.
         </p>
         <p className="mt-4 border-t border-white/20 pt-4 t-body measure">
-          We&apos;re a licensed and insured moving company rated 4.9
-          out of 5 on Google, with trained carpenters and handymen
-          who dismantle, pack, move, and reassemble your furniture,
-          from a single sofa to an entire villa.
+          We&apos;re a licensed and insured moving company rated 4.9 out of 5 on
+          Google, with trained carpenters and handymen who dismantle, pack,
+          move, and reassemble your furniture, from a single sofa to an entire
+          villa.
         </p>
         <div className="mt-9 flex flex-wrap gap-3">
-          <Button render={<a href="https://wa.me/971567277536" target="_blank" rel="noopener noreferrer" />}>
+          <Button
+            render={
+              <a
+                href="https://wa.me/971567277536"
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
+          >
             <WhatsAppIcon />
             <span>Get Your Free Moving Quote</span>
           </Button>
@@ -276,7 +286,10 @@ export default function RasAlKhaimahPage() {
       </LocationHero>
 
       {/* ════ HOUSE, VILLA & APARTMENT ════ */}
-      <section aria-labelledby="residential-movers-heading" className="bg-white section-y">
+      <section
+        aria-labelledby="residential-movers-heading"
+        className="bg-white section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="residential-movers-heading"
@@ -289,12 +302,11 @@ export default function RasAlKhaimahPage() {
               </>
             }
           />
-          <p className="mt-6 t-body text-muted-foreground measure">
-            Our movers and packers in Ras Al Khaimah handle residential
-            moves of every size, from a studio apartment to a full villa
-            relocation. Whether it&apos;s a 1BHK flat or a standalone villa,
-            we handle it the same way: carefully, on schedule, without
-            surprises.
+          <p className="mt-6 t-body text-muted-foreground max-w-5xl ">
+            Our movers and packers in Ras Al Khaimah handle residential moves of
+            every size, from a studio apartment to a full villa relocation.
+            Whether it&apos;s a 1BHK flat or a standalone villa, we handle it
+            the same way: carefully, on schedule, without surprises.
           </p>
 
           <EditorialRows
@@ -351,23 +363,26 @@ export default function RasAlKhaimahPage() {
       </section>
 
       {/* ════ OFFICE & COMMERCIAL ════ */}
-      <section aria-labelledby="commercial-movers-heading" className="section-y">
+      <section
+        aria-labelledby="commercial-movers-heading"
+        className="section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="commercial-movers-heading"
             title="Office & Commercial Movers in Ras Al Khaimah"
             lead="Moving an office requires more professional handling than other types of moving."
           />
-          <div className="mt-6 space-y-3 t-body text-muted-foreground measure">
+          <div className="mt-6 space-y-3 t-body text-muted-foreground max-w-5xl">
             <p>
               There are computers to secure, files to label, workstations to
-              dismantle, and a whole business that can&apos;t afford to be
-              down for long.
+              dismantle, and a whole business that can&apos;t afford to be down
+              for long.
             </p>
             <p>
               At Al Afnan Furniture Transfer, we&apos;ve handled office
-              relocations across Ras Al Khaimah and the other emirates for
-              over a decade, from small corporate offices to warehouse-style
+              relocations across Ras Al Khaimah and the other emirates for over
+              a decade, from small corporate offices to warehouse-style
               commercial spaces in RAKEZ and the RAK Economic Zone.
             </p>
           </div>
@@ -379,7 +394,8 @@ export default function RasAlKhaimahPage() {
                 id: "office",
                 title: "Office Relocation in Ras Al Khaimah",
                 image: "/commercial-office-movers.jpg",
-                imageAlt: "Office Relocation in Ras Al Khaimah by Al Afnan Furniture Transfer",
+                imageAlt:
+                  "Office Relocation in Ras Al Khaimah by Al Afnan Furniture Transfer",
                 body: (
                   <>
                     <p>
@@ -406,7 +422,8 @@ export default function RasAlKhaimahPage() {
                 id: "warehouse",
                 title: "Warehouse & RAKEZ Commercial Moves",
                 image: "/al-afnan-furniture-transfer-sharjah.jpg",
-                imageAlt: "Warehouse & RAKEZ Commercial Moves in Ras Al Khaimah",
+                imageAlt:
+                  "Warehouse & RAKEZ Commercial Moves in Ras Al Khaimah",
                 body: (
                   <>
                     <p>
@@ -444,15 +461,15 @@ export default function RasAlKhaimahPage() {
             tone="dark"
             title={
               <>
-                Furniture Movers &amp; <br className="md:block hidden" /> Packing
-                Services in Ras Al Khaimah
+                Furniture Movers &amp; <br className="md:block hidden" />{" "}
+                Packing Services in Ras Al Khaimah
               </>
             }
             lead="At Al Afnan Furniture Transfer, our team includes trained carpenters and handymen who handle furniture dismantling, moving, and reassembly as a core part of what we do."
           />
           <p className="mt-6 t-body measure">
-            Whether it&apos;s a single item or an entire home&apos;s worth,
-            we treat it with the same care.
+            Whether it&apos;s a single item or an entire home&apos;s worth, we
+            treat it with the same care.
           </p>
 
           <EditorialRows
@@ -460,9 +477,11 @@ export default function RasAlKhaimahPage() {
             items={[
               {
                 id: "dismantling",
-                title: "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
+                title:
+                  "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
                 image: "/furniture-moving-transfer.jpg",
-                imageAlt: "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
+                imageAlt:
+                  "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
                 body: (
                   <>
                     <p>
@@ -569,7 +588,10 @@ export default function RasAlKhaimahPage() {
       />
 
       {/* ════ LONG-DISTANCE & INTER-EMIRATE ════ */}
-      <section aria-labelledby="inter-emirate-heading" className="bg-paper-2 section-y">
+      <section
+        aria-labelledby="inter-emirate-heading"
+        className="bg-paper-2 section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="inter-emirate-heading"
@@ -580,7 +602,8 @@ export default function RasAlKhaimahPage() {
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-x-14 gap-y-14">
             <article className="border-t-2 border-ink pt-6">
               <h3 className="text-ink">
-                Moving From Ras Al Khaimah to Dubai, Sharjah, Ajman &amp; Abu Dhabi
+                Moving From Ras Al Khaimah to Dubai, Sharjah, Ajman &amp; Abu
+                Dhabi
               </h3>
               <div className="mt-4 space-y-3 t-body text-steel">
                 <p>
@@ -595,13 +618,21 @@ export default function RasAlKhaimahPage() {
                   expect.
                 </p>
                 <p>
-                  Our crews have done these runs enough times that the drive
-                  is the least of your worries.
+                  Our crews have done these runs enough times that the drive is
+                  the least of your worries.
                 </p>
               </div>
               <ul className="mt-6 grid grid-cols-2 gap-x-6 border-t border-ink">
-                {["RAK → Dubai", "RAK → Sharjah", "RAK → Abu Dhabi", "RAK → Ajman"].map((route) => (
-                  <li key={route} className="border-b border-line py-3 t-num text-xl font-bold text-ink">
+                {[
+                  "RAK → Dubai",
+                  "RAK → Sharjah",
+                  "RAK → Abu Dhabi",
+                  "RAK → Ajman",
+                ].map((route) => (
+                  <li
+                    key={route}
+                    className="border-b border-line py-3 t-num text-xl font-bold text-ink"
+                  >
                     {route}
                   </li>
                 ))}
@@ -609,7 +640,9 @@ export default function RasAlKhaimahPage() {
             </article>
 
             <article className="border-t-2 border-signal pt-6">
-              <h3 className="text-ink">Moving To Ras Al Khaimah from Anywhere in the UAE</h3>
+              <h3 className="text-ink">
+                Moving To Ras Al Khaimah from Anywhere in the UAE
+              </h3>
               <div className="mt-4 space-y-3 t-body text-steel">
                 <p>
                   Coming into RAK? Whether it&apos;s Dubai to RAK movers,
@@ -624,8 +657,16 @@ export default function RasAlKhaimahPage() {
                 </p>
               </div>
               <ul className="mt-6 grid grid-cols-2 gap-x-6 border-t border-ink">
-                {["Dubai → RAK", "Sharjah → RAK", "Abu Dhabi → RAK", "All 7 Emirates"].map((route) => (
-                  <li key={route} className="border-b border-line py-3 t-num text-xl font-bold text-ink">
+                {[
+                  "Dubai → RAK",
+                  "Sharjah → RAK",
+                  "Abu Dhabi → RAK",
+                  "All 7 Emirates",
+                ].map((route) => (
+                  <li
+                    key={route}
+                    className="border-b border-line py-3 t-num text-xl font-bold text-ink"
+                  >
                     {route}
                   </li>
                 ))}
@@ -636,7 +677,10 @@ export default function RasAlKhaimahPage() {
       </section>
 
       {/* ════ SAME-DAY & EMERGENCY ════ */}
-      <section aria-labelledby="emergency-moving-heading" className="bg-white section-y">
+      <section
+        aria-labelledby="emergency-moving-heading"
+        className="bg-white section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="emergency-moving-heading"
@@ -660,7 +704,9 @@ export default function RasAlKhaimahPage() {
             className="mt-14 flex flex-col md:flex-row md:items-center justify-between gap-6 rounded-xl bg-ink p-7 sm:p-9"
           >
             <div>
-              <p className="t-h3 text-white">Need urgent moving support in Ras Al Khaimah?</p>
+              <p className="t-h3 text-white">
+                Need urgent moving support in Ras Al Khaimah?
+              </p>
               <p className="mt-2 t-body text-fog">
                 Available 24/7 for prompt emergency dispatch and transparent
                 pricing.
@@ -687,9 +733,9 @@ export default function RasAlKhaimahPage() {
             lead="Before you commit to a mover, the first question is almost always about cost."
           />
           <p className="mt-6 t-body text-muted-foreground measure">
-            But moving quotes aren&apos;t just a flat number, they shift
-            based on real factors. Understanding those factors helps you get
-            a fair price and avoid surprises later.
+            But moving quotes aren&apos;t just a flat number, they shift based
+            on real factors. Understanding those factors helps you get a fair
+            price and avoid surprises later.
           </p>
 
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-12">
@@ -701,23 +747,25 @@ export default function RasAlKhaimahPage() {
                   different job than a 4-bedroom villa in Al Hamra Village.
                 </p>
                 <p>
-                  Local moving services in Ras Al Khaimah typically start
-                  around AED 400 to AED 500 for basic studio relocations and
-                  scale up depending on property size and service level.
+                  Local moving services in Ras Al Khaimah typically start around
+                  AED 400 to AED 500 for basic studio relocations and scale up
+                  depending on property size and service level.
                 </p>
                 <p>
-                  The range goes from AED 800 to AED 2,000 for a 1-bedroom,
-                  AED 1,500 to AED 3,300 for a 2-bedroom, AED 2,000 to AED
-                  7,000 for a 3-bedroom or smaller villa, and AED 7,000 to AED
-                  13,500+ for larger 4 to 6 bedroom villas, with each tier
-                  reflecting crew size, vehicle type, and whether packing,
-                  dismantling, or assembly is included.
+                  The range goes from AED 800 to AED 2,000 for a 1-bedroom, AED
+                  1,500 to AED 3,300 for a 2-bedroom, AED 2,000 to AED 7,000 for
+                  a 3-bedroom or smaller villa, and AED 7,000 to AED 13,500+ for
+                  larger 4 to 6 bedroom villas, with each tier reflecting crew
+                  size, vehicle type, and whether packing, dismantling, or
+                  assembly is included.
                 </p>
               </div>
             </article>
 
             <article className="reveal border-t-2 border-ink pt-6 lg:col-span-2">
-              <h3 className="text-ink">Packing Scope, Distance &amp; Building Access</h3>
+              <h3 className="text-ink">
+                Packing Scope, Distance &amp; Building Access
+              </h3>
               <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 t-body text-muted-foreground">
                 <div className="space-y-3">
                   <p>
@@ -754,10 +802,10 @@ export default function RasAlKhaimahPage() {
               <h3 className="text-ink">Specialized Items &amp; Timing</h3>
               <div className="mt-4 space-y-3 t-body text-muted-foreground measure">
                 <p>
-                  Not everything fits into a standard moving box. If
-                  you&apos;re moving a grand piano, fine art, antique
-                  furniture, a chandelier, or heavy medical equipment, the
-                  handling changes entirely.
+                  Not everything fits into a standard moving box. If you&apos;re
+                  moving a grand piano, fine art, antique furniture, a
+                  chandelier, or heavy medical equipment, the handling changes
+                  entirely.
                 </p>
                 <p>
                   Specialty items need custom crating, protective padding, and
@@ -765,8 +813,8 @@ export default function RasAlKhaimahPage() {
                 </p>
                 <p>
                   And timing matters too: standard booking gives you the best
-                  rate, while same-day or emergency moves cost more because
-                  they require crew to be pulled from other schedules.
+                  rate, while same-day or emergency moves cost more because they
+                  require crew to be pulled from other schedules.
                 </p>
               </div>
             </article>
@@ -779,8 +827,8 @@ export default function RasAlKhaimahPage() {
             <div className="lg:col-span-8 space-y-4">
               <p className="t-lead font-semibold text-white">
                 Our quote is all-inclusive, with no hidden fees and no
-                last-minute additions. Once you see the number, that&apos;s
-                what you pay.
+                last-minute additions. Once you see the number, that&apos;s what
+                you pay.
               </p>
               <p className="t-body text-fog">
                 To get yours, share your property size, whether you&apos;re
@@ -808,7 +856,10 @@ export default function RasAlKhaimahPage() {
       </section>
 
       {/* ════ AREAS WE SERVE ════ */}
-      <section aria-labelledby="areas-served-heading" className="bg-white section-y">
+      <section
+        aria-labelledby="areas-served-heading"
+        className="bg-white section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="areas-served-heading"
@@ -821,9 +872,9 @@ export default function RasAlKhaimahPage() {
               <h3 className="text-ink">Popular Residential Communities</h3>
               <div className="mt-4 space-y-3 t-body text-muted-foreground">
                 <p>
-                  Al Hamra Village, Mina Al Arab, Al Marjan Island, Al
-                  Nakheel, Al Dhait, Khuzam, Al Rams, Al Qusaidat, Al Mairid,
-                  Julphar, and Dafan Al Nakheel.
+                  Al Hamra Village, Mina Al Arab, Al Marjan Island, Al Nakheel,
+                  Al Dhait, Khuzam, Al Rams, Al Qusaidat, Al Mairid, Julphar,
+                  and Dafan Al Nakheel.
                 </p>
                 <p>
                   Many of them are gated, which means NOC coordination and
@@ -837,14 +888,14 @@ export default function RasAlKhaimahPage() {
               <div className="mt-4 space-y-3 t-body text-muted-foreground">
                 <p>
                   Al Jazeera Al Hamra, Al Jazeera, Al Mamourah, Al Seer, Al
-                  Riffa, Al Kharran, Yasmin Village, RAKEZ, and the RAK
-                  Economic Zone.
+                  Riffa, Al Kharran, Yasmin Village, RAKEZ, and the RAK Economic
+                  Zone.
                 </p>
                 <p>
                   Whether it&apos;s a residential apartment in a newer
                   development or a commercial unit inside the economic zone,
-                  we&apos;ve moved goods in and out of these areas enough
-                  times to know the logistics.
+                  we&apos;ve moved goods in and out of these areas enough times
+                  to know the logistics.
                 </p>
               </div>
             </article>
@@ -852,9 +903,17 @@ export default function RasAlKhaimahPage() {
 
           <ul className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 border-t border-ink">
             {rakAreas.map((area) => (
-              <li key={area} className="flex items-center gap-2.5 border-b border-line py-3.5">
-                <span className="size-1.5 shrink-0 bg-signal" aria-hidden="true" />
-                <h4 className="t-body font-semibold text-ink">Movers in {area}</h4>
+              <li
+                key={area}
+                className="flex items-center gap-2.5 border-b border-line py-3.5"
+              >
+                <span
+                  className="size-1.5 shrink-0 bg-signal"
+                  aria-hidden="true"
+                />
+                <h4 className="t-body font-semibold text-ink">
+                  Movers in {area}
+                </h4>
               </li>
             ))}
           </ul>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_HREF } from "@/lib/contact";
 
 interface CostFactor {
   id: string;
@@ -70,7 +71,9 @@ export function MovingCosts() {
       <div className="wrap">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16">
           <div className="lg:col-span-5">
-            <span className="t-label text-signal block">Transparent Moving Estimates</span>
+            <span className="t-label text-signal block">
+              Transparent Moving Estimates
+            </span>
             <h2 id="moving-costs-heading" className="mt-3 text-ink">
               Moving Costs in Sharjah
             </h2>
@@ -86,7 +89,9 @@ export function MovingCosts() {
             </p>
             <p>
               At Al Afnan Furniture Transfer, we provide{" "}
-              <strong className="text-ink font-semibold">free moving estimates</strong>{" "}
+              <strong className="text-ink font-semibold">
+                free moving estimates
+              </strong>{" "}
               so you can understand the expected cost based on your actual
               moving requirements. Our approach is to provide transparent,
               all-inclusive quotes with no hidden fees.
@@ -101,7 +106,9 @@ export function MovingCosts() {
           </h3>
           <p className="mt-3 t-body text-muted-foreground">
             Several practical factors can influence{" "}
-            <strong className="text-ink font-semibold">moving costs in Sharjah</strong>
+            <strong className="text-ink font-semibold">
+              moving costs in Sharjah
+            </strong>
             , including:
           </p>
 
@@ -115,12 +122,19 @@ export function MovingCosts() {
                 key={factor.id}
                 className="reveal grid grid-cols-[3rem_1fr] gap-x-4 border-b border-line py-7"
               >
-                <span className="t-num text-3xl font-bold leading-none text-signal" aria-hidden="true">
+                <span
+                  className="t-num text-3xl font-bold leading-none text-signal"
+                  aria-hidden="true"
+                >
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <strong className="t-h4 block text-ink">{factor.title}</strong>
-                  <p className="mt-2 t-body text-muted-foreground">{factor.description}</p>
+                  <strong className="t-h4 block text-ink">
+                    {factor.title}
+                  </strong>
+                  <p className="mt-2 t-body text-muted-foreground">
+                    {factor.description}
+                  </p>
                 </div>
               </li>
             ))}
@@ -135,11 +149,13 @@ export function MovingCosts() {
           >
             <p className="t-body text-steel">
               Because every relocation is different, an accurate{" "}
-              <strong className="text-ink font-semibold">moving estimate in Sharjah</strong>{" "}
-              is more useful than relying on a generic advertised price. Providing
-              details about your property, belongings, locations and required
-              services allows the moving team to understand the work involved and
-              prepare a quotation suited to your move.
+              <strong className="text-ink font-semibold">
+                moving estimate in Sharjah
+              </strong>{" "}
+              is more useful than relying on a generic advertised price.
+              Providing details about your property, belongings, locations and
+              required services allows the moving team to understand the work
+              involved and prepare a quotation suited to your move.
             </p>
           </section>
 
@@ -149,15 +165,22 @@ export function MovingCosts() {
             className="lg:col-span-6 flex flex-col justify-between gap-6 rounded-xl bg-ink p-7 sm:p-9 text-fog"
           >
             <div>
-              <h3 className="text-white">Contact For Free Moving Estimates in Sharjah</h3>
+              <h3 className="text-white">
+                Contact For Free Moving Estimates in Sharjah
+              </h3>
               <p className="mt-3 t-body">
                 For a clear idea of your expected moving charges, contact{" "}
-                <strong className="text-white font-semibold">Al Afnan Furniture Transfer</strong>{" "}
-                for a free estimate. We can discuss your requirements and help you
-                plan the services you actually need.
+                <strong className="text-white font-semibold">
+                  Al Afnan Furniture Transfer
+                </strong>{" "}
+                for a free estimate. We can discuss your requirements and help
+                you plan the services you actually need.
               </p>
             </div>
-            <Button render={<Link href="#estimate" />} className="self-start">
+            <Button
+              render={<Link href={WHATSAPP_HREF} />}
+              className="self-start"
+            >
               <span>Request Free Estimate</span>
               <ArrowRight />
             </Button>

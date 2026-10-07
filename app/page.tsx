@@ -102,7 +102,7 @@ export default function Home() {
         className="relative isolate overflow-hidden bg-ink text-fog"
       >
         <Image
-          src="/studio-moving-services.jpg"
+          src="/al-afnan-furniture-transfer-sharjah.jpg"
           alt="Al Afnan Furniture Transfer Sharjah"
           fill
           preload
@@ -111,15 +111,17 @@ export default function Home() {
         />
         {/* Scrim: even on mobile, darker on the text side from tablet up */}
         <div
-          className="absolute inset-0 -z-10 bg-ink/80 md:bg-transparent md:bg-[linear-gradient(90deg,rgb(15_17_20/0.94)_0%,rgb(15_17_20/0.86)_42%,rgb(15_17_20/0.35)_100%)]"
+          className="absolute inset-0 -z-10 bg-ink/80 md:bg-transparent md:bg-[linear-gradient(90deg,rgb(15_17_20/0.94)_0%,rgb(15_17_20/0.86)_42%,rgb(15_17_20/0.55)_100%)]"
           aria-hidden="true"
         />
 
         <div className="wrap flex min-h-[min(84svh,52rem)] items-center py-20 lg:py-28">
-          <div className="hero-stagger max-w-3xl">
-            <h1 className="t-display text-white">
+          <div className="hero-stagger max-w-4xl">
+            <h1 className="t-display capitalize! text-white">
               <span className="block">Movers in Sharjah </span>
-              <span className="block text-signal-bright">Al Afnan Furniture Transfer</span>
+              <span className="block text-signal-bright">
+                Al Afnan Furniture Transfer
+              </span>
             </h1>
 
             <p className="mt-7 t-lead text-paper measure">
@@ -136,7 +138,7 @@ export default function Home() {
             </p>
 
             <div className="mt-9 flex flex-wrap gap-3">
-              <Button render={<Link href="#estimate" />}>
+              <Button render={<Link href="/contact-us" />}>
                 <span>Get Your Free Sharjah Moving Estimate</span>
                 <ArrowRight />
               </Button>
@@ -171,19 +173,19 @@ export default function Home() {
             </h2>
             <div className="mt-8 border-t border-ink pt-8 space-y-5 measure">
               <p className="t-lead text-steel">
-                Al Afnan Furniture Transfer provides moving and packing
-                support for customers in Sharjah, covering the practical
-                stages of residential, office, and furniture moves. Our team
-                can assist with packing, furniture preparation, loading,
-                transportation, unloading, and related moving requirements
-                based on the needs of your move.
+                Al Afnan Furniture Transfer provides moving and packing support
+                for customers in Sharjah, covering the practical stages of
+                residential, office, and furniture moves. Our team can assist
+                with packing, furniture preparation, loading, transportation,
+                unloading, and related moving requirements based on the needs of
+                your move.
               </p>
               <p className="t-body text-muted-foreground">
-                Whether you are shifting to another apartment in Sharjah,
-                moving a villa, relocating an office, or transferring
-                furniture to another UAE emirate, the right moving plan
-                helps keep the process organized and reduces unnecessary
-                handling of your belongings.
+                Whether you are shifting to another apartment in Sharjah, moving
+                a villa, relocating an office, or transferring furniture to
+                another UAE emirate, the right moving plan helps keep the
+                process organized and reduces unnecessary handling of your
+                belongings.
               </p>
             </div>
           </div>
@@ -201,8 +203,8 @@ export default function Home() {
               <span className="text-signal md:block">From Sharjah</span>
             </h2>
             <p className="lg:col-span-5 t-body text-steel">
-              Al Afnan Furniture Transfer operates across all 7 UAE Emirates,
-              so moving from Sharjah to Dubai, Abu Dhabi, Ajman, or any other
+              Al Afnan Furniture Transfer operates across all 7 UAE Emirates, so
+              moving from Sharjah to Dubai, Abu Dhabi, Ajman, or any other
               emirate is handled with the same professional standard.
             </p>
           </div>
@@ -217,9 +219,15 @@ export default function Home() {
                   className="flex items-center justify-between gap-4 border-b border-line py-4"
                 >
                   <span className="t-h4 text-ink">
-                    <span className="text-muted-foreground font-medium">Sharjah to</span> {emirate}
+                    <span className="text-muted-foreground font-medium">
+                      Sharjah to
+                    </span>{" "}
+                    {emirate}
                   </span>
-                  <ArrowRight className="size-5 shrink-0 text-signal" aria-hidden="true" />
+                  <ArrowRight
+                    className="size-5 shrink-0 text-signal"
+                    aria-hidden="true"
+                  />
                 </li>
               ))}
             </ul>
@@ -228,10 +236,15 @@ export default function Home() {
           {/* Notes */}
           <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 md:divide-x md:divide-line">
             {interEmirateNotes.map((note) => (
-              <div key={note.number} className="md:px-8 first:md:ps-0 last:md:pe-0">
+              <div
+                key={note.number}
+                className="md:px-8 first:md:ps-0 last:md:pe-0"
+              >
                 <div className="flex items-baseline justify-between gap-4 border-b border-ink pb-3">
                   <span className="t-label text-ink">{note.label}</span>
-                  <span className="t-num text-2xl font-bold text-signal">{note.number}</span>
+                  <span className="t-num text-2xl font-bold text-signal">
+                    {note.number}
+                  </span>
                 </div>
                 <p className="mt-4 t-body text-muted-foreground">{note.text}</p>
               </div>
@@ -250,7 +263,11 @@ export default function Home() {
                 discuss your moving requirements with a professional.
               </p>
             </div>
-            <Button variant="white" render={<Link href="#estimate" />} className="shrink-0">
+            <Button
+              variant="white"
+              render={<Link href="/contact-us" />}
+              className="shrink-0"
+            >
               <span>Get Inter-Emirate Quote</span>
               <ArrowRight />
             </Button>
@@ -271,23 +288,24 @@ export default function Home() {
             <div className="lg:col-span-7">
               <h2 className="text-ink">
                 Movers Serving Areas{" "}
-                <span className="text-signal inline sm:block">Across Sharjah</span>
+                <span className="text-signal inline sm:block">
+                  Across Sharjah
+                </span>
               </h2>
 
               <div className="mt-8 space-y-4 t-body text-muted-foreground measure">
                 <p>
                   Al Afnan Furniture Transfer provides moving and relocation
-                  services for customers across Sharjah. Whether you are
-                  moving within the city or relocating to a different
-                  property, our team can help with the practical work involved
-                  in packing, furniture handling, loading, transportation,
-                  unloading and placement.
+                  services for customers across Sharjah. Whether you are moving
+                  within the city or relocating to a different property, our
+                  team can help with the practical work involved in packing,
+                  furniture handling, loading, transportation, unloading and
+                  placement.
                 </p>
                 <p>
-                  Our service coverage includes residential and commercial
-                  areas such as Al Nahda, Al Majaz, Al Taawun, Al Khan,
-                  Muwaileh, Al Qasimia, Al Qarayen, Muwafjah and Sharjah
-                  Industrial Area.
+                  Our service coverage includes residential and commercial areas
+                  such as Al Nahda, Al Majaz, Al Taawun, Al Khan, Muwaileh, Al
+                  Qasimia, Al Qarayen, Muwafjah and Sharjah Industrial Area.
                 </p>
               </div>
 
@@ -297,7 +315,10 @@ export default function Home() {
                     key={area}
                     className="flex items-center gap-2.5 border-b border-line py-3 font-semibold text-ink"
                   >
-                    <span className="size-1.5 shrink-0 bg-signal" aria-hidden="true" />
+                    <span
+                      className="size-1.5 shrink-0 bg-signal"
+                      aria-hidden="true"
+                    />
                     {area}
                   </li>
                 ))}
@@ -324,9 +345,9 @@ export default function Home() {
               <p className="mt-2 t-body text-muted-foreground measure">
                 If you are searching for local movers in Sharjah, you can
                 contact Al Afnan Furniture Transfer to discuss your moving
-                requirements and request a free estimate. Our team can help
-                you understand the services needed for your move and arrange
-                the work around your planned moving date.
+                requirements and request a free estimate. Our team can help you
+                understand the services needed for your move and arrange the
+                work around your planned moving date.
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-stretch">
@@ -350,7 +371,7 @@ export default function Home() {
 
       {/* ── Quote band ── */}
       <CTASection
-        heading="Get a Free Quote From"
+        heading="Get a Free Quote From Afnan Furniture Transfer"
         paragraph="Planning a move in Sharjah? Get a free estimate with no hidden fees — just an honest number based on what you're actually moving. Call 056 7277536 and talk it through with the team."
       />
     </SiteShell>

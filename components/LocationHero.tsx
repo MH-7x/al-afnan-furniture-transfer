@@ -43,25 +43,31 @@ export function LocationHero({
         aria-hidden="true"
       />
 
-      <div className="wrap flex min-h-[min(80svh,50rem)] items-center py-16 lg:py-24">
-        <div className="hero-stagger max-w-3xl">
+      <div className="wrap flex min-h-[min(80svh,50rem)] items-center py-16 lg:py-24 w-full">
+        <div className="hero-stagger max-w-6xl">
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2 t-small">
               <li className="inline-flex items-center gap-2">
                 <Link href="/" className="hover:text-white transition-colors">
                   Home
                 </Link>
-                <ArrowRight className="size-3.5 opacity-60" aria-hidden="true" />
+                <ArrowRight
+                  className="size-3.5 opacity-60"
+                  aria-hidden="true"
+                />
               </li>
               <li>
-                <span className="font-semibold text-signal-bright" aria-current="page">
+                <span
+                  className="font-semibold text-signal-bright"
+                  aria-current="page"
+                >
                   {current}
                 </span>
               </li>
             </ol>
           </nav>
 
-          <h1 id={id} className="mt-5 t-display text-white">
+          <h1 id={id} className="mt-5 t-display capitalize! text-white">
             {title}
           </h1>
 

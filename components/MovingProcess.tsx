@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_HREF } from "@/lib/contact";
 
 interface ProcessStep {
   number: string;
@@ -89,7 +90,7 @@ export function MovingProcess({
   title,
   desc,
   process,
-  ctaHref = "#estimate",
+  ctaHref = WHATSAPP_HREF,
   ctaLabel = "Start Your Move Today",
 }: {
   title?: string;
@@ -102,11 +103,17 @@ export function MovingProcess({
   const steps = process && process.length > 0 ? process : processSteps;
 
   return (
-    <section id="process" data-surface="dark" className="scroll-mt-28 bg-ink text-fog section-y">
+    <section
+      id="process"
+      data-surface="dark"
+      className="scroll-mt-28 bg-ink text-fog section-y"
+    >
       <div className="wrap grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-5">
           <div className="lg:sticky lg:top-32">
-            <h2 className="text-white">{title || "How Our Moving Process Works"}</h2>
+            <h2 className="text-white">
+              {title || "How Our Moving Process Works"}
+            </h2>
 
             {desc !== null && (
               <p className="mt-5 t-lead measure">

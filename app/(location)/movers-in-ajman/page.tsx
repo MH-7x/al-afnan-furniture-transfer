@@ -257,23 +257,29 @@ export default function AjmanPage() {
         imageAlt="Movers in Ajman — Professional Movers and Packers Services by Al Afnan"
       >
         <p className="mt-7 t-lead text-paper measure">
-          Al Afnan Furniture Transfer has been trusted movers in ajman
-          for over 10 years, handling moves across Ajman and the rest of
-          the UAE.
+          Al Afnan Furniture Transfer has been trusted movers in ajman for over
+          10 years, handling moves across Ajman and the rest of the UAE.
         </p>
         <div className="mt-5 space-y-3 border-t border-white/20 pt-5 t-body measure">
           <p>
-            We move houses, villas, apartments, offices, and furniture
-            with the same crew that packs, loads, and delivers your
-            belongings.
+            We move houses, villas, apartments, offices, and furniture with the
+            same crew that packs, loads, and delivers your belongings.
           </p>
           <p>
-            Our moving company is licensed, insured, and rated 4.9 stars
-            on Google by real customers in Ajman.
+            Our moving company is licensed, insured, and rated 4.9 stars on
+            Google by real customers in Ajman.
           </p>
         </div>
         <div className="mt-9 flex flex-wrap gap-3">
-          <Button render={<a href={WHATSAPP_QUOTE} target="_blank" rel="noopener noreferrer" />}>
+          <Button
+            render={
+              <a
+                href={WHATSAPP_QUOTE}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
+          >
             <WhatsAppIcon />
             <span>Get Your Free Moving Quote</span>
           </Button>
@@ -301,7 +307,9 @@ export default function AjmanPage() {
             {whyChooseUsPillars.map((pillar) => (
               <li key={pillar.id} className="reveal border-b border-line py-8">
                 <h3 className="t-h4 text-ink">{pillar.title}</h3>
-                <p className="mt-2 t-body text-muted-foreground">{pillar.description}</p>
+                <p className="mt-2 t-body text-muted-foreground">
+                  {pillar.description}
+                </p>
               </li>
             ))}
           </ul>
@@ -314,7 +322,10 @@ export default function AjmanPage() {
           <>
             <p>
               As your trusted movers and packers in ajman,{" "}
-              <Link href="/" className="font-semibold text-signal underline underline-offset-4">
+              <Link
+                href="/"
+                className="font-semibold text-signal underline underline-offset-4"
+              >
                 Al Afnan Furniture Transfer
               </Link>{" "}
               handle every step of your move so you don’t have to juggle
@@ -327,7 +338,10 @@ export default function AjmanPage() {
       />
 
       {/* ════ SPECIALIZED FURNITURE MOVING ════ */}
-      <section aria-labelledby="specialized-furniture-heading" className="section-y">
+      <section
+        aria-labelledby="specialized-furniture-heading"
+        className="section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="specialized-furniture-heading"
@@ -342,12 +356,14 @@ export default function AjmanPage() {
 
           <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-12">
             <div className="md:col-span-2 border-t-2 border-ink pt-6">
-              <h3 className="text-ink">Carpenter-Led Disassembly &amp; Reassembly</h3>
+              <h3 className="text-ink">
+                Carpenter-Led Disassembly &amp; Reassembly
+              </h3>
               <div className="mt-4 space-y-4 t-body text-muted-foreground measure">
                 <p>
                   Our team includes trained carpenters not just general movers.
-                  They handle beds wardrobes and tables. For each piece they label
-                  every screw and bolt in sealed bags.
+                  They handle beds wardrobes and tables. For each piece they
+                  label every screw and bolt in sealed bags.
                 </p>
                 <p>
                   They check joints for weakness while taking it apart. They
@@ -370,8 +386,14 @@ export default function AjmanPage() {
                   "For clothes we use hanger boxes so suits and dresses arrive wrinkle free.",
                   "No ironing needed.",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 border-b border-line py-3 t-body text-steel">
-                    <span className="mt-2.5 size-1.5 shrink-0 bg-signal" aria-hidden="true" />
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 border-b border-line py-3 t-body text-steel"
+                  >
+                    <span
+                      className="mt-2.5 size-1.5 shrink-0 bg-signal"
+                      aria-hidden="true"
+                    />
                     {item}
                   </li>
                 ))}
@@ -379,7 +401,9 @@ export default function AjmanPage() {
             </div>
 
             <div className="border-t-2 border-ink pt-6">
-              <h3 className="text-ink">Heavy &amp; Awkward Furniture Logistics</h3>
+              <h3 className="text-ink">
+                Heavy &amp; Awkward Furniture Logistics
+              </h3>
               <ul className="mt-4 border-t border-line">
                 {[
                   "For safes pianos or oversized sectionals we use special tools.",
@@ -389,8 +413,14 @@ export default function AjmanPage() {
                   "Oversized items get custom crating only if hallways or doorways demand it.",
                   "We never add unnecessary extra cost.",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 border-b border-line py-3 t-body text-steel">
-                    <span className="mt-2.5 size-1.5 shrink-0 bg-signal" aria-hidden="true" />
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 border-b border-line py-3 t-body text-steel"
+                  >
+                    <span
+                      className="mt-2.5 size-1.5 shrink-0 bg-signal"
+                      aria-hidden="true"
+                    />
                     {item}
                   </li>
                 ))}
@@ -413,7 +443,10 @@ export default function AjmanPage() {
       />
 
       {/* ════ SAME-DAY & EMERGENCY ════ */}
-      <section aria-labelledby="emergency-moving-heading" className="bg-paper-2 section-y">
+      <section
+        aria-labelledby="emergency-moving-heading"
+        className="bg-paper-2 section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="emergency-moving-heading"
@@ -436,7 +469,10 @@ export default function AjmanPage() {
                 body: "Same-day or emergency moves use our standard pricing. You pay the same rate as a booked move. We don’t add rush fees or weekend surcharges. The price we give covers labor truck packing materials and basic reassembly—just like any other move.",
               },
             ].map((item, i) => (
-              <article key={item.title} className={`border-t-2 pt-6 ${i === 2 ? "border-signal" : "border-ink"}`}>
+              <article
+                key={item.title}
+                className={`border-t-2 pt-6 ${i === 2 ? "border-signal" : "border-ink"}`}
+              >
                 <h3 className="t-h4 text-ink">{item.title}</h3>
                 <p className="mt-3 t-body text-muted-foreground">{item.body}</p>
               </article>
@@ -448,7 +484,9 @@ export default function AjmanPage() {
             className="mt-14 flex flex-col md:flex-row md:items-center justify-between gap-6 rounded-xl bg-ink p-7 sm:p-9"
           >
             <div>
-              <p className="t-h3 text-white">Need urgent moving support in Ajman right now?</p>
+              <p className="t-h3 text-white">
+                Need urgent moving support in Ajman right now?
+              </p>
               <p className="mt-2 t-body text-fog">
                 Call our dispatch directly for immediate availability and
                 transparent pricing.
@@ -470,20 +508,32 @@ export default function AjmanPage() {
             title="Areas We Serve Across Ajman"
             lead="We serve all neighborhoods in Ajman. Our team moves customers regularly in:"
           />
-          <h3 className="mt-10 text-ink">We Serve All Neighborhoods in Ajman</h3>
+          <h3 className="mt-10 text-ink">
+            We Serve All Neighborhoods in Ajman
+          </h3>
 
           <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 border-t border-ink">
             {areaList.map((area) => (
-              <li key={area} className="flex items-center gap-2.5 border-b border-line py-3.5">
-                <span className="size-1.5 shrink-0 bg-signal" aria-hidden="true" />
-                <h4 className="t-body font-semibold text-ink">Movers in {area}</h4>
+              <li
+                key={area}
+                className="flex items-center gap-2.5 border-b border-line py-3.5"
+              >
+                <span
+                  className="size-1.5 shrink-0 bg-signal"
+                  aria-hidden="true"
+                />
+                <h4 className="t-body font-semibold text-ink">
+                  Movers in {area}
+                </h4>
               </li>
             ))}
           </ul>
 
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-7">
-              <h3 className="text-ink">Moving Between Ajman and Other Emirates</h3>
+              <h3 className="text-ink">
+                Moving Between Ajman and Other Emirates
+              </h3>
               <div className="mt-5 space-y-4 t-body text-muted-foreground measure">
                 <p>We move customers from Ajman to every emirate in the UAE.</p>
                 <p>
@@ -516,7 +566,10 @@ export default function AjmanPage() {
       </section>
 
       {/* ════ WHAT AFFECTS YOUR MOVING COST ════ */}
-      <section aria-labelledby="moving-cost-factors-heading" className="bg-white section-y">
+      <section
+        aria-labelledby="moving-cost-factors-heading"
+        className="bg-white section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="moving-cost-factors-heading"
@@ -561,7 +614,9 @@ export default function AjmanPage() {
               <article key={f.n} className="reveal border-t-2 border-ink pt-6">
                 <p className="t-label text-muted-foreground">
                   Factor{" "}
-                  <span className="t-num text-2xl font-bold normal-case text-signal">{f.n}</span>
+                  <span className="t-num text-2xl font-bold normal-case text-signal">
+                    {f.n}
+                  </span>
                 </p>
                 <h3 className="mt-3 text-ink">{f.title}</h3>
                 <div className="mt-4 space-y-3 t-body text-muted-foreground">
@@ -577,11 +632,19 @@ export default function AjmanPage() {
           <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-6">
               <h3 className="text-ink">How We Give You A Fixed Price</h3>
-              <p className="mt-3 t-body text-muted-foreground">After your free survey:</p>
+              <p className="mt-3 t-body text-muted-foreground">
+                After your free survey:
+              </p>
               <ol className="mt-5 border-t border-ink">
                 {fixedPriceSteps.map((item, i) => (
-                  <li key={item} className="grid grid-cols-[2.5rem_1fr] gap-x-3 border-b border-line py-4">
-                    <span className="t-num text-2xl font-bold leading-none text-signal" aria-hidden="true">
+                  <li
+                    key={item}
+                    className="grid grid-cols-[2.5rem_1fr] gap-x-3 border-b border-line py-4"
+                  >
+                    <span
+                      className="t-num text-2xl font-bold leading-none text-signal"
+                      aria-hidden="true"
+                    >
                       {i + 1}
                     </span>
                     <span className="t-body font-medium text-ink">{item}</span>
@@ -621,7 +684,11 @@ export default function AjmanPage() {
       </section>
 
       <div className="bg-paper-2">
-        <FAQSection faqs={AjmanFaqs} title="Questions About Moving in Ajman" layout="split" />
+        <FAQSection
+          faqs={AjmanFaqs}
+          title="Questions About Moving in Ajman"
+          layout="split"
+        />
       </div>
       <CTASection
         heading="Ready to Move in Ajman?"

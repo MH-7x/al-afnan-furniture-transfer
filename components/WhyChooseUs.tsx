@@ -76,16 +76,28 @@ export function WhyChooseUs() {
           <div className="lg:col-span-7">
             <h2 className="text-ink">
               Why Customers Choose{" "}
-              <span className="text-signal block">Al Afnan Furniture Transfer</span>
+              <span className="text-signal block">
+                Al Afnan Furniture Transfer
+              </span>
             </h2>
 
             {/* Google rating */}
             <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-x-8 gap-y-3 border-t border-ink pt-8">
               <p className="flex items-center gap-4">
-                <Star className="size-9 shrink-0 fill-signal text-signal" aria-hidden="true" />
+                <Image
+                  src="/google-icon.svg"
+                  alt="Google"
+                  width={40}
+                  height={40}
+                  aria-hidden="true"
+                />
                 <span className="text-ink">
-                  <span className="t-num block text-6xl font-bold leading-none">4.9/5</span>
-                  <span className="mt-1 block font-semibold">Google Customer Rating</span>
+                  <span className="t-num block text-4xl font-bold leading-none">
+                    4.9/5
+                  </span>
+                  <span className="mt-1 block font-semibold">
+                    Google Customer Rating
+                  </span>
                 </span>
               </p>
               <p className="t-small text-muted-foreground sm:max-w-xs sm:border-s sm:border-line sm:ps-8">
@@ -107,7 +119,7 @@ export function WhyChooseUs() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative aspect-4/5 overflow-hidden rounded-xl bg-paper-2">
+            <div className="relative aspect-square overflow-hidden rounded-xl bg-paper-2">
               <Image
                 src="/house-moving-services-by-al-afnan.jpg"
                 alt="Al Afnan Furniture Transfer Professional Moving Team in Sharjah"
@@ -124,7 +136,9 @@ export function WhyChooseUs() {
           {sixPillars.map((item) => (
             <li key={item.id} className="reveal border-b border-line py-7">
               <h3 className="t-h4 text-ink">{item.title}</h3>
-              <p className="mt-2 t-body text-muted-foreground">{item.description}</p>
+              <p className="mt-2 t-body text-muted-foreground">
+                {item.description}
+              </p>
             </li>
           ))}
         </ul>
