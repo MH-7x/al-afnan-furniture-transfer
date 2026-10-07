@@ -3,30 +3,33 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center rounded-4xl border border-transparent bg-clip-padding text-sm font-medium whitespace-nowrap transition-all outline-none select-none  [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "inline-flex shrink-0 items-center justify-center gap-2 rounded-md border border-transparent font-sans font-semibold leading-tight text-center whitespace-normal cursor-pointer transition-colors duration-150 outline-none select-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--focus) disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground hover:bg-primary/90 shadow-xs active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+        /** Signal red: the one primary action in a block. */
+        default: "bg-primary text-primary-foreground hover:bg-signal-hover",
+        /** Ink: secondary action on paper. */
+        secondary: "bg-ink text-white hover:bg-ink-3",
+        /** Hairline on paper. */
         outline:
-          "border border-border bg-background text-foreground hover:bg-muted hover:border-foreground/20 active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-xs active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2",
-        white:
-          "bg-white text-secondary hover:bg-white/90 shadow-sm active:scale-[0.98] focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary font-semibold",
-        ghost:
-          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
-        link: "text-primary underline-offset-4 hover:underline",
+          "border-ink/30 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-white",
+        /** Hairline on ink or red surfaces. */
+        "outline-light":
+          "border-white/45 bg-transparent text-white hover:border-white hover:bg-white hover:text-ink",
+        /** White fill on ink or red surfaces. */
+        white: "bg-white text-ink hover:bg-paper-2",
+        ghost: "text-ink hover:bg-muted aria-expanded:bg-muted",
+        link: "px-0 text-primary underline decoration-1 underline-offset-4 hover:decoration-2",
       },
       size: {
-        xs: "h-6 gap-1 px-2.5 text-xs has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 [&_svg:not([class*='size-'])]:size-3",
-        sm: "h-8 gap-1 px-3 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
-        lg: "h-10 gap-1.5 px-4 has-data-[icon=inline-end]:pr-3 has-data-[icon=inline-start]:pl-3",
-        icon: "size-9",
-        "icon-xs": "size-6 [&_svg:not([class*='size-'])]:size-3",
-        "icon-sm": "size-8",
-        "icon-lg": "size-10",
+        xs: "min-h-7 gap-1 px-2.5 py-1 text-xs [&_svg:not([class*='size-'])]:size-3",
+        sm: "min-h-9 gap-1.5 px-3 py-1.5 text-sm",
+        lg: "min-h-12 px-5 py-2.5 text-base",
+        icon: "size-10",
+        "icon-xs": "size-7 [&_svg:not([class*='size-'])]:size-3",
+        "icon-sm": "size-9",
+        "icon-lg": "size-12",
       },
     },
     defaultVariants: {

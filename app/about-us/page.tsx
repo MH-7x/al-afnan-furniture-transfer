@@ -34,8 +34,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { FAQSection } from "@/components/FaqsSection";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import { whatsappLink } from "@/lib/whatsapp";
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -332,9 +331,7 @@ function DotGrid({ className = "" }: { className?: string }) {
 
 export default function AboutUsPage() {
   return (
-    <>
-      <Navbar />
-      <main>
+    <SiteShell searches={aboutFooterSearches}>
         {/* ════════════════════════════════════════════
             HERO + CREDENTIALS
         ════════════════════════════════════════════ */}
@@ -407,7 +404,6 @@ export default function AboutUsPage() {
                     variant="default"
                     size="lg"
                     render={<Link href="#estimate" />}
-                    className="cursor-pointer px-6 py-6 shadow-sm transition-all hover:shadow-md"
                   >
                     <span>Get a Free Estimate</span>
                     <ArrowRight className="ml-1.5 size-4" aria-hidden="true" />
@@ -416,7 +412,6 @@ export default function AboutUsPage() {
                     variant="secondary"
                     size="lg"
                     render={<a href="tel:0567277536" />}
-                    className="cursor-pointer px-6 py-6 shadow-sm transition-all hover:shadow-md"
                   >
                     <span>Call 056 7277536</span>
                     <Phone className="ml-1.5 size-4" aria-hidden="true" />
@@ -1054,9 +1049,6 @@ export default function AboutUsPage() {
             FAQS
         ════════════════════════════════════════════ */}
         <FAQSection title="FAQs" subtitle="" faqs={aboutFaqs} />
-      </main>
-
-      <Footer searches={aboutFooterSearches} />
-    </>
+    </SiteShell>
   );
 }

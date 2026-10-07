@@ -10,8 +10,7 @@ import { CTASection } from "@/components/CTASection";
 import { HomePageFAQs } from "@/lib/FaqsData";
 import { Phone, ArrowRight, ShieldCheck, Clock, Award } from "lucide-react";
 import { Metadata } from "next";
-import Footer from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "Licensed Movers in Sharjah | Al Afnan Furniture Transfer",
@@ -19,11 +18,43 @@ export const metadata: Metadata = {
     "movers in sharjah: Al Afnan Furniture Transfer offers trusted moving & packing for homes, apartments and offices. Free estimates. Call 056 7277536.",
 };
 
+const homeFooterSearches = [
+  "movers in Sharjah",
+  "moving company Sharjah",
+  "moving companies in Sharjah",
+  "Sharjah movers",
+  "movers and packers in Sharjah",
+  "movers and packers Sharjah",
+  "packers and movers Sharjah",
+  "furniture movers Sharjah",
+  "house movers Sharjah",
+  "home movers Sharjah",
+  "house shifting Sharjah",
+  "home shifting services Sharjah",
+  "villa movers Sharjah",
+  "apartment movers Sharjah",
+  "flat movers Sharjah",
+  "office movers Sharjah",
+  "commercial movers Sharjah",
+  "moving services Sharjah",
+  "packing and moving Sharjah",
+  "packing services Sharjah",
+  "cheap movers Sharjah",
+  "affordable movers Sharjah",
+  "best movers in Sharjah",
+  "movers in Sharjah price",
+  "moving company cost Sharjah",
+  "storage in Sharjah",
+  "movers Sharjah to Dubai",
+  "Dubai to Sharjah movers",
+  "furniture movers Sharjah to Dubai",
+  "long distance movers Sharjah",
+  "inter emirate movers Sharjah",
+];
+
 export default function Home() {
   return (
-    <>
-      <Navbar />
-      <main>
+    <SiteShell searches={homeFooterSearches}>
         <section id="hero" className="px-0 w-full">
           <div className="overflow-hidden md:py-28 py-20 flex items-center relative">
             {/* Background Image */}
@@ -69,7 +100,6 @@ export default function Home() {
                   variant="default"
                   size="lg"
                   render={<Link href="#" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get Your Free Sharjah Moving Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" />
@@ -78,7 +108,6 @@ export default function Home() {
                   variant="secondary"
                   size="lg"
                   render={<Link href="tel:0567277536" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -263,7 +292,7 @@ export default function Home() {
                 variant="white"
                 size="lg"
                 render={<Link href="#" />}
-                className="py-6 px-6 font-semibold shadow-md hover:brightness-105 active:scale-95 transition-all shrink-0 cursor-pointer"
+                className="font-semibold shrink-0"
               >
                 <span>Get Inter-Emirate Quote</span>
               </Button>
@@ -360,7 +389,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   render={<Link href="#" />}
-                  className="py-6 px-6 font-semibold shadow-xs"
+                  className="font-semibold"
                 >
                   <span>Call For Local Moving</span>
                   <Phone className="size-4 ml-1.5" />
@@ -369,7 +398,7 @@ export default function Home() {
                   variant="secondary"
                   size="lg"
                   render={<Link href="#" />}
-                  className="py-6 px-6 font-semibold shadow-xs"
+                  className="font-semibold"
                 >
                   <span>View Our Service Areas</span>
                   <ArrowRight className="size-4 ml-1.5" />
@@ -387,42 +416,6 @@ export default function Home() {
           heading="Get a Free Quote From"
           paragraph="Planning a move in Sharjah? Get a free estimate with no hidden fees — just an honest number based on what you're actually moving. Call 056 7277536 and talk it through with the team."
         />
-      </main>
-      <Footer
-        searches={[
-          "movers in Sharjah",
-          "moving company Sharjah",
-          "moving companies in Sharjah",
-          "Sharjah movers",
-          "movers and packers in Sharjah",
-          "movers and packers Sharjah",
-          "packers and movers Sharjah",
-          "furniture movers Sharjah",
-          "house movers Sharjah",
-          "home movers Sharjah",
-          "house shifting Sharjah",
-          "home shifting services Sharjah",
-          "villa movers Sharjah",
-          "apartment movers Sharjah",
-          "flat movers Sharjah",
-          "office movers Sharjah",
-          "commercial movers Sharjah",
-          "moving services Sharjah",
-          "packing and moving Sharjah",
-          "packing services Sharjah",
-          "cheap movers Sharjah",
-          "affordable movers Sharjah",
-          "best movers in Sharjah",
-          "movers in Sharjah price",
-          "moving company cost Sharjah",
-          "storage in Sharjah",
-          "movers Sharjah to Dubai",
-          "Dubai to Sharjah movers",
-          "furniture movers Sharjah to Dubai",
-          "long distance movers Sharjah",
-          "inter emirate movers Sharjah",
-        ]}
-      />
-    </>
+    </SiteShell>
   );
 }

@@ -194,7 +194,7 @@ export function Services({
                   variant="outline"
                   size="lg"
                   render={<Link href={service.href} />}
-                  className="w-full justify-between rounded-xl font-semibold text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-200 group/btn"
+                  className="w-full justify-between rounded-xl font-semibold text-foreground hover:bg-primary hover:text-white hover:border-primary duration-200 group/btn"
                 >
                   <span>{service.cta}</span>
                   <ArrowRight className="size-4 text-primary group-hover:text-white transition-transform duration-200 group-hover/btn:translate-x-1" />

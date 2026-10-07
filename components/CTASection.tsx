@@ -287,7 +287,7 @@ export function CTASection({
                       type="submit"
                       variant="default"
                       size="lg"
-                      className="w-full py-5.5 font-semibold text-primary-foreground shadow-md hover:brightness-105 active:scale-95 transition-all cursor-pointer mt-1"
+                      className="w-full font-semibold text-primary-foreground mt-1"
                     >
                       <span>{quoteButtonText}</span>
                       <Send className="size-4 ml-1.5" />

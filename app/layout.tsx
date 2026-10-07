@@ -1,28 +1,21 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 
-const inter = Outfit({
+// Body / UI face
+const barlow = Barlow({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-barlow",
   weight: ["400", "500", "600", "700"],
   display: "swap",
-  preload: true,
-  fallback: [
-    "system-ui",
-    "-apple-system",
-    "BlinkMacSystemFont",
-    "Segoe UI",
-    "Roboto",
-    "Helvetica Neue",
-    "Arial",
-    "Noto Sans",
-    "sans-serif",
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji",
-  ],
+});
+
+// Display face for headings, numerals and labels
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  variable: "--font-barlow-condensed",
+  weight: ["600", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -40,7 +33,8 @@ export default function RootLayout({
     <html
       suppressHydrationWarning
       lang="en"
-      className={`antialiased ${inter.variable}`}
+      dir="ltr"
+      className={`antialiased ${barlow.variable} ${barlowCondensed.variable}`}
     >
       <body
         id="top"

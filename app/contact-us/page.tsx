@@ -11,8 +11,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 
 export const metadata: Metadata = {
   title: "Contact Us | Al Afnan Furniture Transfer Sharjah",
@@ -35,9 +34,7 @@ const contactFooterSearches = [
 
 export default function ContactUsPage() {
   return (
-    <>
-      <Navbar />
-      <main>
+    <SiteShell searches={contactFooterSearches}>
         {/* ════════════════════════════════════════════
             HERO SECTION WITH CONTACT DETAILS
         ════════════════════════════════════════════ */}
@@ -240,9 +237,6 @@ export default function ContactUsPage() {
           paragraph="Planning a move in Sharjah, Dubai, Ajman, or any other emirate? Fill out the quote form below or reach out directly. We will provide you with a transparent, written estimate with zero hidden fees and no obligations."
           quoteButtonText="Submit Quote Request"
         />
-      </main>
-
-      <Footer searches={contactFooterSearches} />
-    </>
+    </SiteShell>
   );
 }

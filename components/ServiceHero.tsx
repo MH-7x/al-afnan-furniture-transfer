@@ -46,7 +46,6 @@ function CtaButton({
             : null)}
         />
       }
-      className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
     >
       <cta.icon className="size-4 mr-1.5" aria-hidden="true" />
       <span>{cta.label}</span>

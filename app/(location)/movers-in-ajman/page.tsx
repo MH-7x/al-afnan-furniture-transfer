@@ -13,8 +13,7 @@ import {
   Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import Services from "@/components/Services";
 import MovingProcess from "@/components/MovingProcess";
 import { FAQSection } from "@/components/FaqsSection";
@@ -230,9 +229,7 @@ const processSteps = [
 
 export default function AjmanPage() {
   return (
-    <>
-      <Navbar />
-      <main>
+    <SiteShell searches={footerSearches}>
         {/* ════════════════════════════════════════════
             HERO SECTION (Unique Editorial Layout)
         ════════════════════════════════════════════ */}
@@ -320,7 +317,7 @@ export default function AjmanPage() {
                       rel="noopener noreferrer"
                     />
                   }
-                  className="py-6 mt-8 md:w-max"
+                  className="mt-8 md:w-max"
                 >
                   Get Your Free Moving Quote
                 </Button>
@@ -895,7 +892,7 @@ export default function AjmanPage() {
                         rel="noopener noreferrer"
                       />
                     }
-                    className="w-full sm:w-auto font-semibold shadow-sm hover:shadow-md transition-all cursor-pointer"
+                    className="w-full sm:w-auto font-semibold"
                   >
                     <span>Book Your Free Moving Survey</span>
                     <ArrowRight className="size-4 ml-1.5" />
@@ -910,9 +907,6 @@ export default function AjmanPage() {
           heading="Ready to Move in Ajman?"
           paragraph="Available 24/7 for moves across Ajman. Get your free quote: Call 056 7277536 and talk it through with the team."
         />
-      </main>
-
-      <Footer searches={footerSearches} />
-    </>
+    </SiteShell>
   );
 }

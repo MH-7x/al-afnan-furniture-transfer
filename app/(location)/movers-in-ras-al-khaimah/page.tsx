@@ -12,8 +12,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import MovingProcess from "@/components/MovingProcess";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
@@ -188,9 +187,7 @@ const rakFaqs = [
 
 export default function RasAlKhaimahPage() {
   return (
-    <>
-      <Navbar />
-      <main>
+    <SiteShell searches={footerSearches}>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -276,7 +273,7 @@ export default function RasAlKhaimahPage() {
                       rel="noopener noreferrer"
                     />
                   }
-                  className="py-6 mt-8 md:w-max"
+                  className="mt-8 md:w-max"
                 >
                   Get Your Free Moving Quote
                 </Button>
@@ -1148,7 +1145,7 @@ export default function RasAlKhaimahPage() {
                       rel="noopener noreferrer"
                     />
                   }
-                  className="w-full sm:w-auto py-6 px-6 font-semibold shadow-sm hover:shadow-md transition-all cursor-pointer"
+                  className="w-full sm:w-auto font-semibold"
                 >
                   <span>Get Your Moving Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" aria-hidden="true" />
@@ -1294,9 +1291,6 @@ export default function RasAlKhaimahPage() {
             </div>
           }
         />
-      </main>
-
-      <Footer searches={footerSearches} />
-    </>
+    </SiteShell>
   );
 }

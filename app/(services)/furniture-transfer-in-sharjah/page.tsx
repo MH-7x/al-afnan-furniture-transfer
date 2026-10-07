@@ -15,8 +15,7 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { Metadata } from "next";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
@@ -95,8 +94,7 @@ export default function FurnitureTransferPage() {
   const faqSchema = generateFAQSchema(furnitureFaqs);
 
   return (
-    <>
-      <Navbar />
+    <SiteShell searches={footerSearches}>
       {/* FAQ Schema for Google Rich Results */}
       <script
         id="furniture-transfer-faq-schema"
@@ -104,7 +102,6 @@ export default function FurnitureTransferPage() {
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
 
-      <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -172,7 +169,6 @@ export default function FurnitureTransferPage() {
                   variant="default"
                   size="lg"
                   render={<Link href="#estimate" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get a Free Furniture Transfer Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" />
@@ -181,7 +177,6 @@ export default function FurnitureTransferPage() {
                   variant="secondary"
                   size="lg"
                   render={<a href="tel:0567277536" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -641,9 +636,6 @@ export default function FurnitureTransferPage() {
           heading="Get a Free Furniture Transfer Estimate"
           paragraph="Sometimes you don't need a whole house moved — just one sofa, a wardrobe, or a room set. Call 056 7277536 for a free assessment and transparent pricing with zero hidden fees."
         />
-      </main>
-
-      <Footer searches={footerSearches} />
-    </>
+    </SiteShell>
   );
 }

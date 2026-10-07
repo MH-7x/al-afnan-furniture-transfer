@@ -22,8 +22,7 @@ import {
   Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import MovingProcess from "@/components/MovingProcess";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
@@ -562,8 +561,7 @@ const dubaiFaqs = [
    ───────────────────────────────────────────────────────────────────────────── */
 export default function MoversAndPackersInDubaiPage() {
   return (
-    <>
-      <Navbar region="dubai" />
+    <SiteShell region="dubai" searches={footerSearches}>
       <script
         id="MovingCompanySchema"
         type="application/ld+json"
@@ -572,7 +570,6 @@ export default function MoversAndPackersInDubaiPage() {
         }}
       />
 
-      <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -657,7 +654,7 @@ export default function MoversAndPackersInDubaiPage() {
                         rel="noopener noreferrer"
                       />
                     }
-                    className="py-6 md:w-max"
+                    className="md:w-max"
                   >
                     <MessageCircle className="size-4" aria-hidden="true" />
                     <span>Get a Free Quote on WhatsApp</span>
@@ -666,7 +663,7 @@ export default function MoversAndPackersInDubaiPage() {
                     size="lg"
                     variant="secondary"
                     render={<a href="tel:0567277536" />}
-                    className="py-6 md:w-max"
+                    className="md:w-max"
                   >
                     <Phone className="size-4" aria-hidden="true" />
                     <span>Call 056 7277536</span>
@@ -930,7 +927,7 @@ export default function MoversAndPackersInDubaiPage() {
                     rel="noopener noreferrer"
                   />
                 }
-                className="py-6 px-6 font-semibold"
+                className="font-semibold"
               >
                 <span>Read All Reviews on Google</span>
               </Button>
@@ -943,7 +940,7 @@ export default function MoversAndPackersInDubaiPage() {
                     rel="noopener noreferrer"
                   />
                 }
-                className="py-6 px-6 font-semibold"
+                className="font-semibold"
               >
                 <MessageCircle className="size-4" aria-hidden="true" />
                 <span>Get a Free Quote on WhatsApp</span>
@@ -1113,7 +1110,7 @@ export default function MoversAndPackersInDubaiPage() {
                     rel="noopener noreferrer"
                   />
                 }
-                className="mt-6 py-6 px-6 font-semibold w-full sm:w-auto"
+                className="mt-6 font-semibold w-full sm:w-auto"
               >
                 <MessageCircle className="size-4" aria-hidden="true" />
                 <span>Send Us Your Building&apos;s Rules on WhatsApp</span>
@@ -1303,7 +1300,7 @@ export default function MoversAndPackersInDubaiPage() {
                 rel="noopener noreferrer"
               />
             }
-            className="mt-8 py-6 px-6 font-semibold w-full sm:w-auto"
+            className="mt-8 font-semibold w-full sm:w-auto"
           >
             <MessageCircle className="size-4" aria-hidden="true" />
             <span>Send Photos for Your Exact Quote on WhatsApp</span>
@@ -1329,9 +1326,6 @@ export default function MoversAndPackersInDubaiPage() {
           whatsappButtonHref={WHATSAPP_QUOTE}
           callButtonText="Call 056 7277536"
         />
-      </main>
-
-      <Footer searches={footerSearches} region="dubai" />
-    </>
+    </SiteShell>
   );
 }

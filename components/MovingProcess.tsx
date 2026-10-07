@@ -138,7 +138,7 @@ export function MovingProcess({
                   <Link href={ctaHref} />
                 )
               }
-              className="w-fit mt-6 font-semibold shadow-sm cursor-pointer"
+              className="w-fit mt-6 font-semibold"
             >
               <span>{ctaLabel}</span>
               <ArrowRight className="size-4 ml-1.5" />
