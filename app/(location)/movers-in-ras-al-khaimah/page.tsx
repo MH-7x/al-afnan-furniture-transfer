@@ -230,7 +230,7 @@ export default function RasAlKhaimahPage() {
                 {/* H1 Heading */}
                 <h1
                   id="hero-title"
-                  className="font-bold text-3xl sm:text-4xl lg:text-[2.50rem] leading-[1.14]"
+                  className=""
                 >
                   Movers in Ras Al Khaimah <br /> Professional Moving &amp;
                   Packing Services
@@ -238,7 +238,7 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="lg:col-span-7 flex flex-col justify-center">
                 {/* H2 Heading */}
-                <h2 className="text-lg sm:text-2xl font-semibold text-foreground/90 mt-5 leading-snug">
+                <h2 className="text-foreground/90 mt-5">
                   Trusted Movers and Packers in Ras Al Khaimah | House, Villa,
                   Apartment &amp; Office Moves Across All Seven Emirates
                 </h2>
@@ -252,7 +252,7 @@ export default function RasAlKhaimahPage() {
                     seven UAE Emirates for over 10 years.
                   </p>
 
-                  <div className="border-l-2 border-primary/40 pl-4 sm:pl-5 space-y-2.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="border-l-2 border-primary/40 pl-4 sm:pl-5 space-y-2.5 text-muted-foreground t-body leading-relaxed">
                     <p>
                       We&apos;re a licensed and insured moving company rated 4.9
                       out of 5 on Google, with trained carpenters and handymen
@@ -297,7 +297,7 @@ export default function RasAlKhaimahPage() {
                     <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-primary">
                       Al Afnan Furniture Transfer
                     </span>
-                    <span className="text-sm sm:text-base font-semibold text-white mt-0.5">
+                    <span className="t-body font-semibold text-white mt-0.5">
                       Movers in Ras Al Khaimah &amp; Across the UAE
                     </span>
                   </figcaption>
@@ -317,7 +317,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="residential-movers-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               House, Villa &amp; Apartment Movers in Ras Al Khaimah
             </h2>
@@ -351,10 +351,10 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight mb-3">
+                  <h3 className="font-semibold text-foreground mb-3">
                     Villa Moving in Ras Al Khaimah
                   </h3>
-                  <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                     <p>
                       Villas are a different job than apartments, with more
                       rooms, more furniture, more stairs, and sometimes tricky
@@ -388,10 +388,10 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight mb-3">
+                  <h3 className="font-semibold text-foreground mb-3">
                     Apartment, Flat &amp; Studio Moving in Ras Al Khaimah
                   </h3>
-                  <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                     <p>
                       Apartment moves come with their own headaches: elevator
                       bookings, corridor protection, parking permits, building
@@ -421,7 +421,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="commercial-movers-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Office &amp; Commercial Movers in Ras Al Khaimah
             </h2>
@@ -459,10 +459,10 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight mb-3">
+                  <h3 className="font-semibold text-foreground mb-3">
                     Office Relocation in Ras Al Khaimah
                   </h3>
-                  <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                     <p>
                       Office moving means more than loading boxes into a truck.
                       Your desks, chairs, filing cabinets, and IT equipment all
@@ -509,10 +509,10 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight mb-3">
+                  <h3 className="font-semibold text-foreground mb-3">
                     Warehouse &amp; RAKEZ Commercial Moves
                   </h3>
-                  <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                     <p>
                       Commercial moves in Ras Al Khaimah come with their own
                       logistics, especially when you&apos;re shifting warehouse
@@ -556,7 +556,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-3xl mb-10 sm:mb-12 mx-auto text-center">
             <h2
               id="furniture-packing-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Furniture Movers &amp; <br className="md:block hidden" /> Packing
               Services in Ras Al Khaimah
@@ -588,11 +588,11 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground tracking-tight mb-3">
+                  <h3 className="font-semibold text-foreground mb-3">
                     Furniture Dismantling, Assembly &amp; Reassembly in Ras Al
                     Khaimah
                   </h3>
-                  <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                     <p>
                       Big furniture doesn&apos;t always fit through doors,
                       staircases, or elevator doors, especially in older RAK
@@ -627,10 +627,10 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground tracking-tight mb-3">
+                  <h3 className="font-semibold text-foreground mb-3">
                     Sofa, Bed &amp; Wardrobe Moving in Ras Al Khaimah
                   </h3>
-                  <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                     <p>
                       Some moves are small, and you just need one sofa moved
                       across town, or a bed shifted to a new apartment.
@@ -660,10 +660,10 @@ export default function RasAlKhaimahPage() {
               </div>
               <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground tracking-tight mb-3">
+                  <h3 className="font-semibold text-foreground mb-3">
                     Professional Packing Services in Ras Al Khaimah
                   </h3>
-                  <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                     <p>
                       Packing is where most moves either go smoothly or fall
                       apart. We do it the proper way. Your clothes go into
@@ -697,7 +697,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="why-choose-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Why Choose Al Afnan Furniture Transfer
             </h2>
@@ -807,7 +807,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="inter-emirate-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Long-Distance &amp; Inter-Emirate Moving
             </h2>
@@ -824,11 +824,11 @@ export default function RasAlKhaimahPage() {
             {/* Outbound Route Card */}
             <article className="rounded-2xl bg-primary p-6 sm:p-14  flex flex-col justify-between">
               <div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 border-b-2 border-white/30 pb-3">
+                <h3 className="font-semibold text-white mb-4 border-b-2 border-white/30 pb-3">
                   Moving From Ras Al Khaimah to Dubai, Sharjah, Ajman &amp; Abu
                   Dhabi
                 </h3>
-                <div className="space-y-3 text-white/80 text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-white/80 t-body leading-relaxed">
                   <p>
                     If you&apos;re heading out of RAK, whether it&apos;s movers
                     from Ras Al Khaimah to Dubai, RAK to Sharjah, or RAK to Abu
@@ -867,10 +867,10 @@ export default function RasAlKhaimahPage() {
             {/* Inbound Route Card */}
             <article className="rounded-2xl bg-primary p-6 sm:p-14  flex flex-col justify-between">
               <div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 border-b-2 border-white/30 pb-3">
+                <h3 className="font-semibold text-white mb-4 border-b-2 border-white/30 pb-3">
                   Moving To Ras Al Khaimah from Anywhere in the UAE
                 </h3>
-                <div className="space-y-3 text-white/80 text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-white/80 t-body leading-relaxed">
                   <p>
                     Coming into RAK? Whether it&apos;s Dubai to RAK movers,
                     Sharjah to RAK movers, or movers from Abu Dhabi to Ras Al
@@ -916,7 +916,7 @@ export default function RasAlKhaimahPage() {
             <div className="max-w-3xl mb-8 mx-auto text-center">
               <h2
                 id="emergency-moving-heading"
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground md:px-16"
+                className="text-foreground md:px-16"
               >
                 Same-Day &amp; Emergency Moving in Ras Al Khaimah
               </h2>
@@ -982,7 +982,7 @@ export default function RasAlKhaimahPage() {
                   <p className="text-base sm:text-lg font-bold text-white">
                     Need urgent moving support in Ras Al Khaimah?
                   </p>
-                  <p className="text-xs sm:text-sm text-white/80 mt-0.5">
+                  <p className="t-small text-white/80 mt-0.5">
                     Available 24/7 for prompt emergency dispatch and transparent
                     pricing.
                   </p>
@@ -1009,7 +1009,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="pricing-factors-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               What Determines Your <br /> Moving Quote in Ras Al Khaimah
             </h2>
@@ -1030,10 +1030,10 @@ export default function RasAlKhaimahPage() {
             {/* Factor 1 */}
             <article className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 flex flex-col justify-between ">
               <div>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4">
                   Property Size &amp; Type
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     A studio apartment in Ras Al Khaimah is a fundamentally
                     different job than a 4-bedroom villa in Al Hamra Village.
@@ -1058,10 +1058,10 @@ export default function RasAlKhaimahPage() {
             {/* Factor 2 */}
             <article className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 flex flex-col justify-between lg:col-span-2">
               <div>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4">
                   Packing Scope, Distance &amp; Building Access
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     Full-service packing costs more than labor-only loading,
                     because you&apos;re paying for the materials and the work.
@@ -1093,10 +1093,10 @@ export default function RasAlKhaimahPage() {
             {/* Factor 3 */}
             <article className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 flex flex-col justify-between lg:col-span-3">
               <div>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4">
                   Specialized Items &amp; Timing
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     Not everything fits into a standard moving box. If
                     you&apos;re moving a grand piano, fine art, antique
@@ -1126,7 +1126,7 @@ export default function RasAlKhaimahPage() {
                   last-minute additions. Once you see the number, that&apos;s
                   what you pay.
                 </p>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <p className="t-body text-muted-foreground leading-relaxed">
                   To get yours, share your property size, whether you&apos;re
                   moving within RAK or to another emirate, and if you need full
                   packing or just transport. We&apos;ll send you a written
@@ -1165,7 +1165,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="areas-served-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Areas We Serve in Ras Al Khaimah
             </h2>
@@ -1180,10 +1180,10 @@ export default function RasAlKhaimahPage() {
             {/* Block 1 */}
             <article className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 shadow-xs flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Popular Residential Communities
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     Al Hamra Village, Mina Al Arab, Al Marjan Island, Al
                     Nakheel, Al Dhait, Khuzam, Al Rams, Al Qusaidat, Al Mairid,
@@ -1201,10 +1201,10 @@ export default function RasAlKhaimahPage() {
             {/* Block 2 */}
             <article className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 shadow-xs flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Other Areas
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     Al Jazeera Al Hamra, Al Jazeera, Al Mamourah, Al Seer, Al
                     Riffa, Al Kharran, Yasmin Village, RAKEZ, and the RAK
@@ -1249,7 +1249,7 @@ export default function RasAlKhaimahPage() {
                 key={area}
                 className="p-3 rounded-xl bg-card border border-border/80 shadow-2xs hover:border-primary/40 transition-colors"
               >
-                <h4 className="text-sm font-medium text-foreground tracking-tight">
+                <h4 className="text-sm font-medium text-foreground">
                   Movers in {area}
                 </h4>
               </div>

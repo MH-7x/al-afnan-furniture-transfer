@@ -140,13 +140,13 @@ export default function FurnitureTransferPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="">
                 Professional Furniture Transfer &amp; Movers in Sharjah{" "}
                 <span className="text-primary block sm:inline"></span>
               </h1>
 
               {/* Intro Content */}
-              <div className="mt-5 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Sometimes you don&apos;t need a whole house moved — just one
                   sofa you bought off Facebook Marketplace, a wardrobe headed to

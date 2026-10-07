@@ -75,7 +75,7 @@ export function ServiceSidebar({
           aria-hidden="true"
         />
 
-        <h3 className="text-lg font-semibold text-white">{ctaTitle}</h3>
+        <h3 className="font-semibold text-white">{ctaTitle}</h3>
         <p className="mt-2 text-sm text-white/80 leading-relaxed">{ctaDesc}</p>
 
         <a

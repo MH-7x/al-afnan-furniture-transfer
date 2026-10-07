@@ -123,12 +123,12 @@ export default function ApartmentMoversPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="">
                 Apartment Movers in Sharjah{" "}
               </h1>
 
               {/* Intro Content */}
-              <div className="mt-5 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Al Afnan Furniture Transfer moves apartments and flats across
                   Sharjah, from studios to 3-bedroom units, starting at AED 450.

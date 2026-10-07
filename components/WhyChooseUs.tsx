@@ -7,7 +7,6 @@ import {
   Languages,
   PackageCheck,
   Calculator,
-  Wrench,
 } from "lucide-react";
 
 // Six core service pillars displayed in a clean 3-column grid
@@ -68,99 +67,67 @@ const sixPillars = [
   },
 ];
 
+/** Why choose us: rating and team credential beside a photo, then the six reasons as a ruled spec list. */
 export function WhyChooseUs() {
   return (
-    <section
-      id="why-us"
-      className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
-    >
-      {/* Top Editorial Showcase: Split 7:5 with Exact 700:523 Aspect Ratio Image Frame */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-10 sm:mb-12">
-        {/* Left Column: Title, Google Review Card & In-House Team Feature */}
-        <div className="lg:col-span-7 flex flex-col space-y-6">
-          <div>
-            <h2 className="text-3xl sm:text-5xl lg:text-[2.65rem] font-bold ">
+    <section id="why-us" className="scroll-mt-28 section-y">
+      <div className="wrap">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-7">
+            <h2 className="text-ink">
               Why Customers Choose{" "}
-              <span className="text-primary block mt-2">
-                Al Afnan Furniture Transfer
-              </span>
+              <span className="text-signal block">Al Afnan Furniture Transfer</span>
             </h2>
-          </div>
 
-          {/* Google Verified Review Card */}
-          <div className="bg-muted/30 border border-border/70 rounded-2xl p-5 flex items-center gap-4">
-            <div className="size-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center shrink-0">
-              <Star className="size-6 text-amber-500 fill-amber-500" />
-            </div>
-            <div className="min-w-0 flex-1">
-              <span className="text-base font-bold text-foreground">
-                4.9/5 Google Customer Rating
-              </span>
-
-              <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 leading-snug">
+            {/* Google rating */}
+            <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-x-8 gap-y-3 border-t border-ink pt-8">
+              <p className="flex items-center gap-4">
+                <Star className="size-9 shrink-0 fill-signal text-signal" aria-hidden="true" />
+                <span className="text-ink">
+                  <span className="t-num block text-6xl font-bold leading-none">4.9/5</span>
+                  <span className="mt-1 block font-semibold">Google Customer Rating</span>
+                </span>
+              </p>
+              <p className="t-small text-muted-foreground sm:max-w-xs sm:border-s sm:border-line sm:ps-8">
                 See verified reviews on Google Maps — search “Al Afnan Furniture
                 Transfer Sharjah”.
               </p>
             </div>
-          </div>
 
-          {/* Featured In-House Team Credential Card */}
-          <div className="bg-muted/30 border border-border/70 rounded-2xl p-5 flex flex-col sm:flex-row sm:items-start gap-4">
-            <div className="size-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0 sm:mt-0.5 shadow-xs">
-              <Wrench className="size-6" />
-            </div>
-            <div className="flex-1 min-w-0">
-              <h3 className="text-base font-semibold text-foreground tracking-tight mb-1">
+            {/* In-house team */}
+            <div className="mt-8 border-t border-line pt-8">
+              <h3 className="t-h4 text-ink">
                 Professionally Trained Team (Carpenters &amp; Handymen)
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="mt-2 t-body text-muted-foreground measure">
                 Staff includes certified carpenters and handymen for safe
                 dismantling, reassembly, and custom packing — no subcontractors.
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Right Column: Exact Proportional Image Placeholder Box (700x523 / ~4:3) */}
-        <div className="lg:col-span-5">
-          <div className="relative aspect-4/3 w-full rounded-2xl overflow-hidden bg-muted/20 border border-border/80 shadow-xs group">
-            <Image
-              src="/house-moving-services-by-al-afnan.jpg"
-              alt="Al Afnan Furniture Transfer Professional Moving Team in Sharjah"
-              width={700}
-              height={523}
-              sizes="(max-width: 1024px) 100vw, 42vw"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
+          <div className="lg:col-span-5">
+            <div className="relative aspect-4/5 overflow-hidden rounded-xl bg-paper-2">
+              <Image
+                src="/house-moving-services-by-al-afnan.jpg"
+                alt="Al Afnan Furniture Transfer Professional Moving Team in Sharjah"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover object-[35%_center]"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Section: 6 Customer Guarantees in a Symmetrical 3-Column Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-        {sixPillars.map((item) => {
-          const IconComponent = item.icon;
-          return (
-            <div
-              key={item.id}
-              className="group bg-card rounded-2xl p-6 border border-border/80  flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between gap-3 mb-4">
-                  <div className="size-12 rounded-xl bg-muted/40 text-primary flex items-center justify-center shrink-0 ">
-                    <IconComponent className="size-6" />
-                  </div>
-                </div>
-
-                <h3 className="text-base font-semibold ">{item.title}</h3>
-
-                <p className="text-sm text-muted-foreground leading-relaxed mt-2">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+        {/* Six reasons as a spec list */}
+        <ul className="mt-16 lg:mt-20 grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 border-t border-ink">
+          {sixPillars.map((item) => (
+            <li key={item.id} className="reveal border-b border-line py-7">
+              <h3 className="t-h4 text-ink">{item.title}</h3>
+              <p className="mt-2 t-body text-muted-foreground">{item.description}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );

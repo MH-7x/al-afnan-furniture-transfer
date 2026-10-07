@@ -119,7 +119,7 @@ export function ServiceHero({
           </nav>
 
           {/* H1 Heading */}
-          <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+          <h1 className="">
             {title}
           </h1>
 
@@ -127,7 +127,7 @@ export function ServiceHero({
           <p className="mt-4 text-foreground/85 font-semibold text-base sm:text-lg leading-snug">
             {tagline}
           </p>
-          <div className="mt-4 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+          <div className="mt-4 space-y-3.5 text-muted-foreground t-body leading-relaxed">
             {children}
           </div>
 

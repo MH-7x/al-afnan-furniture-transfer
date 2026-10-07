@@ -35,7 +35,7 @@ export function ReviewsSection({
       <div className="max-w-3xl mb-10 sm:mb-12">
         <h2
           id={headingId}
-          className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
+          className="text-foreground"
         >
           {title}
         </h2>
@@ -63,7 +63,7 @@ export function ReviewsSection({
                 {review.quote}
               </blockquote>
             </div>
-            <figcaption className="mt-5 pt-4 border-t border-border/60 text-xs sm:text-sm text-muted-foreground">
+            <figcaption className="mt-5 pt-4 border-t border-border/60 t-small text-muted-foreground">
               <cite className="not-italic font-semibold text-foreground">
                 {review.author}
               </cite>

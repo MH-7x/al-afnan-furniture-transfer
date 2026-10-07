@@ -59,27 +59,23 @@ const costFactors: CostFactor[] = [
   },
 ];
 
+/** Moving costs: intro split, numbered cost factors, guidance note and estimate panel. */
 export function MovingCosts() {
   return (
     <section
       id="pricing"
-      className="scroll-mt-24"
+      className="scroll-mt-28 bg-white section-y"
       aria-labelledby="moving-costs-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Section Header */}
-        <div className="max-w-4xl">
-          <span className="sm:text-sm font-semibold uppercase tracking-widest text-primary mb-3 block">
-            Transparent Moving Estimates
-          </span>
-          <h2
-            id="moving-costs-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold "
-          >
-            Moving Costs in Sharjah
-          </h2>
-
-          <div className="mt-5 space-y-4 text-muted-foreground text-sm sm:text-base leading-relaxed">
+      <div className="wrap">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16">
+          <div className="lg:col-span-5">
+            <span className="t-label text-signal block">Transparent Moving Estimates</span>
+            <h2 id="moving-costs-heading" className="mt-3 text-ink">
+              Moving Costs in Sharjah
+            </h2>
+          </div>
+          <div className="lg:col-span-7 space-y-4 t-body text-muted-foreground measure lg:pt-9">
             <p>
               The cost of hiring movers in Sharjah depends on the details of
               your move rather than a single fixed rate. A small apartment move
@@ -90,9 +86,7 @@ export function MovingCosts() {
             </p>
             <p>
               At Al Afnan Furniture Transfer, we provide{" "}
-              <strong className="text-foreground font-semibold">
-                free moving estimates
-              </strong>{" "}
+              <strong className="text-ink font-semibold">free moving estimates</strong>{" "}
               so you can understand the expected cost based on your actual
               moving requirements. Our approach is to provide transparent,
               all-inclusive quotes with no hidden fees.
@@ -100,98 +94,72 @@ export function MovingCosts() {
           </div>
         </div>
 
-        {/* Factors Sub-section */}
-        <div className="mt-12 sm:mt-16 pt-10 border-t border-border">
-          <div className="max-w-3xl">
-            <h3
-              id="factors-heading"
-              className="text-2xl sm:text-3xl font-semibold "
-            >
-              What Affects the Cost of Moving?
-            </h3>
-            <p className="mt-3 text-muted-foreground text-sm sm:text-base">
-              Several practical factors can influence{" "}
-              <strong className="text-foreground font-semibold">
-                moving costs in Sharjah
-              </strong>
-              , including:
-            </p>
-          </div>
+        {/* Cost factors */}
+        <div className="mt-16 lg:mt-20">
+          <h3 id="factors-heading" className="text-ink">
+            What Affects the Cost of Moving?
+          </h3>
+          <p className="mt-3 t-body text-muted-foreground">
+            Several practical factors can influence{" "}
+            <strong className="text-ink font-semibold">moving costs in Sharjah</strong>
+            , including:
+          </p>
 
-          {/* Accessible, Semantic Factors List */}
           <ul
             role="list"
             aria-labelledby="factors-heading"
-            className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6"
+            className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-16 border-t border-ink"
           >
             {costFactors.map((factor, index) => (
               <li
                 key={factor.id}
-                className="rounded-2xl border border-border/80 bg-card p-5 sm:p-6 shadow-2xs hover:border-primary/40 hover:shadow-xs transition-all flex flex-col justify-between"
+                className="reveal grid grid-cols-[3rem_1fr] gap-x-4 border-b border-line py-7"
               >
+                <span className="t-num text-3xl font-bold leading-none text-signal" aria-hidden="true">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <div>
-                  <div className="flex items-center justify-between gap-4 mb-3">
-                    <strong className="text-base font-semibold text-foreground">
-                      {factor.title}
-                    </strong>
-                    <span
-                      className="text-xs font-mono font-semibold text-primary bg-muted px-2 py-1 rounded-md shrink-0"
-                      aria-hidden="true"
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {factor.description}
-                  </p>
+                  <strong className="t-h4 block text-ink">{factor.title}</strong>
+                  <p className="mt-2 t-body text-muted-foreground">{factor.description}</p>
                 </div>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Editorial Takeaway Note */}
-        <section
-          aria-label="Moving estimate guidance"
-          className="mt-10 rounded-2xl bg-muted/40  p-6 sm:p-8"
-        >
-          <p className="text-foreground/90 text-sm sm:text-base leading-relaxed">
-            Because every relocation is different, an accurate{" "}
-            <strong className="text-foreground font-semibold">
-              moving estimate in Sharjah
-            </strong>{" "}
-            is more useful than relying on a generic advertised price. Providing
-            details about your property, belongings, locations and required
-            services allows the moving team to understand the work involved and
-            prepare a quotation suited to your move.
-          </p>
-        </section>
-
-        {/* Action / Free Estimate Banner */}
-        <div className="mt-8 rounded-2xl bg-primary text-primary-foreground p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 shadow-sm">
-          <div className="max-w-2xl">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2">
-              Contact For Free Moving Estimates in Sharjah
-            </h3>
-            <p className="text-white/85 text-sm ">
-              For a clear idea of your expected moving charges, contact{" "}
-              <strong className="text-white font-semibold">
-                Al Afnan Furniture Transfer
-              </strong>{" "}
-              for a free estimate. We can discuss your requirements and help you
-              plan the services you actually need.
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* Guidance note */}
+          <section
+            aria-label="Moving estimate guidance"
+            className="lg:col-span-6 rounded-xl bg-paper-2 p-7 sm:p-9"
+          >
+            <p className="t-body text-steel">
+              Because every relocation is different, an accurate{" "}
+              <strong className="text-ink font-semibold">moving estimate in Sharjah</strong>{" "}
+              is more useful than relying on a generic advertised price. Providing
+              details about your property, belongings, locations and required
+              services allows the moving team to understand the work involved and
+              prepare a quotation suited to your move.
             </p>
-          </div>
+          </section>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto shrink-0">
-            <Button
-              variant="white"
-              size="lg"
-              render={<Link href="#" />}
-              className="font-semibold"
-            >
+          {/* Estimate panel */}
+          <div
+            data-surface="dark"
+            className="lg:col-span-6 flex flex-col justify-between gap-6 rounded-xl bg-ink p-7 sm:p-9 text-fog"
+          >
+            <div>
+              <h3 className="text-white">Contact For Free Moving Estimates in Sharjah</h3>
+              <p className="mt-3 t-body">
+                For a clear idea of your expected moving charges, contact{" "}
+                <strong className="text-white font-semibold">Al Afnan Furniture Transfer</strong>{" "}
+                for a free estimate. We can discuss your requirements and help you
+                plan the services you actually need.
+              </p>
+            </div>
+            <Button render={<Link href="#estimate" />} className="self-start">
               <span>Request Free Estimate</span>
-              <ArrowRight className="size-4 ml-1.5 text-primary" />
+              <ArrowRight />
             </Button>
           </div>
         </div>

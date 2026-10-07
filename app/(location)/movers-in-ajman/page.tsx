@@ -274,7 +274,7 @@ export default function AjmanPage() {
                 {/* H1 Heading */}
                 <h1
                   id="hero-title"
-                  className="font-bold text-3xl sm:text-4xl leading-[1.12] "
+                  className=""
                 >
                   Movers in Ajman{" "}
                   <span className="block text-primary mt-1.5 ">
@@ -292,7 +292,7 @@ export default function AjmanPage() {
                   </p>
 
                   {/* Highlighted Service Details & Credibility */}
-                  <div className="border-l-2 border-primary/40 pl-4 sm:pl-5 space-y-2.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  <div className="border-l-2 border-primary/40 pl-4 sm:pl-5 space-y-2.5 text-muted-foreground t-body leading-relaxed">
                     <p>
                       We move houses, villas, apartments, offices, and furniture
                       with the same crew that packs, loads, and delivers your
@@ -344,7 +344,7 @@ export default function AjmanPage() {
                     <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-primary">
                       Al Afnan Furniture Transfer
                     </span>
-                    <span className="text-sm sm:text-base font-semibold text-white mt-0.5">
+                    <span className="t-body font-semibold text-white mt-0.5">
                       Movers in Ajman &amp; Across the UAE
                     </span>
                   </figcaption>
@@ -365,7 +365,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-14">
             <h2
               id="why-choose-us-title"
-              className="text-2xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Why Choose Al Afnan for{" "}
               <span className="md:block">Your Move in Ajman?</span>
@@ -390,7 +390,7 @@ export default function AjmanPage() {
                     <div className="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mb-5">
                       <IconComponent className="size-6" aria-hidden="true" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground tracking-tight">
+                    <h3 className="font-semibold text-foreground">
                       {pillar.title}
                     </h3>
                     <p className="text-sm sm:text-[15px] text-muted-foreground leading-relaxed mt-2.5">
@@ -432,7 +432,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-16">
             <h2
               id="specialized-furniture-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Specialized Furniture Moving <br className="md:block hidden" />{" "}
               Services in Ajman
@@ -447,10 +447,10 @@ export default function AjmanPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* 1. Carpenter-Led Disassembly & Reassembly (Full Width) */}
             <div className="md:col-span-2 border-t border-border/80 pt-6 sm:pt-8 space-y-3.5">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+              <h3 className="font-semibold text-foreground">
                 Carpenter-Led Disassembly &amp; Reassembly
               </h3>
-              <div className="max-w-4xl space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="max-w-4xl space-y-3 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Our team includes trained carpenters not just general movers.
                   They handle beds wardrobes and tables. For each piece they
@@ -466,10 +466,10 @@ export default function AjmanPage() {
 
             {/* 2. Material-Specific Wrapping Protocols (1 Col, UL List) */}
             <div className="border-t border-border/80 pt-6 sm:pt-8 space-y-3.5">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+              <h3 className="font-semibold text-foreground">
                 Material-Specific Wrapping Protocols
               </h3>
-              <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm sm:text-base">
+              <ul className="list-disc list-inside space-y-1.5 text-muted-foreground t-body">
                 <li>We do not use one size fits all padding.</li>
                 <li>
                   For wood surfaces we use furniture pads plus stretch film.
@@ -497,10 +497,10 @@ export default function AjmanPage() {
 
             {/* 3. Heavy & Awkward Furniture Logistics (1 Col, UL List) */}
             <div className="border-t border-border/80 pt-6 sm:pt-8 space-y-3.5">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+              <h3 className="font-semibold text-foreground">
                 Heavy &amp; Awkward Furniture Logistics
               </h3>
-              <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm sm:text-base">
+              <ul className="list-disc list-inside space-y-1.5 text-muted-foreground t-body">
                 <li>
                   For safes pianos or oversized sectionals we use special tools.
                 </li>
@@ -520,7 +520,7 @@ export default function AjmanPage() {
             </div>
 
             <div className="col-span-1 md:col-span-2">
-              <p className="p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl text-sm sm:text-base text-foreground font-medium leading-relaxed">
+              <p className="p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl t-body text-foreground font-medium leading-relaxed">
                 Recently we moved a 300kg safe from an Al Nuaimiya villa to Al
                 Helio 2. We used tracked dollies. There was no wall damage.
                 There were no delays.
@@ -546,7 +546,7 @@ export default function AjmanPage() {
           <div className="max-w-2xl mb-12 sm:mb-14 mx-auto text-center">
             <h2
               id="emergency-moving-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Same-Day &amp; Emergency Moving in Ajman
             </h2>
@@ -561,7 +561,7 @@ export default function AjmanPage() {
             {/* Pillar 1 */}
             <div className="rounded-2xl bg-primary/95 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
+                <h3 className="font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                   Same-Day Service Depends On Crew Availability
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed">
@@ -577,7 +577,7 @@ export default function AjmanPage() {
             {/* Pillar 2 */}
             <div className="rounded-2xl bg-primary/95 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
+                <h3 className="font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                   Emergency Moves For Urgent Situations
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed">
@@ -593,7 +593,7 @@ export default function AjmanPage() {
             {/* Pillar 3 */}
             <div className="rounded-2xl bg-primary/95 p-6 sm:p-8 flex flex-col justify-between shadow-xs">
               <div>
-                <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
+                <h3 className="font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                   No Extra Charge For Urgent Service
                 </h3>
                 <p className="text-sm text-white/90 leading-relaxed">
@@ -614,10 +614,10 @@ export default function AjmanPage() {
                 <Phone className="size-5" />
               </div>
               <div>
-                <p className="text-sm sm:text-base font-semibold text-foreground">
+                <p className="t-body font-semibold text-foreground">
                   Need urgent moving support in Ajman right now?
                 </p>
-                <p className="text-xs sm:text-sm text-muted-foreground">
+                <p className="t-small text-muted-foreground">
                   Call our dispatch directly for immediate availability and
                   transparent pricing.
                 </p>
@@ -644,7 +644,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-10 sm:mb-12">
             <h2
               id="areas-served-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
+              className="text-foreground"
             >
               Areas We Serve Across Ajman
             </h2>
@@ -680,7 +680,7 @@ export default function AjmanPage() {
                 key={area}
                 className="p-3 rounded-xl bg-card border border-border/80 "
               >
-                <h4 className="text-sm font-medium text-foreground tracking-tight">
+                <h4 className="text-sm font-medium text-foreground">
                   Movers in {area}
                 </h4>
               </div>
@@ -692,10 +692,10 @@ export default function AjmanPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               {/* Text Content Column */}
               <div className="lg:col-span-7">
-                <h3 className="text-2xl sm:text-3xl font-semibold text-foreground tracking-tight mb-4">
+                <h3 className="font-semibold text-foreground mb-4">
                   Moving Between Ajman and Other Emirates
                 </h3>
-                <div className="space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3.5 text-muted-foreground t-body leading-relaxed">
                   <p>
                     We move customers from Ajman to every emirate in the UAE.
                   </p>
@@ -708,7 +708,7 @@ export default function AjmanPage() {
                     Ain we schedule based on availability.
                   </p>
                   <div className="pt-2">
-                    <div className="p-4 sm:p-5 rounded-xl bg-muted/60 border border-border/60 text-foreground font-medium text-sm sm:text-base">
+                    <div className="p-4 sm:p-5 rounded-xl bg-muted/60 border border-border/60 text-foreground font-medium t-body">
                       Every cross-emirate move includes the same free survey
                       fixed price and licensed insured service as local moves.
                     </div>
@@ -743,7 +743,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-16 mx-auto text-center">
             <h2
               id="moving-cost-factors-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-foreground"
+              className="text-foreground"
             >
               What Affects Your <br /> Moving Cost in Ajman
             </h2>
@@ -762,10 +762,10 @@ export default function AjmanPage() {
                 <span className="text-xs font-mono font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md mb-4 inline-block">
                   Factor 01
                 </span>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Distance And Access Details
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     A move purely within Ajman (e.g., Al Nuaimiya to Al Zahya)
                     takes less time than one to another emirate.
@@ -788,10 +788,10 @@ export default function AjmanPage() {
                 <span className="text-xs font-mono font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md mb-4 inline-block">
                   Factor 02
                 </span>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   What You’re Moving And How Much
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     A studio move with minimal furniture requires less truck
                     space and packing material than a villa move with outdoor
@@ -817,10 +817,10 @@ export default function AjmanPage() {
                 <span className="text-xs font-mono font-semibold text-primary bg-primary/10 px-2.5 py-1 rounded-md mb-4 inline-block">
                   Factor 03
                 </span>
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Your Service Choices Directly Shape The Price
                 </h3>
-                <div className="space-y-3 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <div className="space-y-3 text-muted-foreground t-body leading-relaxed">
                   <p>
                     Basic service (loading transport unloading only) costs less
                     than full packing/unpacking.
@@ -843,10 +843,10 @@ export default function AjmanPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               {/* Left Column: Bulleted Process */}
               <div className="lg:col-span-6 space-y-4">
-                <h3 className="text-2xl sm:text-3xl font-semibold text-foreground tracking-tight">
+                <h3 className="font-semibold text-foreground">
                   How We Give You A Fixed Price
                 </h3>
-                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                <p className="text-muted-foreground t-body leading-relaxed">
                   After your free survey:
                 </p>
                 <div className="space-y-3 pt-1">
@@ -860,7 +860,7 @@ export default function AjmanPage() {
                       <div className="size-5 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0 mt-0.5">
                         <Check className="size-3.5" />
                       </div>
-                      <span className="text-sm sm:text-base text-foreground font-medium">
+                      <span className="t-body text-foreground font-medium">
                         {item}
                       </span>
                     </div>
@@ -871,11 +871,11 @@ export default function AjmanPage() {
               {/* Right Column: Pricing Guarantee and CTA */}
               <div className="lg:col-span-6 bg-muted/50 rounded-xl p-6 sm:p-7 border border-border/80 flex flex-col justify-between h-full space-y-5">
                 <div className="space-y-3">
-                  <p className="text-sm sm:text-base font-semibold text-foreground leading-relaxed">
+                  <p className="t-body font-semibold text-foreground leading-relaxed">
                     This price covers everything agreed upon—no hidden fees no
                     surprises.
                   </p>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                  <p className="t-body text-muted-foreground leading-relaxed">
                     If your needs change after the survey we discuss adjustments
                     openly before any work begins.
                   </p>

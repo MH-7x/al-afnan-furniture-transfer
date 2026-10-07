@@ -2,7 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowUp } from "lucide-react";
 import { ServicesLinks } from "@/components/ServicesLinks";
+import { ADDRESS, EMAIL, MAPS_HREF, PHONE_DISPLAY, PHONE_HREF } from "@/lib/contact";
 import type { Region } from "@/lib/servicesNav";
+
+const colTitle = "t-label text-white";
+const colLink = "text-fog hover:text-white transition-colors";
+const social =
+  "flex size-11 items-center justify-center rounded-md border border-ink-3 text-white hover:border-white transition-colors";
 
 /** `region` picks which services the "Our Services" column lists (default: Sharjah). */
 export function Footer({
@@ -13,356 +19,153 @@ export function Footer({
   region?: Region;
 }) {
   return (
-    <footer className="w-full">
-      {/* Main Footer Content */}
-      <div className="bg-linear-180 from-[#bd4a38] to-primary text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
-            {/* Column 1: Brand & Social Links */}
-            <div className="flex flex-col md:col-span-3">
-              <Link
-                href="/"
-                className="inline-block shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg"
-                aria-label="Al Afan Furniture Transfer Home"
-              >
-                <Image
-                  src="/logo-white.svg"
-                  alt="Al Afan Furniture Transfer"
-                  width={240}
-                  height={52}
-                  className="h-10 sm:h-12 w-auto object-contain"
-                />
-              </Link>
-              <p className="mt-4 text-sm text-white/80 leading-relaxed max-w-sm">
-                Quam pharetra lobortis integer magna aliquam rhoncus arcu
-                porttitor eget augue. Maximus fusce pharetra molestie accumsan
-                habitant metus tincidunt.
-              </p>
+    <footer data-surface="dark" className="w-full border-t border-ink-3 bg-ink text-fog">
+      <div className="wrap py-16 lg:py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12">
+          {/* Brand & social */}
+          <div className="sm:col-span-2 lg:col-span-3">
+            <Link href="/" className="inline-block rounded-sm" aria-label="Al Afan Furniture Transfer Home">
+              <Image
+                src="/logo-white.svg"
+                alt="Al Afan Furniture Transfer"
+                width={240}
+                height={52}
+                className="h-11 w-auto"
+              />
+            </Link>
+            <p className="mt-5 max-w-sm t-small">
+              Quam pharetra lobortis integer magna aliquam rhoncus arcu
+              porttitor eget augue. Maximus fusce pharetra molestie accumsan
+              habitant metus tincidunt.
+            </p>
 
-              <div className="mt-6">
-                <span className="block text-white font-semibold text-base mb-3">
-                  Connect with us
-                </span>
-                <div className="flex items-center gap-2.5">
-                  {/* Facebook */}
-                  <a
-                    href="https://facebook.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="size-10 rounded-lg border border-white/20 bg-white/5 hover:bg-white/15 text-white flex items-center justify-center transition-colors"
-                  >
-                    <svg
-                      className="size-4 fill-current"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
-                    </svg>
-                  </a>
+            <div className="mt-8">
+              <span className="block t-small font-semibold text-white">Connect with us</span>
+              <div className="mt-3 flex items-center gap-2.5">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={social}>
+                  <svg className="size-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+                  </svg>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className={social}>
+                  <svg className="size-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={social}>
+                  <svg className="size-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                  </svg>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className={social}>
+                  <svg className="size-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
 
-                  {/* X (formerly Twitter) */}
-                  <a
-                    href="https://x.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="X (Twitter)"
-                    className="size-10 rounded-lg border border-white/20 bg-white/5 hover:bg-white/15 text-white flex items-center justify-center transition-colors"
-                  >
-                    <svg
-                      className="size-3.5 fill-current"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                  </a>
+          {/* Locations (currently holds the policy links) */}
+          <div className="lg:col-span-2">
+            <h3 className={colTitle}>Locations</h3>
+            <ul className="mt-5 space-y-3 t-small">
+              <li><Link href="#" className={colLink}>Privacy Policy</Link></li>
+              <li><Link href="#" className={colLink}>Terms &amp; Conditions</Link></li>
+              <li><Link href="/#faqs" className={colLink}>FAQ&apos;s</Link></li>
+              <li><Link href="#" className={colLink}>Disclaimer</Link></li>
+              <li><Link href="/contact-us" className={colLink}>Support</Link></li>
+            </ul>
+          </div>
 
-                  {/* Instagram */}
-                  <a
-                    href="https://instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="size-10 rounded-lg border border-white/20 bg-white/5 hover:bg-white/15 text-white flex items-center justify-center transition-colors"
-                  >
-                    <svg
-                      className="size-4 fill-none stroke-current stroke-2"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                    </svg>
-                  </a>
+          {/* Useful links */}
+          <div className="lg:col-span-2">
+            <h3 className={colTitle}>Useful Links</h3>
+            <ul className="mt-5 space-y-3 t-small">
+              <li><Link href="/about-us" className={colLink}>About Us</Link></li>
+              <li><Link href="/contact-us" className={colLink}>Our Contact</Link></li>
+              <li><Link href="/#services" className={colLink}>Services</Link></li>
+              <li><Link href="/contact-us" className={colLink}>Appointment</Link></li>
+              <li><Link href="/#pricing" className={colLink}>Pricing</Link></li>
+            </ul>
+          </div>
 
-                  {/* YouTube */}
-                  <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube"
-                    className="size-10 rounded-lg border border-white/20 bg-white/5 hover:bg-white/15 text-white flex items-center justify-center transition-colors"
-                  >
-                    <svg
-                      className="size-4 fill-current"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                    </svg>
+          {/* Region-aware services */}
+          <div className="lg:col-span-2">
+            <h3 className={colTitle}>Our Services</h3>
+            <ul className="mt-5 space-y-3 t-small">
+              <ServicesLinks variant="footer" region={region} />
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="sm:col-span-2 lg:col-span-3">
+            <h3 className={colTitle}>Contact Us</h3>
+            <address className="not-italic mt-5 space-y-5 t-small">
+              <div className="flex gap-3">
+                <Phone className="mt-0.5 size-4.5 shrink-0 text-signal-bright" aria-hidden="true" />
+                <div>
+                  <span className="block text-fog">Phone No</span>
+                  <a href={PHONE_HREF} className="t-num text-lg font-bold text-white hover:text-signal-bright transition-colors">
+                    {PHONE_DISPLAY}
                   </a>
                 </div>
               </div>
-            </div>
-
-            {/* Column 2: Locations */}
-            <div className="md:col-span-2">
-              <h3 className="text-white font-semibold text-xl tracking-tight">
-                Locations
-              </h3>
-              <div
-                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
-                aria-hidden="true"
-              />
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Terms &amp; Conditions
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    FAQ&apos;s
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Disclaimer
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Support
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 3: Useful Links */}
-            <div className="md:col-span-2">
-              <h3 className="text-white font-semibold text-xl tracking-tight">
-                Useful Links
-              </h3>
-              <div
-                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
-                aria-hidden="true"
-              />
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/about-us"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact-us"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Our Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Appointment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    Pricing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Column 4: Our Services (Dubai services when region="dubai") */}
-            <div className="md:col-span-2">
-              <h3 className="text-white font-semibold text-xl tracking-tight">
-                Our Services
-              </h3>
-              <div
-                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
-                aria-hidden="true"
-              />
-              <ul className="space-y-3">
-                <ServicesLinks variant="footer" region={region} />
-              </ul>
-            </div>
-
-            {/* Column 5: Contact Us */}
-            <div className="md:col-span-3">
-              <h3 className="text-white font-semibold text-xl tracking-tight">
-                Contact Us
-              </h3>
-              <div
-                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
-                aria-hidden="true"
-              />
-              <address className="not-italic space-y-4">
-                {/* Phone */}
-                <div className="flex items-start gap-3">
-                  <div
-                    className="size-11 rounded-xl border border-white/30 flex items-center justify-center text-white shrink-0"
-                    aria-hidden="true"
-                  >
-                    <Phone className="size-5" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-xs text-white/80 leading-tight">
-                      Phone No
-                    </span>
-                    <a
-                      href="tel:0567277536"
-                      className="text-sm font-semibold text-white hover:text-white/80 hover:underline transition-colors mt-0.5"
-                    >
-                      056 7277536
-                    </a>
-                  </div>
+              <div className="flex gap-3">
+                <Mail className="mt-0.5 size-4.5 shrink-0 text-signal-bright" aria-hidden="true" />
+                <div className="min-w-0">
+                  <span className="block text-fog">Email</span>
+                  <a href={`mailto:${EMAIL}`} className="font-semibold text-white [overflow-wrap:anywhere] hover:underline">
+                    {EMAIL}
+                  </a>
                 </div>
-
-                {/* Email */}
-                <div className="flex items-start gap-3">
-                  <div
-                    className="size-11 rounded-xl border border-white/30 flex items-center justify-center text-white shrink-0"
-                    aria-hidden="true"
-                  >
-                    <Mail className="size-5" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-xs text-white/80 leading-tight">
-                      Email
-                    </span>
-                    <a
-                      href="mailto:afanfurnituretransfer@gmail.com"
-                      className="text-sm lg:text-xs font-semibold text-white hover:text-white/80 hover:underline transition-colors mt-0.5 break-all"
-                    >
-                      afanfurnituretransfer@gmail.com
-                    </a>
-                  </div>
+              </div>
+              <div className="flex gap-3">
+                <MapPin className="mt-0.5 size-4.5 shrink-0 text-signal-bright" aria-hidden="true" />
+                <div>
+                  <span className="block text-fog">Address</span>
+                  <a href={MAPS_HREF} target="_blank" rel="noopener noreferrer" className="font-semibold text-white hover:underline">
+                    {ADDRESS}
+                  </a>
                 </div>
-
-                {/* Address */}
-                <div className="flex items-start gap-3">
-                  <div
-                    className="size-11 rounded-xl border border-white/30 flex items-center justify-center text-white shrink-0"
-                    aria-hidden="true"
-                  >
-                    <MapPin className="size-5" />
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-xs text-white/80 leading-tight">
-                      Address
-                    </span>
-                    <a
-                      href="https://maps.google.com/?q=Jamal+Abdul+Naser+St+near+Al+Majaz+2+Al+Majaz+Sharjah"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm font-semibold text-white hover:text-white/80 hover:underline transition-colors leading-snug mt-0.5"
-                    >
-                      Jamal Abdul Naser St, near Al Majaz 2 - Al Majaz 2 - Al
-                      Majaz, Sharjah
-                    </a>
-                  </div>
-                </div>
-              </address>
-            </div>
+              </div>
+            </address>
           </div>
         </div>
       </div>
 
-      {/* Bottom Copyright Bar */}
-      <div className="bg-secondary text-secondary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
-            {/* Copyright */}
-            <p className="font-medium text-center md:text-left">
-              Copyright &copy; 2026 Al Afnan Furniture Transfer. All rights
-              reserved.
-            </p>
-
-            {/* Links & Scroll to top */}
-            <div className="flex items-center gap-3 sm:gap-4 font-medium flex-wrap justify-center">
-              <span>Dev. by Mashal Huraira</span>
-              <span className="text-secondary-foreground/40" aria-hidden="true">
-                |
-              </span>
-              <Link href="#" className="hover:underline transition-colors">
-                Privacy Policy
-              </Link>
-              <span className="text-secondary-foreground/40" aria-hidden="true">
-                |
-              </span>
-              <Link href="#" className="hover:underline transition-colors">
-                Cookie Policy
-              </Link>
-
-              {/* Scroll to top button */}
-              <a
-                href="#top"
-                aria-label="Scroll to top"
-                className="size-9 sm:size-10 rounded-full bg-white/25 hover:bg-white/35 text-white flex items-center justify-center transition-colors ml-1 sm:ml-2 shadow-xs"
-              >
-                <ArrowUp className="size-5 stroke-[2.5]" />
-              </a>
-            </div>
+      {/* Legal bar */}
+      <div className="border-t border-ink-3">
+        <div className="wrap flex flex-col md:flex-row items-center justify-between gap-4 py-5 t-small">
+          <p className="text-center md:text-start">
+            Copyright &copy; 2026 Al Afnan Furniture Transfer. All rights reserved.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+            <span>Dev. by Mashal Huraira</span>
+            <span className="text-ink-3" aria-hidden="true">|</span>
+            <Link href="#" className="hover:text-white hover:underline">Privacy Policy</Link>
+            <span className="text-ink-3" aria-hidden="true">|</span>
+            <Link href="#" className="hover:text-white hover:underline">Cookie Policy</Link>
+            <a
+              href="#top"
+              aria-label="Scroll to top"
+              className="ms-2 flex size-11 items-center justify-center rounded-md border border-ink-3 text-white hover:border-white transition-colors"
+            >
+              <ArrowUp className="size-5" aria-hidden="true" />
+            </a>
           </div>
         </div>
       </div>
-      <details className="group py-1 [&_summary::-webkit-details-marker]:hidden flex flex-col items-center justify-center text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer">
-        <summary>popular searches</summary>
-        <div className="flex flex-wrap items-center justify-center gap-1">
+
+      <details className="group border-t border-ink-3 [&_summary::-webkit-details-marker]:hidden">
+        <summary className="wrap cursor-pointer list-none py-3 text-center t-small text-fog hover:text-white">
+          popular searches
+        </summary>
+        <div className="wrap flex flex-wrap justify-center gap-x-4 gap-y-1 pb-6 t-small">
           {searches?.map((search, index) => (
-            <p key={index} className="hover:underline cursor-pointer">
-              {search}
-            </p>
+            <p key={index}>{search}</p>
           ))}
         </div>
       </details>

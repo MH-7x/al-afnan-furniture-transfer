@@ -50,7 +50,7 @@ const GOOGLE_REVIEWS_URL = "https://maps.google.com/?cid=15781830796061422134";
 
 const sectionClass = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full";
 const h2Class =
-  "text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground";
+  "text-foreground";
 const leadClass =
   "mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed";
 const bodyClass = "text-muted-foreground text-sm sm:text-base leading-relaxed";
@@ -612,7 +612,7 @@ export default function MoversAndPackersInDubaiPage() {
 
                 <h1
                   id="hero-title"
-                  className="font-bold text-3xl sm:text-4xl lg:text-[2.65rem] leading-[1.12]"
+                  className=""
                 >
                   Movers and Packers in Dubai
                 </h1>
@@ -629,7 +629,7 @@ export default function MoversAndPackersInDubaiPage() {
                   {trustStrip.map(({ icon: Icon, text, lead }) => (
                     <li
                       key={text}
-                      className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-card px-3 py-2 text-xs sm:text-sm font-semibold text-foreground shadow-2xs"
+                      className="inline-flex items-center gap-2 rounded-xl border border-border/80 bg-card px-3 py-2 t-small font-semibold text-foreground shadow-2xs"
                     >
                       <Icon
                         className="size-4 text-primary shrink-0"
@@ -672,7 +672,7 @@ export default function MoversAndPackersInDubaiPage() {
 
                 <a
                   href="#moving-prices"
-                  className="mt-5 w-fit text-sm sm:text-base font-semibold text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
+                  className="mt-5 w-fit t-body font-semibold text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
                 >
                   See moving prices →
                 </a>
@@ -767,7 +767,7 @@ export default function MoversAndPackersInDubaiPage() {
                   />
                 </div>
                 <div className="p-6 sm:p-7 flex flex-col flex-1">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+                  <h3 className="font-semibold text-foreground">
                     {card.title}
                   </h3>
                   <p className={`mt-3.5 ${bodyClass}`}>{card.body}</p>
@@ -788,7 +788,7 @@ export default function MoversAndPackersInDubaiPage() {
                   />
                 </div>
                 <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
-                  <h3 className="text-xl sm:text-2xl font-semibold text-foreground tracking-tight">
+                  <h3 className="font-semibold text-foreground">
                     Moves Between Dubai and Other Emirates
                   </h3>
                   <p className={`mt-3.5 ${bodyClass}`}>
@@ -818,7 +818,7 @@ export default function MoversAndPackersInDubaiPage() {
             </article>
           </div>
 
-          <p className="mt-8 p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl text-sm sm:text-base text-foreground font-medium leading-relaxed">
+          <p className="mt-8 p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl t-body text-foreground font-medium leading-relaxed">
             Not sure which service fits your move?{" "}
             <a
               href={whatsapp(
@@ -858,7 +858,7 @@ export default function MoversAndPackersInDubaiPage() {
                 <div className="size-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mb-5">
                   <Icon className="size-6" aria-hidden="true" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground tracking-tight">
+                <h3 className="font-semibold text-foreground">
                   {title}
                 </h3>
                 <p className="text-sm sm:text-[15px] text-muted-foreground leading-relaxed mt-2.5">
@@ -871,7 +871,7 @@ export default function MoversAndPackersInDubaiPage() {
             <div className="md:col-span-2 lg:col-span-12 rounded-2xl bg-muted/50 border border-border/80 p-6 sm:p-8 lg:p-10">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                 <div className="lg:col-span-5">
-                  <h3 className="text-2xl sm:text-3xl font-semibold text-foreground tracking-tight">
+                  <h3 className="font-semibold text-foreground">
                     How to Choose the Best Moving Company in Dubai
                   </h3>
                   <p className={`mt-4 ${bodyClass}`}>
@@ -892,13 +892,13 @@ export default function MoversAndPackersInDubaiPage() {
                         >
                           {index + 1}
                         </span>
-                        <span className="text-sm sm:text-base text-foreground font-medium leading-relaxed">
+                        <span className="t-body text-foreground font-medium leading-relaxed">
                           {question}
                         </span>
                       </li>
                     ))}
                   </ol>
-                  <p className="mt-5 text-sm sm:text-base text-foreground font-semibold">
+                  <p className="mt-5 t-body text-foreground font-semibold">
                     We&apos;re happy to answer all five before you book.
                   </p>
                 </div>
@@ -985,10 +985,10 @@ export default function MoversAndPackersInDubaiPage() {
               <div className="size-11 rounded-xl bg-white/15 text-white flex items-center justify-center mb-4">
                 <Zap className="size-5" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
+              <h3 className="font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                 Same-Day and Emergency Moves
               </h3>
-              <p className="text-sm sm:text-base text-white/90 leading-relaxed">
+              <p className="t-body text-white/90 leading-relaxed">
                 Need to move today? Call or WhatsApp us with both addresses and
                 a few photos. Whether we can do it the same day depends on the
                 size of the job and your building&apos;s lift availability, so
@@ -1000,10 +1000,10 @@ export default function MoversAndPackersInDubaiPage() {
               <div className="size-11 rounded-xl bg-white/15 text-white flex items-center justify-center mb-4">
                 <Moon className="size-5" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
+              <h3 className="font-semibold border-b-2 border-white/30 pb-2 text-white mb-3">
                 Night and Weekend Moves
               </h3>
-              <p className="text-sm sm:text-base text-white/90 leading-relaxed">
+              <p className="t-body text-white/90 leading-relaxed">
                 Our 24-hour movers in Dubai can work through the night, which
                 suits offices that can&apos;t close during working hours. Many
                 towers and gated communities set fixed moving hours, so send us
@@ -1033,7 +1033,7 @@ export default function MoversAndPackersInDubaiPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
             {/* Permits */}
             <article className="lg:col-span-7 rounded-2xl border border-border/80 bg-card p-6 sm:p-8 shadow-xs">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4 tracking-tight">
+              <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4">
                 Move-Out and Move-In Permits
               </h3>
               <div className={`space-y-4 ${bodyClass}`}>
@@ -1067,7 +1067,7 @@ export default function MoversAndPackersInDubaiPage() {
 
             {/* Service lift */}
             <article className="lg:col-span-5 rounded-2xl border border-border/80 bg-card p-6 sm:p-8 shadow-xs">
-              <h3 className="text-xl sm:text-2xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4 tracking-tight">
+              <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-4">
                 Booking the Service Lift and Loading Bay
               </h3>
               <p className={bodyClass}>
@@ -1082,7 +1082,7 @@ export default function MoversAndPackersInDubaiPage() {
 
             {/* Towers vs villa communities */}
             <div className="lg:col-span-12 mt-2">
-              <h3 className="text-2xl sm:text-3xl font-semibold text-foreground tracking-tight mb-5">
+              <h3 className="font-semibold text-foreground mb-5">
                 High-Rise Towers vs Gated Villa Communities
               </h3>
               <ContentTable
@@ -1094,7 +1094,7 @@ export default function MoversAndPackersInDubaiPage() {
                 ]}
                 rows={buildingComparison}
               />
-              <p className="mt-6 p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl text-sm sm:text-base text-foreground font-medium leading-relaxed">
+              <p className="mt-6 p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl t-body text-foreground font-medium leading-relaxed">
                 Before you confirm your moving date, make sure you have an
                 approved permit, a booked lift slot or gate pass, and a parking
                 spot for the truck.
@@ -1149,7 +1149,7 @@ export default function MoversAndPackersInDubaiPage() {
             ))}
           </ul>
 
-          <p className="mt-8 p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl text-sm sm:text-base text-foreground font-medium leading-relaxed">
+          <p className="mt-8 p-4 sm:p-5 bg-muted/60 border border-border/60 rounded-xl t-body text-foreground font-medium leading-relaxed">
             All packing materials are included in your quote, and everything we
             move is insured in transit and while our crew is handling it.
           </p>
@@ -1176,7 +1176,7 @@ export default function MoversAndPackersInDubaiPage() {
                 key={group.title}
                 className="rounded-2xl border border-border/80 bg-card p-6 sm:p-8 shadow-xs flex flex-col"
               >
-                <h3 className="text-xl font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   {group.title}
                 </h3>
                 <p className={bodyClass}>{group.description}</p>
@@ -1231,14 +1231,14 @@ export default function MoversAndPackersInDubaiPage() {
                 rows={priceRows}
                 className="min-w-0"
               />
-              <p className="mt-3 text-xs sm:text-sm text-muted-foreground font-medium">
+              <p className="mt-3 t-small text-muted-foreground font-medium">
                 Updated October 2026
               </p>
             </div>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               <article className="rounded-2xl border border-border/80 bg-card p-6 shadow-xs">
-                <h3 className="text-lg font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   What Every Quote Includes
                 </h3>
                 <p className={bodyClass}>
@@ -1248,7 +1248,7 @@ export default function MoversAndPackersInDubaiPage() {
               </article>
 
               <article className="rounded-2xl border border-border/80 bg-card p-6 shadow-xs">
-                <h3 className="text-lg font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   What Changes Your Price
                 </h3>
                 <ul className="space-y-2 list-none p-0 m-0">
@@ -1265,7 +1265,7 @@ export default function MoversAndPackersInDubaiPage() {
               </article>
 
               <article className="rounded-2xl border border-border/80 bg-card p-6 shadow-xs">
-                <h3 className="text-lg font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Building Fees Paid Separately
                 </h3>
                 <p className={bodyClass}>
@@ -1276,7 +1276,7 @@ export default function MoversAndPackersInDubaiPage() {
               </article>
 
               <article className="rounded-2xl border border-border/80 bg-card p-6 shadow-xs">
-                <h3 className="text-lg font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3 tracking-tight">
+                <h3 className="font-semibold text-foreground border-b-2 border-primary/30 pb-2 mb-3">
                   Affordable Movers in Dubai Without Hidden Fees
                 </h3>
                 <p className={bodyClass}>

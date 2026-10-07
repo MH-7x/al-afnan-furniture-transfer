@@ -67,7 +67,7 @@ export default function ContactUsPage() {
             {/* H1 Heading */}
             <h1
               id="contact-hero-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]"
+              className="text-foreground"
             >
               Contact Afnan Furniture Transfer
             </h1>
@@ -93,7 +93,7 @@ export default function ContactUsPage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Call &amp; WhatsApp
                 </span>
-                <h2 className="text-xl font-bold text-foreground mt-1 mb-2 tracking-tight">
+                <h2 className="text-foreground mt-1 mb-2">
                   <a
                     href="tel:0567277536"
                     className="hover:text-primary transition-colors focus:outline-hidden focus-visible:underline"
@@ -141,7 +141,7 @@ export default function ContactUsPage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Our Headquarters
                 </span>
-                <h2 className="text-xl font-bold text-foreground mt-1 mb-2 tracking-tight">
+                <h2 className="text-foreground mt-1 mb-2">
                   Sharjah Office
                 </h2>
 
@@ -174,7 +174,7 @@ export default function ContactUsPage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   Availability
                 </span>
-                <h2 className="text-xl font-bold text-foreground mt-1 mb-2 tracking-tight">
+                <h2 className="text-foreground mt-1 mb-2">
                   Opening Hours
                 </h2>
 

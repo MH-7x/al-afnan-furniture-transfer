@@ -139,12 +139,12 @@ export default function OfficeMoversPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="">
                 Office Movers in Sharjah{" "}
               </h1>
 
               {/* Intro Content */}
-              <div className="mt-5 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Al Afnan Furniture Transfer handles office moves across
                   Sharjah — from a single-room startup to a full corporate

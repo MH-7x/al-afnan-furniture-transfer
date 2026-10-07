@@ -296,7 +296,7 @@ const aboutFooterSearches = [
    ───────────────────────────────────────────────────────────────────────────── */
 const sectionWrap = "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full";
 const h2Class =
-  "text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight leading-[1.1] text-foreground";
+  "text-foreground";
 const enter =
   "motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-4 motion-safe:duration-700 motion-safe:fill-mode-backwards";
 const phoneLink =
@@ -380,7 +380,7 @@ export default function AboutUsPage() {
 
                 <h1
                   id="about-hero-heading"
-                  className="text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl lg:text-[3.4rem]"
+                  className=""
                 >
                   About <span className="text-primary">Al Afnan Furniture Transfer</span>
                 </h1>
@@ -555,7 +555,7 @@ export default function AboutUsPage() {
                 <SectionMark n="02" light />
                 <h2
                   id="stand-heading"
-                  className="text-3xl font-bold leading-[1.1] tracking-tight text-white sm:text-4xl lg:text-[2.65rem]"
+                  className="text-white"
                 >
                   What We Stand For
                 </h2>
@@ -629,7 +629,7 @@ export default function AboutUsPage() {
           <div className="mt-14 rounded-3xl border border-border/70 bg-muted/40 p-6 sm:p-10 lg:p-12">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-14">
               <div className="lg:col-span-5">
-                <h3 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
+                <h3 className="font-bold text-foreground">
                   How We Train Our Movers
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -668,7 +668,7 @@ export default function AboutUsPage() {
                 <Languages className="size-6" aria-hidden="true" />
               </span>
               <div>
-                <h3 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                <h3 className="font-semibold text-foreground">
                   Arabic, English, Urdu and Hindi Support
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
