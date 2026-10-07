@@ -1,5 +1,6 @@
 import React from "react";
 import { Quote } from "lucide-react";
+import { SectionHeader } from "@/components/SectionHeader";
 
 export interface Review {
   quote: string;
@@ -13,10 +14,11 @@ export interface ReviewsSectionProps {
   title: React.ReactNode;
   intro?: React.ReactNode;
   reviews: Review[];
-  /** Buttons / links rendered under the review cards */
+  /** Buttons / links rendered under the reviews */
   actions?: React.ReactNode;
 }
 
+/** Customer reviews on a white band: three across, then two wider, separated by rules. */
 export function ReviewsSection({
   id = "reviews",
   title,
@@ -27,62 +29,37 @@ export function ReviewsSection({
   const headingId = `${id}-heading`;
 
   return (
-    <section
-      id={id}
-      aria-labelledby={headingId}
-      className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
-    >
-      <div className="max-w-3xl mb-10 sm:mb-12">
-        <h2
-          id={headingId}
-          className="text-foreground"
-        >
-          {title}
-        </h2>
-        {intro && (
-          <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
-            {intro}
-          </p>
-        )}
-      </div>
+    <section id={id} aria-labelledby={headingId} className="scroll-mt-28 bg-white section-y">
+      <div className="wrap">
+        <SectionHeader id={headingId} title={title} lead={intro} />
 
-      {/* 3 + 2 card layout on large screens */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-        {reviews.map((review, index) => (
-          <figure
-            key={review.author + index}
-            className={`bg-card rounded-2xl p-6 sm:p-7 border border-border/80 shadow-xs hover:border-primary/40 transition-colors flex flex-col justify-between ${
-              index < 3 ? "lg:col-span-2" : "lg:col-span-3"
-            }`}
-          >
-            <div>
-              <div className="size-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 mb-4">
-                <Quote className="size-5" aria-hidden="true" />
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-x-10 gap-y-12">
+          {reviews.map((review, index) => (
+            <figure
+              key={review.author + index}
+              className={`reveal flex flex-col justify-between border-t-2 border-ink pt-6 ${
+                index < 3 ? "lg:col-span-2" : "lg:col-span-3"
+              }`}
+            >
+              <div>
+                <Quote className="size-7 fill-signal text-signal" aria-hidden="true" />
+                <blockquote className="mt-4 t-body text-steel">{review.quote}</blockquote>
               </div>
-              <blockquote className="text-sm sm:text-[15px] text-foreground/90 leading-relaxed">
-                {review.quote}
-              </blockquote>
-            </div>
-            <figcaption className="mt-5 pt-4 border-t border-border/60 t-small text-muted-foreground">
-              <cite className="not-italic font-semibold text-foreground">
-                {review.author}
-              </cite>
-              {review.details?.map((detail) => (
-                <span key={detail}>
-                  {" · "}
-                  {detail}
-                </span>
-              ))}
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-
-      {actions && (
-        <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
-          {actions}
+              <figcaption className="mt-6 t-small text-muted-foreground">
+                <cite className="not-italic font-semibold text-ink">{review.author}</cite>
+                {review.details?.map((detail) => (
+                  <span key={detail}>
+                    {" · "}
+                    {detail}
+                  </span>
+                ))}
+              </figcaption>
+            </figure>
+          ))}
         </div>
-      )}
+
+        {actions && <div className="mt-12 flex flex-wrap items-center gap-3">{actions}</div>}
+      </div>
     </section>
   );
 }
