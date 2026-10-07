@@ -11,6 +11,7 @@ import { HomePageFAQs } from "@/lib/FaqsData";
 import { Phone, ArrowRight, ShieldCheck, Clock, Award } from "lucide-react";
 import { Metadata } from "next";
 import Footer from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Licensed Movers in Sharjah | Al Afnan Furniture Transfer",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <Navbar />
       <main>
         <section id="hero" className="px-0 w-full">
           <div className="overflow-hidden md:py-28 py-20 flex items-center relative">
@@ -42,7 +44,7 @@ export default function Home() {
 
             {/* Hero Content */}
             <div className="relative z-10 px-4 sm:px-10 md:px-16 lg:px-20 max-w-6xl">
-              <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl md:text-start text-center">
+              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl md:text-start text-center">
                 <span className="block ">Movers in Sharjah </span>
                 <span className="block text-primary mt-1 sm:mt-2">
                   Al Afnan Furniture Transfer
@@ -115,7 +117,7 @@ export default function Home() {
               {/* Content Column */}
               <div className="lg:col-span-7 pt-4 sm:pt-6 lg:pt-0">
                 {/* Main Heading */}
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold  mb-5">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold  mb-5">
                   Movers and Packers in Sharjah{" "}
                   <span className="text-primary ">For Every Move</span>
                 </h2>
@@ -152,7 +154,7 @@ export default function Home() {
           <div className="rounded-2xl sm:rounded-3xl bg-muted/35 border border-border/70 p-8 sm:p-12 lg:p-14">
             {/* Section Header */}
             <div className="max-w-4xl">
-              <h2 className="text-3xl sm:text-5xl font-extrabold">
+              <h2 className="text-3xl sm:text-5xl font-bold">
                 Inter-Emirate Moving Services{" "}
                 <span className="text-primary md:block">From Sharjah</span>
               </h2>
@@ -278,7 +280,7 @@ export default function Home() {
               {/* Content Column */}
               <div className="lg:col-span-7 pt-4 sm:pt-6 lg:pt-0">
                 {/* Main Heading */}
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold  mb-5">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold  mb-5">
                   Movers Serving Areas{" "}
                   <span className="text-primary inline sm:block">
                     Across Sharjah

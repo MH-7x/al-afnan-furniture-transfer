@@ -2,32 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Phone, ChevronDown, ArrowRight, Menu, X, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ServicesLinks } from "@/components/ServicesLinks";
+import type { Region } from "@/lib/servicesNav";
 
 const locations = [
-  { name: "Movers in Dubai", href: "#" },
+  { name: "Movers in Dubai", href: "/movers-and-packer-in-dubai" },
+  { name: "Movers in Sharjah", href: "/" },
   { name: "Movers in Ajman", href: "/movers-in-ajman" },
   { name: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
 ];
 
-const services = [
-  { name: "House Movers", href: "/house-movers-in-sharjah" },
-  {
-    name: "Apartment Movers",
-    href: "/apartment-movers-in-sharjah",
-  },
-  { name: "Villa Movers", href: "/villa-movers-in-sharjah" },
-  { name: "Office Movers", href: "/office-movers-in-sharjah" },
-  {
-    name: "Furniture Transfer",
-    href: "/furniture-transfer-in-sharjah",
-  },
-  {
-    name: "Packing Services",
-    href: "/packing-services-in-sharjah",
-  },
-];
-
-export function Navbar() {
+/** `region` picks which services the Services menu lists (default: Sharjah). */
+export function Navbar({ region = "sharjah" }: { region?: Region }) {
   return (
     <>
       {/* Upper Header Bar (scrolls away naturally) */}
@@ -78,28 +64,20 @@ export function Navbar() {
                 className="hidden md:block h-9 w-px bg-border"
                 aria-hidden="true"
               />
-
-              {/* Address */}
-              <div className="hidden md:flex items-center gap-2.5 sm:gap-3">
+              <div className="not-italic flex items-center gap-2.5 sm:gap-3">
                 <div
                   className="size-10 sm:size-11 md:size-12 rounded-xl bg-primary flex items-center justify-center text-white shrink-0 shadow-xs"
                   aria-hidden="true"
                 >
-                  <MapPin className="size-4 sm:size-5" />
+                  <Phone className="size-4 sm:size-5" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-primary font-semibold text-xs sm:text-sm leading-tight">
-                    Address
+                    Service Areas
                   </span>
-                  <a
-                    href="https://maps.google.com/?q=Jamal+Abdul+Naser+St+near+Al+Majaz+2+Al+Majaz+Sharjah"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground text-sm hover:text-primary transition-colors"
-                  >
-                    Jamal Abdul Naser St - near Al Majaz 2 <br /> Al Majaz 2 -
-                    Al Majaz - Sharjah
-                  </a>
+                  <span className="text-foreground font-semibold text-sm sm:text-base md:text-lg tracking-tight hover:text-primary transition-colors">
+                    Sun To Fri, Open 24 hours. Sat, 9 AM–5 PM
+                  </span>
                 </div>
               </div>
             </div>
@@ -128,7 +106,7 @@ export function Navbar() {
             {/* About Us */}
             <li>
               <Link
-                href="#"
+                href="/about-us"
                 className="font-semibold text-sm xl:text-base text-white hover:text-white/80 transition-colors"
               >
                 About Us
@@ -176,17 +154,8 @@ export function Navbar() {
 
               {/* Services Dropdown Menu */}
               <div className="absolute left-0 top-full pt-3 opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 transition-all duration-200 z-50 pointer-events-none group-hover:pointer-events-auto group-focus-within:pointer-events-auto">
-                <ul className="w-60 rounded-xl bg-card border border-border p-2 shadow-xl">
-                  {services.map((item, idx) => (
-                    <li key={`${item.name}-${idx}`}>
-                      <Link
-                        href={item.href}
-                        className="flex items-center gap-2.5 px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors"
-                      >
-                        <span>{item.name}</span>
-                      </Link>
-                    </li>
-                  ))}
+                <ul className="w-64 rounded-xl bg-card border border-border p-2 shadow-xl">
+                  <ServicesLinks variant="desktop" region={region} />
                 </ul>
               </div>
             </li>
@@ -223,7 +192,7 @@ export function Navbar() {
                   </li>
                   <li>
                     <Link
-                      href="#"
+                      href="/about-us"
                       className="block py-2 text-base font-semibold text-white hover:text-white/80 transition-colors"
                     >
                       About Us
@@ -260,16 +229,7 @@ export function Navbar() {
                         <ChevronDown className="size-4 transition-transform duration-200 group-open/srv:rotate-180" />
                       </summary>
                       <ul className="mt-1 pl-3 space-y-1.5 border-l-2 border-white/30 ml-1">
-                        {services.map((item, idx) => (
-                          <li key={`mobile-${item.name}-${idx}`}>
-                            <Link
-                              href={item.href}
-                              className="block py-1 text-sm text-white/90 hover:text-white transition-colors"
-                            >
-                              {item.name}
-                            </Link>
-                          </li>
-                        ))}
+                        <ServicesLinks variant="mobile" region={region} />
                       </ul>
                     </details>
                   </li>

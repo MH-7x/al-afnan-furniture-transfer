@@ -59,7 +59,7 @@ export const FAQSection: React.FC<FAQProps> = ({
           <div className="text-center mb-10 sm:mb-12">
             <h2
               id="faq-heading"
-              className="text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground"
             >
               {title}
             </h2>

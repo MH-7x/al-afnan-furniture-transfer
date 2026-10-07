@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Contact Us | Al Afnan Furniture Transfer Sharjah",
@@ -35,6 +36,7 @@ const contactFooterSearches = [
 export default function ContactUsPage() {
   return (
     <>
+      <Navbar />
       <main>
         {/* ════════════════════════════════════════════
             HERO SECTION WITH CONTACT DETAILS
@@ -68,7 +70,7 @@ export default function ContactUsPage() {
             {/* H1 Heading */}
             <h1
               id="contact-hero-heading"
-              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-foreground leading-[1.15]"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.15]"
             >
               Contact Afnan Furniture Transfer
             </h1>

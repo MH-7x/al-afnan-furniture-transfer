@@ -1,43 +1,43 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+import { getServices, regionNames, type Region } from "@/lib/servicesNav";
 
-const allServices = [
-  { label: "House Movers in Sharjah", href: "/house-movers-in-sharjah" },
-  {
-    label: "Apartment Movers in Sharjah",
-    href: "/apartment-movers-in-sharjah",
-  },
-  { label: "Villa Movers in Sharjah", href: "/villa-movers-in-sharjah" },
-  { label: "Office Movers in Sharjah", href: "/office-movers-in-sharjah" },
-  {
-    label: "Furniture Transfer in Sharjah",
-    href: "/furniture-transfer-in-sharjah",
-  },
-  {
-    label: "Packing Services in Sharjah",
-    href: "/packing-services-in-sharjah",
-  },
-];
-
-const emiratesWeCover = [
-  { label: "Movers in Dubai", href: "#" },
-  { label: "Movers in Ajman", href: "#" },
-  { label: "Movers in Ras Al Khaimah", href: "#" },
-];
+const emiratesWeCover: Record<Region, { label: string; href: string }[]> = {
+  sharjah: [
+    { label: "Movers in Dubai", href: "/movers-and-packers-in-dubai" },
+    { label: "Movers in Ajman", href: "/movers-in-ajman" },
+    { label: "Movers in Sharjah", href: "/" },
+    { label: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
+  ],
+  dubai: [
+    { label: "Movers in Dubai", href: "/movers-and-packer-in-dubai" },
+    { label: "Movers in Sharjah", href: "/" },
+    { label: "Movers in Ajman", href: "/movers-in-ajman" },
+    { label: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
+  ],
+};
 
 export interface ServiceSidebarProps {
   /** Title shown in the quick contact card */
   ctaTitle: string;
   /** Short description shown below the quick contact title */
   ctaDesc: string;
-  /** Sharjah areas served — passed per service page */
+  /**
+   * Which city this page belongs to. Switches the "Our Services" list, the
+   * emirates list and the areas block. Defaults to "sharjah".
+   */
+  region?: Region;
+  /** Sharjah areas served — passed per service page (region="sharjah") */
   sharjahAreas?: string[];
+  /** Dubai areas served — passed per service page (region="dubai") */
+  dubaiAreas?: string[];
 }
 
 export function ServiceSidebar({
   ctaTitle,
   ctaDesc,
+  region = "sharjah",
   sharjahAreas = [
     "Al Nahda",
     "Al Majaz",
@@ -46,7 +46,21 @@ export function ServiceSidebar({
     "Muwaileh",
     "Al Qasimia",
   ],
+  dubaiAreas = [
+    "Dubai Marina",
+    "JVC",
+    "JLT",
+    "Business Bay",
+    "Downtown Dubai",
+    "Al Barsha",
+    "Mirdif",
+    "Dubai Silicon Oasis",
+  ],
 }: ServiceSidebarProps) {
+  const regionName = regionNames[region];
+  const services = getServices(region);
+  const areas = region === "dubai" ? dubaiAreas : sharjahAreas;
+
   return (
     <aside className="flex flex-col gap-5">
       {/* ── Quick Contact Card ── */}
@@ -83,7 +97,7 @@ export function ServiceSidebar({
         </div>
 
         <ul className="flex flex-col divide-y divide-border/50">
-          {allServices.map((service) => (
+          {services.map((service) => (
             <li key={service.href}>
               <Link
                 href={service.href}
@@ -94,7 +108,7 @@ export function ServiceSidebar({
                     className="size-1.5 shrink-0 rounded-full bg-primary/40 transition-colors group-hover:bg-primary"
                     aria-hidden="true"
                   />
-                  {service.label}
+                  {service.name} in {regionName}
                 </span>
                 <ArrowRight className="size-3.5 shrink-0 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
               </Link>
@@ -117,8 +131,8 @@ export function ServiceSidebar({
           Emirates We Cover
         </p>
         <ul className="flex flex-col divide-y divide-border/50 mb-5">
-          {emiratesWeCover.map((loc) => (
-            <li key={loc.href}>
+          {emiratesWeCover[region].map((loc) => (
+            <li key={loc.label}>
               <Link
                 href={loc.href}
                 className="group flex items-center justify-between py-2.5 text-sm font-medium text-foreground/75 transition-colors hover:text-primary"
@@ -136,12 +150,12 @@ export function ServiceSidebar({
           ))}
         </ul>
 
-        {/* Sharjah Areas */}
+        {/* Areas of the current city */}
         <p className="mb-2.5 text-[10px] font-semibold uppercase tracking-widest text-primary/80">
-          Sharjah Areas
+          {regionName} Areas
         </p>
         <ul className="flex flex-wrap gap-1.5">
-          {sharjahAreas.map((area) => (
+          {areas.map((area) => (
             <li key={area}>
               <span className="inline-flex items-center gap-1.5 rounded-lg border border-border/70 bg-muted/50 px-2.5 py-1 text-xs font-medium text-foreground/70">
                 <span

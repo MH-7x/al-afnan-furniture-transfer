@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 import Services from "@/components/Services";
 import MovingProcess from "@/components/MovingProcess";
 import { FAQSection } from "@/components/FaqsSection";
@@ -230,6 +231,7 @@ const processSteps = [
 export default function AjmanPage() {
   return (
     <>
+      <Navbar />
       <main>
         {/* ════════════════════════════════════════════
             HERO SECTION (Unique Editorial Layout)
@@ -275,7 +277,7 @@ export default function AjmanPage() {
                 {/* H1 Heading */}
                 <h1
                   id="hero-title"
-                  className="font-extrabold text-3xl sm:text-4xl leading-[1.12] "
+                  className="font-bold text-3xl sm:text-4xl leading-[1.12] "
                 >
                   Movers in Ajman{" "}
                   <span className="block text-primary mt-1.5 ">
@@ -366,7 +368,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-14">
             <h2
               id="why-choose-us-title"
-              className="text-2xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
             >
               Why Choose Al Afnan for{" "}
               <span className="md:block">Your Move in Ajman?</span>
@@ -433,7 +435,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-16">
             <h2
               id="specialized-furniture-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
+              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
             >
               Specialized Furniture Moving <br className="md:block hidden" />{" "}
               Services in Ajman
@@ -547,7 +549,7 @@ export default function AjmanPage() {
           <div className="max-w-2xl mb-12 sm:mb-14 mx-auto text-center">
             <h2
               id="emergency-moving-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
+              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
             >
               Same-Day &amp; Emergency Moving in Ajman
             </h2>
@@ -645,7 +647,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-10 sm:mb-12">
             <h2
               id="areas-served-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold tracking-tight text-foreground"
+              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold tracking-tight text-foreground"
             >
               Areas We Serve Across Ajman
             </h2>
@@ -744,7 +746,7 @@ export default function AjmanPage() {
           <div className="max-w-3xl mb-12 sm:mb-16 mx-auto text-center">
             <h2
               id="moving-cost-factors-heading"
-              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-extrabold text-foreground"
+              className="text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-foreground"
             >
               What Affects Your <br /> Moving Cost in Ajman
             </h2>

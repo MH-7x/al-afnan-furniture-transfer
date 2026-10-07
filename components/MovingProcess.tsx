@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 interface ProcessStep {
   number: string;
-  title: string;
+  title: React.ReactNode;
   paragraphs: React.ReactNode[];
 }
 
@@ -88,10 +88,15 @@ export function MovingProcess({
   title,
   desc,
   process,
+  ctaHref = "#",
+  ctaLabel = "Start Your Move Today",
 }: {
   title?: string;
-  desc?: string;
+  /** Pass null to hide the description paragraph entirely. */
+  desc?: string | null;
   process?: ProcessStep[];
+  ctaHref?: string;
+  ctaLabel?: string;
 }) {
   const steps = process && process.length > 0 ? process : processSteps;
 
@@ -105,29 +110,37 @@ export function MovingProcess({
         <div className="lg:col-span-5">
           {/* Inner container with sticky positioning */}
           <div className="lg:sticky lg:top-28 flex flex-col">
-            <h2 className="text-3xl sm:text-5xl tracking-tight font-extrabold">
+            <h2 className="text-3xl sm:text-5xl tracking-tight font-bold">
               {title || "How Our Moving Process Works"}
             </h2>
 
-            <p className="mt-5 text-muted-foreground text-base leading-relaxed">
-              {desc || (
-                <>
-                  A well-planned move is easier to manage when you know what to
-                  expect at each stage. At Al Afnan Furniture Transfer, we
-                  organize the moving process around your requirements, from the
-                  initial discussion and estimate through packing,
-                  transportation, unloading, and furniture reassembly.
-                </>
-              )}
-            </p>
+            {desc !== null && (
+              <p className="mt-5 text-muted-foreground text-base leading-relaxed">
+                {desc || (
+                  <>
+                    A well-planned move is easier to manage when you know what
+                    to expect at each stage. At Al Afnan Furniture Transfer, we
+                    organize the moving process around your requirements, from
+                    the initial discussion and estimate through packing,
+                    transportation, unloading, and furniture reassembly.
+                  </>
+                )}
+              </p>
+            )}
 
             <Button
               variant="default"
               size="lg"
-              render={<Link href="#" />}
+              render={
+                ctaHref.startsWith("http") ? (
+                  <a href={ctaHref} target="_blank" rel="noopener noreferrer" />
+                ) : (
+                  <Link href={ctaHref} />
+                )
+              }
               className="w-fit mt-6 font-semibold shadow-sm cursor-pointer"
             >
-              <span>Start Your Move Today</span>
+              <span>{ctaLabel}</span>
               <ArrowRight className="size-4 ml-1.5" />
             </Button>
           </div>

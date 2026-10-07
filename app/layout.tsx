@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const inter = Outfit({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "800"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
   preload: true,
   fallback: [
@@ -24,9 +24,6 @@ const inter = Inter({
     "Noto Color Emoji",
   ],
 });
-
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Movers in Sharjah | Al Afnan Furniture Transfer",
@@ -49,7 +46,6 @@ export default function RootLayout({
         id="top"
         className="min-h-screen flex flex-col bg-background text-foreground"
       >
-        <Navbar />
         {children}
       </body>
     </html>

@@ -74,7 +74,7 @@ export function MovingCosts() {
           </span>
           <h2
             id="moving-costs-heading"
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold "
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold "
           >
             Moving Costs in Sharjah
           </h2>

@@ -16,6 +16,7 @@ import { CTASection } from "@/components/CTASection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { Metadata } from "next";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
@@ -91,6 +92,7 @@ export default function PackingServicesPage() {
 
   return (
     <>
+      <Navbar />
       {/* FAQ Schema for Google Rich Results */}
       <script
         id="packing-services-faq-schema"
@@ -137,7 +139,7 @@ export default function PackingServicesPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
                 Packing Services in Sharjah
               </h1>
 

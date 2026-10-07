@@ -1,14 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowUp } from "lucide-react";
+import { ServicesLinks } from "@/components/ServicesLinks";
+import type { Region } from "@/lib/servicesNav";
 
-export function Footer({ searches }: { searches?: string[] }) {
+/** `region` picks which services the "Our Services" column lists (default: Sharjah). */
+export function Footer({
+  searches,
+  region = "sharjah",
+}: {
+  searches?: string[];
+  region?: Region;
+}) {
   return (
     <footer className="w-full">
       {/* Main Footer Content */}
       <div className="bg-linear-180 from-[#bd4a38] to-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
             {/* Column 1: Brand & Social Links */}
             <div className="flex flex-col md:col-span-3">
               <Link
@@ -173,7 +182,7 @@ export function Footer({ searches }: { searches?: string[] }) {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="#"
+                    href="/about-us"
                     className="text-sm text-white/80 hover:text-white transition-colors"
                   >
                     About Us
@@ -214,7 +223,21 @@ export function Footer({ searches }: { searches?: string[] }) {
               </ul>
             </div>
 
-            {/* Column 4: Contact Us */}
+            {/* Column 4: Our Services (Dubai services when region="dubai") */}
+            <div className="md:col-span-2">
+              <h3 className="text-white font-semibold text-xl tracking-tight">
+                Our Services
+              </h3>
+              <div
+                className="w-10 h-1 bg-white/40 rounded-full mt-2 mb-5"
+                aria-hidden="true"
+              />
+              <ul className="space-y-3">
+                <ServicesLinks variant="footer" region={region} />
+              </ul>
+            </div>
+
+            {/* Column 5: Contact Us */}
             <div className="md:col-span-3">
               <h3 className="text-white font-semibold text-xl tracking-tight">
                 Contact Us
@@ -259,7 +282,7 @@ export function Footer({ searches }: { searches?: string[] }) {
                     </span>
                     <a
                       href="mailto:afanfurnituretransfer@gmail.com"
-                      className="text-sm font-semibold text-white hover:text-white/80 hover:underline transition-colors mt-0.5 break-all"
+                      className="text-sm lg:text-xs font-semibold text-white hover:text-white/80 hover:underline transition-colors mt-0.5 break-all"
                     >
                       afanfurnituretransfer@gmail.com
                     </a>

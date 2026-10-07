@@ -14,6 +14,7 @@ import { CTASection } from "@/components/CTASection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { Metadata } from "next";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
@@ -94,6 +95,7 @@ export default function VillaMoversPage() {
 
   return (
     <>
+      <Navbar />
       {/* FAQ Schema for Google Rich Results */}
       <script
         id="villa-movers-faq-schema"
@@ -140,7 +142,7 @@ export default function VillaMoversPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
                 Villa Movers in Sharjah{" "}
               </h1>
 

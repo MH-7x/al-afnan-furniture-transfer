@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Phone, MapPin, Send, CheckCircle2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export interface CTASectionProps {
@@ -13,6 +13,9 @@ export interface CTASectionProps {
   quoteButtonText?: string;
   /** Primary CTA button link (default: "#") */
   quoteButtonHref?: string;
+  /** Optional WhatsApp button, shown before the call button when set */
+  whatsappButtonText?: string;
+  whatsappButtonHref?: string;
   /** Call button text (default: "Call: 056 7277536") */
   callButtonText?: string;
   /** Call button link (default: "tel:0567277536") */
@@ -33,6 +36,8 @@ export function CTASection({
   heading,
   paragraph,
   quoteButtonText = "Get a Quote",
+  whatsappButtonText,
+  whatsappButtonHref,
   callButtonText = "Call: 056 7277536",
   callButtonHref = "tel:0567277536",
   mapSrc = DEFAULT_MAP_SRC,
@@ -62,7 +67,7 @@ export function CTASection({
             {/* Content & Direct Contact Column */}
             <div className="lg:col-span-7 ">
               <div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground leading-tight">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-tight">
                   {heading}{" "}
                 </h2>
 
@@ -72,6 +77,17 @@ export function CTASection({
 
                 {/* Direct Call Button */}
                 <div className="mt-6 flex flex-wrap items-center gap-3.5 sm:gap-4">
+                  {whatsappButtonText && whatsappButtonHref && (
+                    <a
+                      href={whatsappButtonHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-4xl bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-sm transition-all shadow-xs active:scale-95"
+                    >
+                      <MessageCircle className="size-4 shrink-0" />
+                      <span>{whatsappButtonText}</span>
+                    </a>
+                  )}
                   <a
                     href={callButtonHref}
                     className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-4xl bg-card border border-border text-foreground hover:text-primary hover:border-primary/50 font-semibold text-sm transition-all shadow-2xs active:scale-95"

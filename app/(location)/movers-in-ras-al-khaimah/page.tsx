@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 import MovingProcess from "@/components/MovingProcess";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
@@ -188,6 +189,7 @@ const rakFaqs = [
 export default function RasAlKhaimahPage() {
   return (
     <>
+      <Navbar />
       <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
@@ -231,7 +233,7 @@ export default function RasAlKhaimahPage() {
                 {/* H1 Heading */}
                 <h1
                   id="hero-title"
-                  className="font-extrabold text-3xl sm:text-4xl lg:text-[2.50rem] leading-[1.14]"
+                  className="font-bold text-3xl sm:text-4xl lg:text-[2.50rem] leading-[1.14]"
                 >
                   Movers in Ras Al Khaimah <br /> Professional Moving &amp;
                   Packing Services
@@ -318,7 +320,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="residential-movers-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
             >
               House, Villa &amp; Apartment Movers in Ras Al Khaimah
             </h2>
@@ -422,7 +424,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="commercial-movers-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
             >
               Office &amp; Commercial Movers in Ras Al Khaimah
             </h2>
@@ -557,7 +559,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-3xl mb-10 sm:mb-12 mx-auto text-center">
             <h2
               id="furniture-packing-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
             >
               Furniture Movers &amp; <br className="md:block hidden" /> Packing
               Services in Ras Al Khaimah
@@ -698,7 +700,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="why-choose-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
             >
               Why Choose Al Afnan Furniture Transfer
             </h2>
@@ -808,7 +810,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="inter-emirate-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
             >
               Long-Distance &amp; Inter-Emirate Moving
             </h2>
@@ -917,7 +919,7 @@ export default function RasAlKhaimahPage() {
             <div className="max-w-3xl mb-8 mx-auto text-center">
               <h2
                 id="emergency-moving-heading"
-                className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground md:px-16"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground md:px-16"
               >
                 Same-Day &amp; Emergency Moving in Ras Al Khaimah
               </h2>
@@ -1010,7 +1012,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="pricing-factors-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
             >
               What Determines Your <br /> Moving Quote in Ras Al Khaimah
             </h2>
@@ -1166,7 +1168,7 @@ export default function RasAlKhaimahPage() {
           <div className="max-w-4xl mb-10 sm:mb-12">
             <h2
               id="areas-served-heading"
-              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground"
+              className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground"
             >
               Areas We Serve in Ras Al Khaimah
             </h2>

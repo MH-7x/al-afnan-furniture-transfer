@@ -79,7 +79,7 @@ export function WhyChooseUs() {
         {/* Left Column: Title, Google Review Card & In-House Team Feature */}
         <div className="lg:col-span-7 flex flex-col space-y-6">
           <div>
-            <h2 className="text-3xl sm:text-5xl lg:text-[2.65rem] font-extrabold ">
+            <h2 className="text-3xl sm:text-5xl lg:text-[2.65rem] font-bold ">
               Why Customers Choose{" "}
               <span className="text-primary block mt-2">
                 Al Afnan Furniture Transfer
@@ -93,7 +93,7 @@ export function WhyChooseUs() {
               <Star className="size-6 text-amber-500 fill-amber-500" />
             </div>
             <div className="min-w-0 flex-1">
-              <span className="text-base font-extrabold text-foreground">
+              <span className="text-base font-bold text-foreground">
                 4.9/5 Google Customer Rating
               </span>
 

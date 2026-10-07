@@ -166,7 +166,7 @@
 
 /* h2 — large section title with a short primary underline accent */
 .service-content h2 {
-  @apply text-2xl sm:text-3xl font-extrabold text-foreground mt-10 mb-1 first:mt-0
+  @apply text-2xl sm:text-3xl font-bold text-foreground mt-10 mb-1 first:mt-0
          pb-3 border-b border-border/60;
 }
 
