@@ -15,8 +15,7 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { Metadata } from "next";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
@@ -91,8 +90,7 @@ export default function PackingServicesPage() {
   const faqSchema = generateFAQSchema(packingFaqs);
 
   return (
-    <>
-      <Navbar />
+    <SiteShell searches={footerSearches}>
       {/* FAQ Schema for Google Rich Results */}
       <script
         id="packing-services-faq-schema"
@@ -100,7 +98,6 @@ export default function PackingServicesPage() {
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
 
-      <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -139,12 +136,12 @@ export default function PackingServicesPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="">
                 Packing Services in Sharjah
               </h1>
 
               {/* Intro Content */}
-              <div className="mt-5 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Al Afnan Furniture Transfer packs homes and offices across
                   Sharjah — on its own, or as part of a full move. If
@@ -164,7 +161,6 @@ export default function PackingServicesPage() {
                   variant="default"
                   size="lg"
                   render={<Link href="#estimate" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get a Free Packing Assessment</span>
                   <ArrowRight className="size-4 ml-1.5" />
@@ -173,7 +169,6 @@ export default function PackingServicesPage() {
                   variant="secondary"
                   size="lg"
                   render={<a href="tel:0567277536" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -648,9 +643,6 @@ export default function PackingServicesPage() {
           heading="Get a Free Packing Assessment in Sharjah"
           paragraph="Al Afnan Furniture Transfer packs homes and offices across Sharjah — standalone or as part of a full move. Call 056 7277536 for a free assessment with transparent quotes and zero hidden per-box fees."
         />
-      </main>
-
-      <Footer searches={footerSearches} />
-    </>
+    </SiteShell>
   );
 }

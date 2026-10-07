@@ -30,7 +30,7 @@ const servicesData: ServiceItem[] = [
       "We can support the different stages of a home move, from packing and furniture preparation to loading, transportation, and unloading.",
     ],
     cta: "House Moving Services",
-    href: "#",
+    href: "/house-movers-in-sharjah",
   },
   {
     id: "apartment-movers",
@@ -45,7 +45,7 @@ const servicesData: ServiceItem[] = [
       "Whether you are changing apartments within Sharjah or relocating to another UAE emirate, the service can be planned around the requirements of your move.",
     ],
     cta: "Apartment Moving Services",
-    href: "#",
+    href: "/apartment-movers-in-sharjah",
   },
   {
     id: "villa-movers",
@@ -60,7 +60,7 @@ const servicesData: ServiceItem[] = [
       "Our villa moving service in sharjah covers the key moving stages, including packing, furniture preparation, loading, transportation, unloading, and furniture reassembly where required.",
     ],
     cta: "Villa Moving Services",
-    href: "#",
+    href: "/villa-movers-in-sharjah",
   },
   {
     id: "commercial-movers",
@@ -75,7 +75,7 @@ const servicesData: ServiceItem[] = [
       "Al Afnan Furniture Transfer provides office and commercial moving support for businesses relocating within Sharjah or moving between UAE emirates.",
     ],
     cta: "Commercial Moving Services",
-    href: "#",
+    href: "/office-movers-in-sharjah",
   },
   {
     id: "furniture-movers",
@@ -90,7 +90,7 @@ const servicesData: ServiceItem[] = [
       "Furniture may require preparation, dismantling, protective wrapping, careful loading, transportation, unloading, and reassembly depending on its size and condition.",
     ],
     cta: "Furniture Moving Services",
-    href: "#",
+    href: "/furniture-transfer-in-sharjah",
   },
   {
     id: "packing-services",
@@ -105,10 +105,14 @@ const servicesData: ServiceItem[] = [
       "Our packing and moving service brings preparation and transportation together, helping customers manage the move through a more coordinated process.",
     ],
     cta: "Packing Services",
-    href: "#",
+    href: "/packing-services-in-sharjah",
   },
 ];
 
+/**
+ * Services as a numbered editorial index: photo and text alternate sides,
+ * rows separated by hairlines. Numbers come from a CSS counter.
+ */
 export function Services({
   title,
   desc,
@@ -119,90 +123,78 @@ export function Services({
   services?: ServiceItem[];
 }) {
   return (
-    <section
-      id="services"
-      className="scroll-mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
-    >
-      {/* Section Header */}
-      <div className="flex flex-col items-center max-w-3xl mx-auto">
-        <h2 className="text-2xl lg:text-[2.65rem] text-center font-bold ">
-          {title || "Our Moving Services in Sharjah"}
-        </h2>
-
-        <div className="space-y-3.5 mt-4 text-muted-foreground text-sm sm:text-base text-center">
-          {desc || (
-            <>
-              <p>
-                Every move has different requirements. A family moving from an
-                apartment may need careful packing and furniture handling, while
-                a villa relocation can involve larger household items and more
-                extensive preparation. Office moves often require a more
-                organized approach to minimize disruption.
-              </p>
-              <p>
-                Al Afnan Furniture Transfer provides moving services in Sharjah
-                for homes, apartments, villas, offices, and individual furniture
-                transfers.
-              </p>
-            </>
-          )}
+    <section id="services" className="scroll-mt-28 bg-white section-y">
+      <div className="wrap">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-end">
+          <h2 className="lg:col-span-5 text-ink">
+            {title || "Our Moving Services in Sharjah"}
+          </h2>
+          <div className="lg:col-span-7 space-y-4 t-body text-muted-foreground measure">
+            {desc || (
+              <>
+                <p>
+                  Every move has different requirements. A family moving from an
+                  apartment may need careful packing and furniture handling, while
+                  a villa relocation can involve larger household items and more
+                  extensive preparation. Office moves often require a more
+                  organized approach to minimize disruption.
+                </p>
+                <p>
+                  Al Afnan Furniture Transfer provides moving services in Sharjah
+                  for homes, apartments, villas, offices, and individual furniture
+                  transfers.
+                </p>
+              </>
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* Services Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-10 sm:mt-12">
-        {(services ? services : servicesData).map((service) => (
-          <article
-            key={service.id}
-            className="group relative flex flex-col bg-card rounded-2xl border border-border/80 shadow-xs hover:shadow-xl duration-300 overflow-hidden"
-          >
-            {/* 4:3 Ratio Image Container */}
-            <div className="aspect-4/3 w-full relative overflow-hidden flex flex-col justify-between p-5 select-none">
-              <Image
-                src={service.image}
-                alt={service.imageAlt}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover object-center "
-              />
-
-              {/* Top Header inside 4:3 area */}
-              <div className="relative z-10 flex items-center justify-between">
-                <span className="px-3 py-1.5 rounded-full bg-background/95 backdrop-blur-xs text-xs font-semibold text-primary shadow-2xs">
-                  {service.category}
-                </span>
+        <ol className="mt-14 border-t border-ink [counter-reset:service]">
+          {(services ? services : servicesData).map((service, index) => (
+            <li
+              key={service.id}
+              className="reveal grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 lg:gap-14 items-center border-b border-line py-10 lg:py-14 [counter-increment:service]"
+            >
+              <div
+                className={`md:col-span-5 relative aspect-4/3 overflow-hidden rounded-xl bg-paper-2 ${
+                  index % 2 ? "md:order-2" : ""
+                }`}
+              >
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 42vw"
+                  className="object-cover"
+                />
               </div>
-            </div>
 
-            {/* Card Content Body */}
-            <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
-              <div>
-                <h3 className="text-xl sm:text-2xl font-semibold ">
-                  {service.title}
-                </h3>
-
-                <div className="space-y-3 mt-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className={`md:col-span-7 ${index % 2 ? "md:order-1" : ""}`}>
+                <div className="flex items-baseline gap-4">
+                  <span
+                    className="t-num text-4xl font-bold leading-none text-signal before:content-[counter(service,decimal-leading-zero)]"
+                    aria-hidden="true"
+                  />
+                  <span className="t-label text-muted-foreground">{service.category}</span>
+                </div>
+                <h3 className="mt-4 text-ink">{service.title}</h3>
+                <div className="mt-4 space-y-3 t-body text-muted-foreground measure">
                   {service.paragraphs.map((para, idx) => (
                     <p key={idx}>{para}</p>
                   ))}
                 </div>
-              </div>
-
-              {/* Action Button Link */}
-              <div className="mt-6 pt-5 border-t border-border/50">
                 <Button
                   variant="outline"
-                  size="lg"
                   render={<Link href={service.href} />}
-                  className="w-full justify-between rounded-xl font-semibold text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-200 group/btn"
+                  className="mt-7 group/btn"
                 >
                   <span>{service.cta}</span>
-                  <ArrowRight className="size-4 text-primary group-hover:text-white transition-transform duration-200 group-hover/btn:translate-x-1" />
+                  <ArrowRight className="transition-transform duration-150 group-hover/btn:translate-x-0.5" />
                 </Button>
               </div>
-            </div>
-          </article>
-        ))}
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

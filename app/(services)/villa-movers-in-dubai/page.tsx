@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Clock, MessageCircle, Phone, ShieldCheck, Star } from "lucide-react";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import { SiteShell } from "@/components/SiteShell";
 import { ServiceHero } from "@/components/ServiceHero";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { ServiceCTAButton } from "@/components/ServiceCTAButton";
@@ -157,10 +156,8 @@ const footerSearches = [
 
 export default function VillaMoversInDubaiPage() {
   return (
-    <>
-      <Navbar region="dubai" />
+    <SiteShell region="dubai" searches={footerSearches}>
 
-      <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -703,9 +700,6 @@ export default function VillaMoversInDubaiPage() {
           whatsappButtonHref={WHATSAPP_VIDEO}
           callButtonText="Call 056 7277536"
         />
-      </main>
-
-      <Footer searches={footerSearches} region="dubai" />
-    </>
+    </SiteShell>
   );
 }

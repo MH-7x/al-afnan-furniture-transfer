@@ -13,8 +13,7 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { Metadata } from "next";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
@@ -94,8 +93,7 @@ export default function VillaMoversPage() {
   const faqSchema = generateFAQSchema(villaFaqs);
 
   return (
-    <>
-      <Navbar />
+    <SiteShell searches={footerSearches}>
       {/* FAQ Schema for Google Rich Results */}
       <script
         id="villa-movers-faq-schema"
@@ -103,7 +101,6 @@ export default function VillaMoversPage() {
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
 
-      <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -142,12 +139,12 @@ export default function VillaMoversPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="">
                 Villa Movers in Sharjah{" "}
               </h1>
 
               {/* Intro Content */}
-              <div className="mt-5 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Al Afnan Furniture Transfer has spent the last 10 years moving
                   villas across Sharjah and the rest of the UAE, with a trained
@@ -162,7 +159,6 @@ export default function VillaMoversPage() {
                   variant="default"
                   size="lg"
                   render={<Link href="#estimate" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get a Free Villa Moving Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" />
@@ -171,7 +167,6 @@ export default function VillaMoversPage() {
                   variant="secondary"
                   size="lg"
                   render={<a href="tel:0567277536" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -658,9 +653,6 @@ export default function VillaMoversPage() {
           heading="Get a Free Villa Moving Estimate in Sharjah"
           paragraph="Al Afnan Furniture Transfer has moved villas across Sharjah and all seven UAE emirates for over 10 years. Call 056 7277536 for a free, no-obligation villa moving quote with transparent, upfront pricing."
         />
-      </main>
-
-      <Footer searches={footerSearches} />
-    </>
+    </SiteShell>
   );
 }

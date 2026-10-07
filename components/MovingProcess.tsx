@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WHATSAPP_HREF } from "@/lib/contact";
 
 interface ProcessStep {
   number: string;
@@ -84,11 +85,12 @@ const processSteps: ProcessStep[] = [
   },
 ];
 
+/** Moving process on a black band: sticky intro left, numbered steps right. */
 export function MovingProcess({
   title,
   desc,
   process,
-  ctaHref = "#",
+  ctaHref = WHATSAPP_HREF,
   ctaLabel = "Start Your Move Today",
 }: {
   title?: string;
@@ -103,19 +105,18 @@ export function MovingProcess({
   return (
     <section
       id="process"
-      className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full"
+      data-surface="dark"
+      className="scroll-mt-28 bg-ink text-fog section-y"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
-        {/* Left Column: Outer Column stretches to full height of timeline */}
+      <div className="wrap grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
         <div className="lg:col-span-5">
-          {/* Inner container with sticky positioning */}
-          <div className="lg:sticky lg:top-28 flex flex-col">
-            <h2 className="text-3xl sm:text-5xl tracking-tight font-bold">
+          <div className="lg:sticky lg:top-32">
+            <h2 className="text-white">
               {title || "How Our Moving Process Works"}
             </h2>
 
             {desc !== null && (
-              <p className="mt-5 text-muted-foreground text-base leading-relaxed">
+              <p className="mt-5 t-lead measure">
                 {desc || (
                   <>
                     A well-planned move is easier to manage when you know what
@@ -129,8 +130,6 @@ export function MovingProcess({
             )}
 
             <Button
-              variant="default"
-              size="lg"
               render={
                 ctaHref.startsWith("http") ? (
                   <a href={ctaHref} target="_blank" rel="noopener noreferrer" />
@@ -138,52 +137,34 @@ export function MovingProcess({
                   <Link href={ctaHref} />
                 )
               }
-              className="w-fit mt-6 font-semibold shadow-sm cursor-pointer"
+              className="mt-8"
             >
               <span>{ctaLabel}</span>
-              <ArrowRight className="size-4 ml-1.5" />
+              <ArrowRight />
             </Button>
           </div>
         </div>
 
-        {/* Right Column: Connected Vertical Timeline */}
-        <div className="lg:col-span-7 flex flex-col">
-          {steps.map((step, index) => (
-            <div
+        <ol className="lg:col-span-7">
+          {steps.map((step) => (
+            <li
               key={step.number}
-              className="relative flex items-stretch gap-4 sm:gap-6 group"
+              className="reveal grid grid-cols-[3.5rem_1fr] sm:grid-cols-[5rem_1fr] gap-x-4 border-t border-ink-3 py-8 first:border-t-2 first:border-signal"
             >
-              {/* Numbered Node Pin & Line Segment */}
-              <div className="flex flex-col items-center shrink-0">
-                <div
-                  className="size-9 sm:size-10 rounded-full bg-primary text-white font-semibold text-xs sm:text-sm flex items-center justify-center shrink-0 ring-4 ring-background z-10 font-mono shadow-xs group-hover:scale-105 transition-transform"
-                  aria-label={`Step ${step.number}`}
-                >
-                  {step.number}
-                </div>
-                {index < steps.length - 1 && (
-                  <div
-                    className="w-0.5 flex-1 bg-gradient-to-b from-primary via-primary/50 to-primary/20 my-1"
-                    aria-hidden="true"
-                  />
-                )}
-              </div>
-
-              {/* Step Card Content */}
-              <div className="flex-1 bg-card rounded-2xl p-6 sm:p-7 border border-border/80 shadow-2xs hover:border-primary/40 hover:shadow-md transition-all duration-200 mb-6 sm:mb-8">
-                <h3 className="text-lg sm:text-xl font-semibold mb-3">
-                  {step.title}
-                </h3>
-
-                <div className="space-y-2.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <span className="t-num text-4xl sm:text-5xl font-bold leading-none text-signal-bright">
+                {step.number}
+              </span>
+              <div>
+                <h3 className="text-white">{step.title}</h3>
+                <div className="mt-3 space-y-3 t-body [&_strong]:text-white [&_a]:text-signal-bright [&_a]:underline">
                   {step.paragraphs.map((paragraph, idx) => (
                     <p key={idx}>{paragraph}</p>
                   ))}
                 </div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

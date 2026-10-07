@@ -5,10 +5,9 @@ type Variant = "desktop" | "mobile" | "footer";
 
 const linkClasses: Record<Variant, string> = {
   desktop:
-    "flex items-center gap-2.5 px-3 py-2 text-sm font-medium text-foreground hover:text-primary hover:bg-muted rounded-lg transition-colors",
-  mobile:
-    "block py-1 text-sm text-white/90 hover:text-white transition-colors",
-  footer: "text-sm text-white/80 hover:text-white transition-colors",
+    "flex items-center rounded-sm px-3 py-2.5 font-medium text-ink hover:bg-paper-2 transition-colors",
+  mobile: "block py-2 text-ink hover:text-signal transition-colors",
+  footer: "text-fog hover:text-white transition-colors",
 };
 
 /**

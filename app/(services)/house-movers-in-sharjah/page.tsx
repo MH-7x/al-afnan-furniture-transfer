@@ -12,8 +12,7 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { Metadata } from "next";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
@@ -98,8 +97,7 @@ export default function HouseMoversPage() {
   const faqSchema = generateFAQSchema(houseMoversFaqs);
 
   return (
-    <>
-      <Navbar />
+    <SiteShell searches={footerSearches}>
       {/* FAQ Schema for Google Rich Results */}
       <script
         id="house-movers-faq-schema"
@@ -107,7 +105,6 @@ export default function HouseMoversPage() {
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
 
-      <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -146,12 +143,12 @@ export default function HouseMoversPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="">
                 House Movers in Sharjah{" "}
               </h1>
 
               {/* Intro Content */}
-              <div className="mt-5 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Moving house is one of those jobs that looks simple until
                   you&apos;re standing in a half-packed living room at 9pm
@@ -172,7 +169,6 @@ export default function HouseMoversPage() {
                   variant="default"
                   size="lg"
                   render={<Link href="#estimate" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get a Free House Moving Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" />
@@ -181,7 +177,6 @@ export default function HouseMoversPage() {
                   variant="secondary"
                   size="lg"
                   render={<a href="tel:0567277536" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -733,9 +728,6 @@ export default function HouseMoversPage() {
           heading="Get a Free House Moving Estimate in Sharjah"
           paragraph="If you're planning a house move in Sharjah — or need one sorted quickly — call 056 7277536 for a free, no-obligation estimate. We're based on Jamal Abdul Naser Street near Al Majaz 2, and we serve households across Sharjah with transparent pricing, a trained team, and no surprises once the truck is loaded."
         />
-      </main>
-
-      <Footer searches={footerSearches} />
-    </>
+    </SiteShell>
   );
 }

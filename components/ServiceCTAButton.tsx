@@ -19,7 +19,7 @@ export function ServiceCTAButton({
       <Button
         size="lg"
         render={<a href={href} target="_blank" rel="noopener noreferrer" />}
-        className="h-auto py-3.5 px-6 font-semibold whitespace-normal text-center text-primary-foreground! no-underline! hover:text-primary-foreground!"
+        className="h-auto py-3.5 font-semibold whitespace-normal text-center text-primary-foreground! no-underline! hover:text-primary-foreground!"
       >
         <MessageCircle className="size-4" aria-hidden="true" />
         <span>{children}</span>

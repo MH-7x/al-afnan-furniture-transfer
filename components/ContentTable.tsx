@@ -11,8 +11,8 @@ export interface ContentTableProps {
 }
 
 /**
- * Responsive data table styled to match the site cards: dark header row,
- * zebra body rows, horizontal scroll on narrow screens.
+ * Spec-sheet table: black header row, hairline rows, horizontal scroll on
+ * narrow screens.
  */
 export function ContentTable({
   label,
@@ -22,49 +22,36 @@ export function ContentTable({
 }: ContentTableProps) {
   return (
     <div
-      className={`w-full overflow-x-auto rounded-2xl border border-border/80 bg-card shadow-xs ${className}`}
+      className={`w-full overflow-x-auto rounded-xl border border-line bg-white ${className}`}
     >
-      <table
-        aria-label={label}
-        className="w-full min-w-[520px] border-collapse text-left text-sm"
-      >
+      <table aria-label={label} className="w-full min-w-130 border-collapse text-start">
         <thead>
-          <tr className="bg-secondary text-secondary-foreground">
+          <tr className="bg-ink text-white">
             {headers.map((header, index) =>
               header ? (
-                <th
-                  key={header}
-                  scope="col"
-                  className="px-4 py-3.5 sm:px-5 text-xs font-semibold uppercase tracking-wider align-bottom"
-                >
+                <th key={header} scope="col" className="t-label px-5 py-4 text-start align-bottom">
                   {header}
                 </th>
               ) : (
-                <td key={`empty-${index}`} className="px-4 py-3.5 sm:px-5" />
+                <td key={`empty-${index}`} className="px-5 py-4" />
               ),
             )}
           </tr>
         </thead>
         <tbody>
           {rows.map((row, rowIndex) => (
-            <tr
-              key={rowIndex}
-              className="border-t border-border/60 even:bg-muted/40"
-            >
+            <tr key={rowIndex} className="border-t border-line even:bg-paper">
               {row.map((cell, cellIndex) =>
                 cellIndex === 0 ? (
                   <th
                     key={cellIndex}
                     scope="row"
-                    className="px-4 py-3.5 sm:px-5 align-top font-semibold text-foreground"
+                    className="px-5 py-4 text-start align-top font-semibold text-ink"
                   >
                     {cell}
                   </th>
                 ) : (
-                  <td
-                    key={cellIndex}
-                    className="px-4 py-3.5 sm:px-5 align-top text-muted-foreground"
-                  >
+                  <td key={cellIndex} className="px-5 py-4 align-top text-steel">
                     {cell}
                   </td>
                 ),

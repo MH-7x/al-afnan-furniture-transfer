@@ -13,8 +13,7 @@ import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { Metadata } from "next";
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/navbar";
+import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
@@ -94,8 +93,7 @@ export default function OfficeMoversPage() {
   const faqSchema = generateFAQSchema(officeFaqs);
 
   return (
-    <>
-      <Navbar />
+    <SiteShell searches={footerSearches}>
       {/* FAQ Schema for Google Rich Results */}
       <script
         id="office-movers-faq-schema"
@@ -103,7 +101,6 @@ export default function OfficeMoversPage() {
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
 
-      <main>
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -142,12 +139,12 @@ export default function OfficeMoversPage() {
               </nav>
 
               {/* H1 Heading */}
-              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl leading-tight">
+              <h1 className="">
                 Office Movers in Sharjah{" "}
               </h1>
 
               {/* Intro Content */}
-              <div className="mt-5 space-y-3.5 text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Al Afnan Furniture Transfer handles office moves across
                   Sharjah — from a single-room startup to a full corporate
@@ -169,7 +166,6 @@ export default function OfficeMoversPage() {
                   variant="default"
                   size="lg"
                   render={<Link href="#estimate" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Get a Free Office Moving Estimate</span>
                   <ArrowRight className="size-4 ml-1.5" />
@@ -178,7 +174,6 @@ export default function OfficeMoversPage() {
                   variant="secondary"
                   size="lg"
                   render={<a href="tel:0567277536" />}
-                  className="py-6 px-6 shadow-sm hover:shadow-md transition-all cursor-pointer"
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -749,9 +744,6 @@ export default function OfficeMoversPage() {
           heading="Get a Free Office Moving Estimate in Sharjah"
           paragraph="Tell us the size of your office and your target moving date, and we'll get back to you with a clear estimate — no hidden charges added later. Call 056 7277536, available 24/7, for a free office moving quote in Sharjah."
         />
-      </main>
-
-      <Footer searches={footerSearches} />
-    </>
+    </SiteShell>
   );
 }
