@@ -186,7 +186,7 @@ const trustBadges = [
    ───────────────────────────────────────────────────────────────────────────── */
 export default function HomePage() {
   return (
-    <SiteShell searches={footerSearches} layout="bands">
+    <SiteShell region="dubai" searches={footerSearches} layout="bands">
       <script
         id="MovingCompanySchema"
         type="application/ld+json"
