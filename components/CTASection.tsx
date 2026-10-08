@@ -6,12 +6,16 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { PHONE_HREF } from "@/lib/contact";
 
 export interface CTASectionProps {
+  /** Section id and scroll anchor (default: "estimate") */
+  id?: string;
   /** Main heading */
   heading: React.ReactNode;
   /** Description (string or rich content) */
   paragraph: React.ReactNode;
   /** Form submit button text (default: "Get a Quote") */
   quoteButtonText?: string;
+  /** Line under the form heading; defaults to the form's own wording. */
+  formDescription?: string;
   /** Optional WhatsApp button, shown before the call button when set */
   whatsappButtonText?: string;
   whatsappButtonHref?: string;
@@ -19,11 +23,13 @@ export interface CTASectionProps {
   callButtonText?: string;
   /** Call button link (default: tel link) */
   callButtonHref?: string;
+  /** Short proof points under the buttons; defaults to the three site-wide ones. */
+  trustPoints?: string[];
   /** Optional extra classes on the section */
   className?: string;
 }
 
-const trustPoints = [
+const defaultTrustPoints = [
   "Free & Transparent Quotes",
   "No Hidden Handling Fees",
   "Serving All 7 Emirates",
@@ -31,18 +37,21 @@ const trustPoints = [
 
 /** End-of-page quote band: contact options on black, estimate form on white. */
 export function CTASection({
+  id = "estimate",
   heading,
   paragraph,
   quoteButtonText = "Get a Quote",
+  formDescription,
   whatsappButtonText,
   whatsappButtonHref,
   callButtonText = "Call: 056 7277536",
   callButtonHref = PHONE_HREF,
+  trustPoints = defaultTrustPoints,
   className = "",
 }: CTASectionProps) {
   return (
     <section
-      id="estimate"
+      id={id}
       data-surface="dark"
       // Inside the centered "flow" layout the band gets rounded corners once it stops touching the screen edges.
       className={`scroll-mt-28 bg-ink text-fog min-[1400px]:in-data-[layout=flow]:rounded-xl ${className}`}
@@ -80,7 +89,11 @@ export function CTASection({
         </div>
 
         <div className="lg:col-span-6">
-          <QuoteForm quoteButtonText={quoteButtonText} callButtonHref={callButtonHref} />
+          <QuoteForm
+            quoteButtonText={quoteButtonText}
+            callButtonHref={callButtonHref}
+            description={formDescription}
+          />
         </div>
       </div>
     </section>
