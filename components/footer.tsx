@@ -45,22 +45,7 @@ export function Footer({
         aria-hidden="true"
         className="-z-2 absolute inset-y-0 top-0 h-1.5 bg-primary"
       />
-      <div
-        aria-hidden="true"
-        className="-z-2 pointer-events-none absolute -top-24 -left-24 size-96 rounded-full bg-primary/25 blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="-z-2 pointer-events-none absolute -left-20 -bottom-28 size-80 rounded-full border border-white/10"
-      />
-      <div
-        aria-hidden="true"
-        className="-z-2 pointer-events-none absolute -left-8 -bottom-16 size-56 rounded-full border border-white/10"
-      />
-      <div
-        aria-hidden="true"
-        className="-z-2 absolute inset-y-0 top-0 h-1.5 bg-primary"
-      />
+
       <div className="wrap py-16 lg:py-20 z-10 ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-x-8 gap-y-12">
           {/* Brand & social */}
@@ -160,28 +145,28 @@ export function Footer({
             <h3 className={colTitle}>Locations</h3>
             <ul className="mt-5 space-y-3 t-small">
               <li>
-                <Link href="#" className={colLink}>
-                  Privacy Policy
+                <Link href="/movers-and-packer-in-dubai" className={colLink}>
+                  Movers in Dubai
                 </Link>
               </li>
               <li>
-                <Link href="#" className={colLink}>
-                  Terms &amp; Conditions
+                <Link href="/movers-in-sharjah" className={colLink}>
+                  Movers in Sharjah
                 </Link>
               </li>
               <li>
-                <Link href="/#faqs" className={colLink}>
-                  FAQ&apos;s
+                <Link href="/movers-in-ajman" className={colLink}>
+                  Movers in Ajman
                 </Link>
               </li>
               <li>
-                <Link href="#" className={colLink}>
-                  Disclaimer
+                <Link href="/movers-in-ras-al-khaimah" className={colLink}>
+                  Movers in Ras Al Khaimah
                 </Link>
               </li>
               <li>
-                <Link href="/contact-us" className={colLink}>
-                  Support
+                <Link href="/" className={colLink}>
+                  Movers and Packers
                 </Link>
               </li>
             </ul>
@@ -208,12 +193,12 @@ export function Footer({
               </li>
               <li>
                 <Link href="/contact-us" className={colLink}>
-                  Appointment
+                  Free Quote
                 </Link>
               </li>
               <li>
-                <Link href="/#pricing" className={colLink}>
-                  Pricing
+                <Link href={MAPS_HREF} className={colLink}>
+                  Map Location
                 </Link>
               </li>
             </ul>
@@ -295,15 +280,25 @@ export function Footer({
             <span className="text-ink-3" aria-hidden="true">
               |
             </span>
-            <Link href="#" className="hover:text-white hover:underline">
+            <Link
+              href="/privacy-policy"
+              className="hover:text-white hover:underline"
+            >
               Privacy Policy
             </Link>
             <span className="text-ink-3" aria-hidden="true">
               |
             </span>
-            <Link href="#" className="hover:text-white hover:underline">
-              Cookie Policy
+            <Link
+              href="/terms-and-conditions"
+              className="hover:text-white hover:underline"
+            >
+              Terms
             </Link>
+            <span className="text-ink-3" aria-hidden="true">
+              |
+            </span>
+
             <a
               href="#top"
               aria-label="Scroll to top"

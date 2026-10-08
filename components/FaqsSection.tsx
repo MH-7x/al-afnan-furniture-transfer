@@ -17,6 +17,8 @@ export interface FAQProps {
   faqs?: FAQData[];
   /** "center": single centered column. "split": heading left, questions right (wide screens). */
   layout?: "center" | "split";
+  /** Replaces the default closing line under the questions. Pass null to hide it. */
+  note?: React.ReactNode;
 }
 
 export const FAQItem: React.FC<{ faq: FAQData }> = ({ faq }) => {
@@ -43,11 +45,12 @@ export const FAQSection: React.FC<FAQProps> = ({
   subtitle = "Find clear answers to common questions about moving, packing, and relocation services in Sharjah.",
   faqs = HomePageFAQs,
   layout = "center",
+  note: noteOverride,
 }) => {
   const FaqsSchema = generateFAQSchema(convertFaqsForSchema(faqs));
   const split = layout === "split";
 
-  const note = (
+  const defaultNote = (
     <p className={`t-small text-muted-foreground ${split ? "mt-6" : "mt-8 text-center"}`}>
       Still have questions? Call us at{" "}
       <a href={PHONE_HREF} className="font-semibold text-signal underline underline-offset-4">
@@ -60,6 +63,18 @@ export const FAQSection: React.FC<FAQProps> = ({
       .
     </p>
   );
+
+  /* Pages can replace the closing line (or pass null to drop it). */
+  const note =
+    noteOverride === undefined ? (
+      defaultNote
+    ) : noteOverride ? (
+      <div
+        className={`${split ? "mt-6" : "mt-8 text-center"} t-small text-muted-foreground [&_a]:font-semibold [&_a]:text-signal [&_a]:underline [&_a]:underline-offset-4`}
+      >
+        {noteOverride}
+      </div>
+    ) : null;
 
   return (
     <>

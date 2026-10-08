@@ -92,6 +92,7 @@ export function MovingProcess({
   process,
   ctaHref = WHATSAPP_HREF,
   ctaLabel = "Start Your Move Today",
+  footer,
 }: {
   title?: string;
   /** Pass null to hide the description paragraph entirely. */
@@ -99,6 +100,8 @@ export function MovingProcess({
   process?: ProcessStep[];
   ctaHref?: string;
   ctaLabel?: string;
+  /** Optional content rendered under the last step (e.g. a closing line). */
+  footer?: React.ReactNode;
 }) {
   const steps = process && process.length > 0 ? process : processSteps;
 
@@ -165,6 +168,12 @@ export function MovingProcess({
             </li>
           ))}
         </ol>
+
+        {footer && (
+          <div className="lg:col-span-7 lg:col-start-6 mt-10 t-lead measure [&_a]:font-semibold [&_a]:text-signal-bright [&_a]:underline [&_a]:underline-offset-4">
+            {footer}
+          </div>
+        )}
       </div>
     </section>
   );

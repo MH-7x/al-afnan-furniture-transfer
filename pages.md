@@ -1,0 +1,20 @@
+- `/` - Home
+- `/about-us` - About Us
+- `/contact-us` - Contact Us
+- `/design-system` - Design System
+- `/movers-and-packer-in-dubai` - Movers and Packer in Dubai
+- `/movers-in-ajman` - Movers in Ajman
+- `/movers-in-ras-al-khaimah` - Movers in Ras Al Khaimah
+- `/apartment-movers-in-dubai` - Apartment Movers in Dubai
+- `/apartment-movers-in-sharjah` - Apartment Movers in Sharjah
+- `/furniture-movers-in-dubai` - Furniture Movers in Dubai
+- `/furniture-transfer-in-sharjah` - Furniture Transfer in Sharjah
+- `/house-movers-in-dubai` - House Movers in Dubai
+- `/house-movers-in-sharjah` - House Movers in Sharjah
+- `/office-movers-in-dubai` - Office Movers in Dubai
+- `/office-movers-in-sharjah` - Office Movers in Sharjah
+- `/packing-services-in-sharjah` - Packing Services in Sharjah
+- `/villa-movers-in-dubai` - Villa Movers in Dubai
+- `/villa-movers-in-sharjah` - Villa Movers in Sharjah
+- `/privacy-policy` - Privacy Policy
+- `/terms-and-conditions` - Terms and Conditions
