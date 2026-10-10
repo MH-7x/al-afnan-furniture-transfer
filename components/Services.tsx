@@ -12,8 +12,8 @@ interface ServiceItem {
   image: string;
   imageAlt: string;
   paragraphs: string[];
-  cta: string;
-  href: string;
+  cta?: string;
+  href?: string;
 }
 
 const servicesData: ServiceItem[] = [
@@ -183,14 +183,16 @@ export function Services({
                     <p key={idx}>{para}</p>
                   ))}
                 </div>
-                <Button
-                  variant="outline"
-                  render={<Link href={service.href} />}
-                  className="mt-7 group/btn"
-                >
-                  <span>{service.cta}</span>
-                  <ArrowRight className="transition-transform duration-150 group-hover/btn:translate-x-0.5" />
-                </Button>
+                {service.href && service.cta && (
+                  <Button
+                    variant="outline"
+                    render={<Link href={service.href} />}
+                    className="mt-7 group/btn"
+                  >
+                    <span>{service.cta}</span>
+                    <ArrowRight className="transition-transform duration-150 group-hover/btn:translate-x-0.5" />
+                  </Button>
+                )}
               </div>
             </li>
           ))}

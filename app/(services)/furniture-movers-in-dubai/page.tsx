@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { Clock, MessageCircle, Phone, ShieldCheck, Star } from "lucide-react";
 import { SiteShell } from "@/components/SiteShell";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -8,16 +8,19 @@ import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { ServiceCTAButton } from "@/components/ServiceCTAButton";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { whatsappLink } from "@/lib/whatsapp";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Furniture Movers in Dubai | Furniture Transfer – Al Afnan",
-  description:
+  desc:
     "Furniture movers in Dubai for one sofa or a full home. Carpenters dismantle and refit, same-day jobs, free quote on WhatsApp. Call 056 7277536.",
-};
+  path: "/furniture-movers-in-dubai",
+  image: { path: "/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg" },
+});
 
 const WHATSAPP_PHOTO = whatsappLink(
   "Hi, I would like a free quote to move furniture in Dubai. I'm sending a photo of the item and both addresses.",
@@ -201,7 +204,7 @@ export default function FurnitureMoversInDubaiPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/furniture-moving-transfer.jpg"
+                    src="/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg"
                     alt="Furniture movers in Dubai wrapping a sofa in stretch film"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -343,7 +346,7 @@ export default function FurnitureMoversInDubaiPage() {
               <figure>
                 <div className="img-wide">
                   <Image
-                    src="/packing-and-moving-services.jpg"
+                    src="/images/packing-unpacking-services-dubai-al-afnan-movers.jpg"
                     alt="Bed dismantling and moving in Dubai"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -560,8 +563,6 @@ export default function FurnitureMoversInDubaiPage() {
                 page.
               </p>
 
-              {/* TODO: add 2–3 real Google reviews from furniture moves here. */}
-
               <h3>Same-day furniture moves</h3>
               <p>
                 Our Dubai team works 24/7 and takes same-day and emergency jobs
@@ -578,7 +579,7 @@ export default function FurnitureMoversInDubaiPage() {
                 Barsha, Mirdif, International City, Al Nahda Dubai, Dubai
                 Silicon Oasis and Dubai South. We&apos;re based in Al Majaz,
                 Sharjah, so furniture transfer between Dubai and{" "}
-                <Link href="/">Sharjah</Link> is straightforward to plan, along
+                <Link href="/movers-in-sharjah">Sharjah</Link> is straightforward to plan, along
                 with moves to <Link href="/movers-in-ajman">Ajman</Link>, Abu
                 Dhabi and{" "}
                 <Link href="/movers-in-ras-al-khaimah">Ras Al Khaimah</Link>.
@@ -605,6 +606,8 @@ export default function FurnitureMoversInDubaiPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         {/* ════════════════════════════════════════════
             FAQ SECTION (also outputs the FAQPage schema)

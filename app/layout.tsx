@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
+import { movingCompanySchemaJson } from "@/lib/MovingCompanySchema";
 import "./globals.css";
 
 // Body / UI face
@@ -19,9 +20,27 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: "Movers in Sharjah | Al Afnan Furniture Transfer",
-  description:
-    "Professional movers and packers in Sharjah for homes, apartments, villas, offices, and furniture transfers across all 7 UAE Emirates. Transparent pricing with free estimates.",
+  applicationName: "Al Afnan Movers and Packers",
+  robots: {
+    "max-image-preview": "large",
+    follow: true,
+    googleBot: {
+      notranslate: true,
+      "max-image-preview": "large",
+      index: true,
+      follow: true,
+    },
+    index: true,
+    notranslate: true,
+  },
+  icons: {
+    icon: [
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+    shortcut: "/icons/favicon-32x32.png",
+  },
 };
 
 export default function RootLayout({
@@ -40,6 +59,11 @@ export default function RootLayout({
         id="top"
         className="min-h-screen flex flex-col bg-background text-foreground"
       >
+        <script
+          id="MovingCompanySchema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: movingCompanySchemaJson }}
+        />
         {children}
       </body>
     </html>

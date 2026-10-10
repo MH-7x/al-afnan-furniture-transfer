@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import Link from "next/link";
 import { SiteShell } from "@/components/SiteShell";
 import { LegalPage, P, UL, type LegalSection } from "@/components/LegalPage";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/contact";
 
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Terms and Conditions | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "The terms that apply to quotes, bookings and moving services from Al Afnan Furniture Transfer in Sharjah, Dubai and across the UAE, plus the rules for using this website.",
-};
+  path: "/terms-and-conditions",
+});
 
 const link = "underline hover:text-ink";
 

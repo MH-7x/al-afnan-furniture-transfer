@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
   Phone,
   MapPin,
@@ -13,11 +13,11 @@ import {
 import { CTASection } from "@/components/CTASection";
 import { SiteShell } from "@/components/SiteShell";
 
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Contact Us | Al Afnan Furniture Transfer Sharjah",
-  description:
-    "Contact Al Afnan Furniture Transfer. Call 056 7277536 for free moving quotes in Sharjah, Dubai, Ajman and across the UAE. Available 24/7. Central Sharjah location.",
-};
+  desc: "Contact Al Afnan Furniture Transfer. Call 056 7277536 for free moving quotes in Sharjah, Dubai, Ajman and across the UAE. Available 24/7. Central Sharjah location.",
+  path: "/contact-us",
+});
 
 const contactFooterSearches = [
   "contact movers in sharjah",
@@ -148,7 +148,7 @@ export default function ContactUsPage() {
 
             <div className="mt-6 pt-4 border-t border-border/60">
               <a
-                href="https://maps.google.com/?q=Jamal+Abdul+Naser+St+near+Al+Majaz+2+Al+Majaz+Sharjah"
+                href="https://maps.app.goo.gl/XHgaTBknHE7vrtFo6"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
@@ -225,7 +225,34 @@ export default function ContactUsPage() {
         ════════════════════════════════════════════ */}
       <CTASection
         heading="Send Us a Message or Request a Free Moving Quote"
-        paragraph="Planning a move in Sharjah, Dubai, Ajman, or any other emirate? Fill out the quote form below or reach out directly. We will provide you with a transparent, written estimate with zero hidden fees and no obligations."
+        paragraph={
+          <>
+            Planning a move in{" "}
+            <Link
+              href="/movers-in-sharjah"
+              className="font-semibold text-white underline underline-offset-4 hover:text-signal-bright transition-colors"
+            >
+              Sharjah
+            </Link>
+            ,{" "}
+            <Link
+              href="/movers-and-packer-in-dubai"
+              className="font-semibold text-white underline underline-offset-4 hover:text-signal-bright transition-colors"
+            >
+              Dubai
+            </Link>
+            ,{" "}
+            <Link
+              href="/movers-in-ajman"
+              className="font-semibold text-white underline underline-offset-4 hover:text-signal-bright transition-colors"
+            >
+              Ajman
+            </Link>
+            , or any other emirate? Fill out the quote form below or reach out
+            directly. We will provide you with a transparent, written estimate
+            with zero hidden fees and no obligations.
+          </>
+        }
         quoteButtonText="Submit Quote Request"
       />
     </SiteShell>

@@ -6,12 +6,12 @@ Oct 8, 2026 · @Mashal Huraira
 
 This is the corrected, publish-ready version of the UAE homepage. Paste the H2/H3 headings exactly as written; links use relative URLs so they keep working when the site moves from Vercel to WordPress.
 
-| Element | Final copy | Length |
-| --- | --- | --- |
-| SEO title | Movers and Packers in UAE \| 24/7 Movers and Packers | 51 characters |
+| Element          | Final copy                                                                                                                                                      | Length         |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| SEO title        | Movers and Packers in UAE \| 24/7 Movers and Packers                                                                                                            | 51 characters  |
 | Meta description | Al Afnan movers and packers across all 7 UAE emirates. 10 years' experience, 4.9★ rated, licensed and insured, 24/7 service. Call 056 7277536 for a free quote. | 159 characters |
-| H1 | Movers and Packers in UAE — Serving All 7 Emirates | — |
-| URL | / (root) | — |
+| H1               | Movers and Packers in UAE — Serving All 7 Emirates                                                                                                              | —              |
+| URL              | / (root)                                                                                                                                                        | —              |
 
 The alternative title avoids repeating "movers and packers" twice and adds the "moving company" variant. Use whichever you prefer; both are under 60 characters.
 
@@ -200,15 +200,15 @@ What do movers and packers in the UAE charge? Mostly it depends on how much you 
 
 ### H3: What Moving Costs Across the UAE
 
-| Move size | Typical price (AED) |
-| --- | --- |
-| Studio | 800 – 1,200 |
-| 1 bedroom apartment | 1,100 – 1,600 |
-| 2 bedroom apartment | 1,700 – 2,600 |
-| 3 bedroom apartment | 2,800 – 4,000 |
-| 3–4 bedroom villa | 4,000 – 6,000 |
-| 5+ bedroom villa | From 6,500 |
-| Office and commercial | Price on estimate |
+| Move size             | Typical price (AED) |
+| --------------------- | ------------------- |
+| Studio                | 800 – 1,200         |
+| 1 bedroom apartment   | 1,100 – 1,600       |
+| 2 bedroom apartment   | 1,700 – 2,600       |
+| 3 bedroom apartment   | 2,800 – 4,000       |
+| 3–4 bedroom villa     | 4,000 – 6,000       |
+| 5+ bedroom villa      | From 6,500          |
+| Office and commercial | Price on estimate   |
 
 Updated October 2026. Prices are for moves within one emirate. Inter-emirate moves, such as Dubai to Sharjah or Sharjah to Abu Dhabi, are quoted on volume and distance.
 
@@ -351,20 +351,20 @@ Fill in your move details for an upfront quote with no hidden fees.
 &#91;quote form here\]\
 Submit button: Get My Free Quote
 
-**Al Afnan Furniture Transfer** · Jamal Abdul Naser St, near Al Majaz 2, Al Majaz, Sharjah · 056 7277536 · afanfurnituretransfer@gmail.com
+**Al Afnan Furniture Transfer** · Jamal Abdul Naser St, near Al Majaz 2, Al Majaz, Sharjah · 056 7277536 · alalafnanfurnituretransfer@gmail.com
 
 ## Publishing notes
 
 The content above is final; these notes are for setup only and should not be published.
 
-| Item | Setting |
-| --- | --- |
-| All "Call 056 7277536" buttons | href = tel:0567277536 |
-| "Contact Us for Moving in UAE" | /contact-us |
-| Anchors | Price guide H2 = #moving-prices, Why Choose H2 = #why-choose, quote form = #estimate |
-| Inner links | Switch the vercel.app domain to relative paths (e.g. /house-movers-in-dubai) when you move to WordPress |
-| Schema | LocalBusiness (NAP, hours, geo), FAQPage (all 17 Q&As), AggregateRating 4.9 + Review for the 5 testimonials |
-| Image alt text | Describe the real scene and include "movers and packers in UAE" on one hero image only |
+| Item                           | Setting                                                                                                     |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| All "Call 056 7277536" buttons | href = tel:0567277536                                                                                       |
+| "Contact Us for Moving in UAE" | /contact-us                                                                                                 |
+| Anchors                        | Price guide H2 = #moving-prices, Why Choose H2 = #why-choose, quote form = #estimate                        |
+| Inner links                    | Switch the vercel.app domain to relative paths (e.g. /house-movers-in-dubai) when you move to WordPress     |
+| Schema                         | LocalBusiness (NAP, hours, geo), FAQPage (all 17 Q&As), AggregateRating 4.9 + Review for the 5 testimonials |
+| Image alt text                 | Describe the real scene and include "movers and packers in UAE" on one hero image only                      |
 
 ### Check before publishing
 

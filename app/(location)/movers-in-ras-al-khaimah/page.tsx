@@ -1,20 +1,24 @@
-import { Metadata } from "next";
+import Link from "next/link";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { ArrowRight, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteShell } from "@/components/SiteShell";
 import MovingProcess from "@/components/MovingProcess";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { SectionHeader } from "@/components/SectionHeader";
 import { LocationHero } from "@/components/LocationHero";
 import { EditorialRows } from "@/components/EditorialRows";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Movers in Ras Al Khaimah | Professional House, Villa & Office Moving",
-  description:
+  desc:
     "Movers in Ras Al Khaimah from Al Afnan Furniture Transfer. House, villa, apartment & office moving. Licensed, insured, free quotes. Call 056 7277536.",
-};
+  path: "/movers-in-ras-al-khaimah",
+  image: { path: "/images/movers-in-ras-al-khaimah-al-afnan.jpg" },
+});
 
 const footerSearches = [
   "movers in Ras Al Khaimah",
@@ -246,7 +250,7 @@ export default function RasAlKhaimahPage() {
             </span>
           </>
         }
-        image="/movers-in-ras-al-khaimah.jpg"
+        image="/images/movers-in-ras-al-khaimah-al-afnan.jpg"
         imageAlt="Movers in Ras Al Khaimah — Professional Moving &amp; Packing Services by Al Afnan"
       >
         <h2 className="mt-6 t-h3 font-medium text-paper measure text-2xl">
@@ -314,7 +318,7 @@ export default function RasAlKhaimahPage() {
               {
                 id: "villa",
                 title: "Villa Moving in Ras Al Khaimah",
-                image: "/villa-moving-services.jpg",
+                image: "/images/villa-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt: "Villa Moving in Ras Al Khaimah",
                 body: (
                   <>
@@ -339,7 +343,7 @@ export default function RasAlKhaimahPage() {
               {
                 id: "apartment",
                 title: "Apartment, Flat & Studio Moving in Ras Al Khaimah",
-                image: "/flat-apartment-movers.jpg",
+                image: "/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt: "Apartment, Flat & Studio Moving in Ras Al Khaimah",
                 body: (
                   <>
@@ -393,7 +397,7 @@ export default function RasAlKhaimahPage() {
               {
                 id: "office",
                 title: "Office Relocation in Ras Al Khaimah",
-                image: "/commercial-office-movers.jpg",
+                image: "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt:
                   "Office Relocation in Ras Al Khaimah by Al Afnan Furniture Transfer",
                 body: (
@@ -421,7 +425,7 @@ export default function RasAlKhaimahPage() {
               {
                 id: "warehouse",
                 title: "Warehouse & RAKEZ Commercial Moves",
-                image: "/al-afnan-furniture-transfer-sharjah.jpg",
+                image: "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt:
                   "Warehouse & RAKEZ Commercial Moves in Ras Al Khaimah",
                 body: (
@@ -479,7 +483,7 @@ export default function RasAlKhaimahPage() {
                 id: "dismantling",
                 title:
                   "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
-                image: "/furniture-moving-transfer.jpg",
+                image: "/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg",
                 imageAlt:
                   "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
                 body: (
@@ -506,7 +510,7 @@ export default function RasAlKhaimahPage() {
               {
                 id: "sofa-bed",
                 title: "Sofa, Bed & Wardrobe Moving in Ras Al Khaimah",
-                image: "/house-moving-services-by-al-afnan.jpg",
+                image: "/images/house-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt: "Sofa, Bed & Wardrobe Moving in Ras Al Khaimah",
                 body: (
                   <>
@@ -527,7 +531,7 @@ export default function RasAlKhaimahPage() {
               {
                 id: "packing",
                 title: "Professional Packing Services in Ras Al Khaimah",
-                image: "/packing-and-moving-services.jpg",
+                image: "/images/packing-unpacking-services-dubai-al-afnan-movers.jpg",
                 imageAlt: "Professional Packing Services in Ras Al Khaimah",
                 body: (
                   <>
@@ -608,8 +612,29 @@ export default function RasAlKhaimahPage() {
               <div className="mt-4 space-y-3 t-body text-steel">
                 <p>
                   If you&apos;re heading out of RAK, whether it&apos;s movers
-                  from Ras Al Khaimah to Dubai, RAK to Sharjah, or RAK to Abu
-                  Dhabi, we handle the full journey.
+                  from Ras Al Khaimah to{" "}
+                  <Link
+                    href="/movers-and-packer-in-dubai"
+                    className="font-semibold text-signal underline underline-offset-4"
+                  >
+                    Dubai
+                  </Link>
+                  , RAK to{" "}
+                  <Link
+                    href="/movers-in-sharjah"
+                    className="font-semibold text-signal underline underline-offset-4"
+                  >
+                    Sharjah
+                  </Link>
+                  , or RAK to Abu Dhabi, we handle the full journey. Moving
+                  between RAK and Ajman? See our{" "}
+                  <Link
+                    href="/movers-in-ajman"
+                    className="font-semibold text-signal underline underline-offset-4"
+                  >
+                    movers in Ajman
+                  </Link>{" "}
+                  page.
                 </p>
                 <p>
                   Long-distance moves need proper planning, route timing,
@@ -919,6 +944,8 @@ export default function RasAlKhaimahPage() {
           </ul>
         </div>
       </section>
+
+      <GoogleReviewsSection />
 
       {/* ════ FAQ ════ */}
       <div className="bg-paper-2">

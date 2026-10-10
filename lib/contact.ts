@@ -5,11 +5,11 @@ export const PHONE_HREF = "tel:0567277536";
 export const WHATSAPP_NUMBER = "971567277536";
 export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}`;
 
-export const EMAIL = "afanfurnituretransfer@gmail.com";
+export const EMAIL = "alalafnanfurnituretransfer@gmail.com";
 
-export const ADDRESS = "Jamal Abdul Naser St, near Al Majaz 2 - Al Majaz 2 - Al Majaz, Sharjah";
-export const MAPS_HREF =
-  "https://maps.google.com/?q=Jamal+Abdul+Naser+St+near+Al+Majaz+2+Al+Majaz+Sharjah";
+export const ADDRESS =
+  "Jamal Abdul Naser St, near Al Majaz 2 - Al Majaz 2 - Al Majaz, Sharjah";
+export const MAPS_HREF = "https://maps.app.goo.gl/XHgaTBknHE7vrtFo6";
 
 export const HOURS = "Sun To Fri, Open 24 hours. Sat, 9 AM–5 PM";
 

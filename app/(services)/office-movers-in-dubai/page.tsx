@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
   CalendarCheck,
   Clock,
@@ -14,16 +14,19 @@ import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { ServiceCTAButton } from "@/components/ServiceCTAButton";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { whatsappLink } from "@/lib/whatsapp";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Office Movers in Dubai | 24/7 Office Relocation – Al Afnan",
-  description:
+  desc:
     "Office movers in Dubai for overnight and weekend relocations. Workstations, IT and files moved and set up. Free site visit, 24/7 team. Call 056 7277536.",
-};
+  path: "/office-movers-in-dubai",
+  image: { path: "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg" },
+});
 
 const WHATSAPP_SITE_VISIT = whatsappLink(
   "Hi, I would like to book a free site visit for an office move in Dubai.",
@@ -211,7 +214,7 @@ export default function OfficeMoversInDubaiPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/commercial-office-movers.jpg"
+                    src="/images/office-movers-dubai-al-afnan-furniture-transfer.jpg"
                     alt="Office movers in Dubai dismantling workstations"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -279,7 +282,7 @@ export default function OfficeMoversInDubaiPage() {
               <figure>
                 <div className="img-wide">
                   <Image
-                    src="/packing-and-moving-services.jpg"
+                    src="/images/packing-unpacking-services-dubai-al-afnan-movers.jpg"
                     alt="Office movers and packers in Dubai labelling cartons by desk"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -617,8 +620,6 @@ export default function OfficeMoversInDubaiPage() {
                 4.9 out of 5 on Google.
               </p>
 
-              {/* TODO: add 2–3 real Google reviews from office moves here. */}
-
               <h3>What to ask before you hire office movers in Dubai</h3>
               <p>
                 The best office movers in Dubai for your business are the ones
@@ -653,7 +654,7 @@ export default function OfficeMoversInDubaiPage() {
               <p>
                 We&apos;re based in Al Majaz, Sharjah, and our Dubai office
                 movers handle moves between Dubai and every emirate, including{" "}
-                <Link href="/">Sharjah</Link>,{" "}
+                <Link href="/movers-in-sharjah">Sharjah</Link>,{" "}
                 <Link href="/movers-in-ajman">Ajman</Link>, Abu Dhabi and{" "}
                 <Link href="/movers-in-ras-al-khaimah">Ras Al Khaimah</Link>.
                 Trucks can&apos;t use Sheikh Mohammed bin Zayed Road between Ras
@@ -678,6 +679,8 @@ export default function OfficeMoversInDubaiPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         {/* ════════════════════════════════════════════
             FAQ SECTION (also outputs the FAQPage schema)

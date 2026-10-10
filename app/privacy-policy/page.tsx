@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { LegalPage, P, UL, type LegalSection } from "@/components/LegalPage";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/contact";
 
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Privacy Policy | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "How Al Afnan Furniture Transfer collects, uses and protects your personal information when you visit our website, request a quote or book a move in the UAE.",
-};
+  path: "/privacy-policy",
+});
 
 const link = "underline hover:text-ink";
 

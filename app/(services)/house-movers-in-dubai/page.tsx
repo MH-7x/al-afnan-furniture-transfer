@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { Clock, MessageCircle, Phone, ShieldCheck, Star } from "lucide-react";
 import { SiteShell } from "@/components/SiteShell";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -8,16 +8,19 @@ import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { ServiceCTAButton } from "@/components/ServiceCTAButton";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { whatsappLink } from "@/lib/whatsapp";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "House Movers in Dubai | House Shifting Services – Al Afnan",
-  description:
+  desc:
     "House movers in Dubai for full home shifting: packing, dismantling, transport and setup in one booking. Free estimate, 24/7 team. Call 056 7277536.",
-};
+  path: "/house-movers-in-dubai",
+  image: { path: "/images/house-movers-dubai-al-afnan-furniture-transfer.jpg" },
+});
 
 const WHATSAPP_PHOTOS = whatsappLink(
   "Hi, I would like a free quote for a house move in Dubai. I'm sending photos of each room.",
@@ -211,7 +214,7 @@ export default function HouseMoversInDubaiPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/house-moving-services-by-al-afnan.jpg"
+                    src="/images/house-movers-dubai-al-afnan-furniture-transfer.jpg"
                     alt="House movers in Dubai carrying a wrapped sofa"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -297,7 +300,7 @@ export default function HouseMoversInDubaiPage() {
               <figure>
                 <div className="img-wide">
                   <Image
-                    src="/packing-and-moving-services.jpg"
+                    src="/images/packing-unpacking-services-dubai-al-afnan-movers.jpg"
                     alt="House shifting services in Dubai packing a kitchen"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -684,8 +687,6 @@ export default function HouseMoversInDubaiPage() {
                 Google.
               </p>
 
-              {/* TODO: add 2–3 real Google reviews from house moves in Dubai here. */}
-
               <h3>Same-day and short-notice house moves</h3>
               <p>
                 Leases end early, handovers get pushed, and sometimes you need
@@ -712,7 +713,7 @@ export default function HouseMoversInDubaiPage() {
               <p>
                 We&apos;re based in Al Majaz, Sharjah, and we handle home
                 relocation between Dubai and every emirate, including{" "}
-                <Link href="/">Sharjah</Link>,{" "}
+                <Link href="/movers-in-sharjah">Sharjah</Link>,{" "}
                 <Link href="/movers-in-ajman">Ajman</Link>, Abu Dhabi and{" "}
                 <Link href="/movers-in-ras-al-khaimah">Ras Al Khaimah</Link>.
                 The service is the same, with packing, dismantling and
@@ -738,6 +739,8 @@ export default function HouseMoversInDubaiPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         {/* ════════════════════════════════════════════
             FAQ SECTION (also outputs the FAQPage schema)

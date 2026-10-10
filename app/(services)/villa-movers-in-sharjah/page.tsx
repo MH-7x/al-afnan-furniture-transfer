@@ -11,8 +11,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
@@ -20,11 +21,13 @@ import { FAQSection } from "@/components/FaqsSection";
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Villa Movers in Sharjah | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "Professional villa movers in Sharjah from AED 2,000. Licensed, insured, 10 years' experience, free estimates. 3 to 5+ BR villas, all UAE emirates. Call 056 7277536.",
-};
+  path: "/villa-movers-in-sharjah",
+  image: { path: "/villa-moving-services.jpg" },
+});
 
 const villaFaqs = [
   {
@@ -131,7 +134,12 @@ export default function VillaMoversPage() {
                   Home
                 </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
-                <span className="text-muted-foreground">Services</span>
+                <Link
+                  href="/movers-in-sharjah"
+                  className="hover:text-primary transition-colors"
+                >
+                  Movers in Sharjah
+                </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
                 <span className="text-primary font-semibold">
                   Villa Movers in Sharjah
@@ -288,8 +296,11 @@ export default function VillaMoversPage() {
                 unpacking on the other end, including putting furniture back
                 together and getting boxes out of the way. Both options are
                 available. If you&apos;re short on time or just don&apos;t want
-                to deal with the packing side of a villa move, tell us upfront
-                and we&apos;ll scope the estimate accordingly.
+                to deal with{" "}
+                <Link href="/packing-services-in-sharjah">
+                  the packing side of a villa move
+                </Link>
+                , tell us upfront and we&apos;ll scope the estimate accordingly.
               </p>
 
               {/* Two-column 4:3 images */}
@@ -601,7 +612,8 @@ export default function VillaMoversPage() {
               <h3>Inter-Emirate Villa Relocation</h3>
               <p>
                 Because Al Afnan is licensed and insured across all seven UAE
-                emirates, villa relocations to Abu Dhabi, Ajman, Ras Al Khaimah,
+                emirates, villa relocations to Abu Dhabi, Ajman,{" "}
+                <Link href="/movers-in-ras-al-khaimah">Ras Al Khaimah</Link>,
                 Fujairah, or Umm Al Quwain are handled by the same team rather
                 than handed off to a subcontractor. Distance affects the
                 estimate, but not the level of care your furniture gets.
@@ -614,7 +626,9 @@ export default function VillaMoversPage() {
                 Taawun, Al Khan, Muwaileh, Al Qasimia, Al Qarayen, Muwafjah, and
                 the Sharjah Industrial Area, along with surrounding
                 neighborhoods throughout the city. If you&apos;re not sure
-                whether your area is covered, call us, chances are it is.
+                whether your area is covered, call us, chances are it is. Our
+                wider <Link href="/movers-in-sharjah">movers in Sharjah</Link>{" "}
+                page covers every other type of move we handle in the emirate.
               </p>
 
               {/* Sharjah Neighborhood Badges */}
@@ -644,6 +658,8 @@ export default function VillaMoversPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         <FAQSection title="Questions About Villa Movers in Sharjah" />
         {/* ════════════════════════════════════════════

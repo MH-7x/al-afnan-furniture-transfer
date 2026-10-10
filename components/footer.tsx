@@ -197,9 +197,14 @@ export function Footer({
                 </Link>
               </li>
               <li>
-                <Link href={MAPS_HREF} className={colLink}>
+                <a
+                  href={MAPS_HREF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={colLink}
+                >
                   Map Location
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

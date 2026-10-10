@@ -14,7 +14,7 @@ export const serviceRows = [
   {
     id: "house-movers",
     title: "House Movers in UAE",
-    image: "/house-moving-services-by-al-afnan.jpg",
+    image: "/images/house-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt:
       "Al Afnan house movers carrying a stretch-wrapped sofa through a hallway with labelled boxes ready to load",
     body: (
@@ -35,7 +35,7 @@ export const serviceRows = [
   {
     id: "villa-movers",
     title: "Villa Movers in UAE",
-    image: "/villa-moving-services.jpg",
+    image: "/images/villa-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt:
       "Al Afnan villa movers loading wrapped furniture into a truck outside a villa",
     body: (
@@ -45,7 +45,7 @@ export const serviceRows = [
         truck. Our carpenters dismantle the big pieces, bag and label the
         fittings, and rebuild them in the new villa. Our{" "}
         <Link href="/villa-movers-in-dubai" className={linkClass}>
-          villa movers
+          villa movers in Dubai
         </Link>{" "}
         work in gated communities where moving hours and gate passes are set by
         the community, and we plan villa shifting in other emirates the same
@@ -56,7 +56,7 @@ export const serviceRows = [
   {
     id: "apartment-movers",
     title: "Apartment Movers in UAE",
-    image: "/flat-apartment-movers.jpg",
+    image: "/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt:
       "Al Afnan apartment movers carrying wrapped furniture into a building service lift",
     body: (
@@ -66,7 +66,7 @@ export const serviceRows = [
         crew and pack in advance to finish inside that window. From studios to
         3-bedroom flats, our{" "}
         <Link href="/apartment-movers-in-dubai" className={linkClass}>
-          apartment movers
+          apartment movers in Dubai
         </Link>{" "}
         plan around tower rules, and we bring the same planning to apartment
         shifting in Sharjah, Ajman and Abu Dhabi.
@@ -76,7 +76,7 @@ export const serviceRows = [
   {
     id: "office-movers",
     title: "Office and Commercial Movers",
-    image: "/commercial-office-movers.jpg",
+    image: "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt:
       "Al Afnan office movers wheeling filing boxes and a wrapped office chair out of an office",
     body: (
@@ -86,7 +86,7 @@ export const serviceRows = [
         move workstations, filing cabinets and computers out after closing and
         set them up before staff return. Our{" "}
         <Link href="/office-movers-in-dubai" className={linkClass}>
-          office movers
+          office movers in Dubai
         </Link>{" "}
         handle commercial relocation services for small offices and full floors,
         and office moves in other emirates are quoted after a survey.
@@ -96,7 +96,7 @@ export const serviceRows = [
   {
     id: "furniture-movers",
     title: "Furniture Movers: Dismantling and Reassembly",
-    image: "/furniture-moving-transfer.jpg",
+    image: "/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg",
     imageAlt:
       "Al Afnan furniture movers carrying a wardrobe wrapped in a furniture pad and stretch film",
     body: (
@@ -105,7 +105,7 @@ export const serviceRows = [
         collected and delivered. We dismantle, wrap and refit single items or
         small loads without you booking a full house move. Our{" "}
         <Link href="/furniture-movers-in-dubai" className={linkClass}>
-          furniture movers
+          furniture movers in Dubai
         </Link>{" "}
         bag the fittings for each piece, so your bed goes back together with
         every bolt it came apart with.
@@ -115,7 +115,7 @@ export const serviceRows = [
   {
     id: "packing-services",
     title: "Professional Packing and Unpacking Services",
-    image: "/packing-and-moving-services.jpg",
+    image: "/images/packing-unpacking-services-dubai-al-afnan-movers.jpg",
     imageAlt:
       "Al Afnan packers wrapping glassware and furniture in bubble wrap and stretch film",
     body: (
@@ -135,7 +135,7 @@ export const serviceRows = [
   {
     id: "long-distance",
     title: "Long-Distance and Inter-Emirate Moving",
-    image: "/movers-and-packers-in-sharjah.jpg",
+    image: "/images/long-distance-inter-emirate-movers-uae-al-afnan.jpg",
     imageAlt:
       "Al Afnan moving crew preparing wrapped furniture and boxes for a move between emirates",
     body: (

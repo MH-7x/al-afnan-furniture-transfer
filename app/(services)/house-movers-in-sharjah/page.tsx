@@ -10,8 +10,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
@@ -19,11 +20,13 @@ import { FAQSection } from "@/components/FaqsSection";
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE DATA — SEO metadata & structural content
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "House Movers in Sharjah | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "Professional house movers in Sharjah. Licensed, insured, 10 years' experience, free estimates, 24/7 service. Call 056 7277536.",
-};
+  path: "/house-movers-in-sharjah",
+  image: { path: "/house-moving-services-by-al-afnan.jpg" },
+});
 
 const houseMoversFaqs = [
   {
@@ -135,7 +138,12 @@ export default function HouseMoversPage() {
                   Home
                 </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
-                <span className="text-muted-foreground">Services</span>
+                <Link
+                  href="/movers-in-sharjah"
+                  className="hover:text-primary transition-colors"
+                >
+                  Movers in Sharjah
+                </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
                 <span className="text-primary font-semibold">
                   House Movers in Sharjah
@@ -408,7 +416,14 @@ export default function HouseMoversPage() {
                 Damage during a house move almost always comes down to rushing
                 or improvising. We don&apos;t do either — items are wrapped,
                 carried, and loaded the same careful way whether it&apos;s a
-                2-bedroom apartment or a full villa&apos;s worth of furniture.
+                <Link href="/apartment-movers-in-sharjah">
+                  2-bedroom apartment
+                </Link>{" "}
+                or{" "}
+                <Link href="/villa-movers-in-sharjah">
+                  a full villa&apos;s worth of furniture
+                </Link>
+                .
               </p>
 
               <h3>Reliable Moving Schedule</h3>
@@ -434,8 +449,9 @@ export default function HouseMoversPage() {
 
               <h3>Safe and Organized House Relocation</h3>
               <p>
-                We&apos;re recognized as one of the more trusted movers in
-                Sharjah, and that reputation is built on moves that go the way
+                We&apos;re recognized as one of the more trusted{" "}
+                <Link href="/movers-in-sharjah">movers in Sharjah</Link>, and
+                that reputation is built on moves that go the way
                 they&apos;re supposed to — nothing broken, nothing missing,
                 nothing that shows up as a surprise charge.
               </p>
@@ -684,8 +700,9 @@ export default function HouseMoversPage() {
                 the same trained team, packing materials, and transparent
                 pricing apply. If you&apos;re moving between emirates,
                 we&apos;re licensed to operate across all seven, so a
-                Sharjah-to-Dubai or Sharjah-to-Ajman house move is handled the
-                same way, start to finish.
+                Sharjah-to-<Link href="/movers-and-packer-in-dubai">Dubai</Link>{" "}
+                or Sharjah-to-<Link href="/movers-in-ajman">Ajman</Link> house
+                move is handled the same way, start to finish.
               </p>
               {/* Sharjah Neighborhood Badges */}
               <div className="flex flex-wrap gap-2 my-5 not-prose">
@@ -716,6 +733,8 @@ export default function HouseMoversPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         <FAQSection
           title="Questions About House Moving in Sharjah"

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { Clock, MessageCircle, Phone, ShieldCheck, Star } from "lucide-react";
 import { SiteShell } from "@/components/SiteShell";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -8,16 +8,19 @@ import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { ServiceCTAButton } from "@/components/ServiceCTAButton";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { whatsappLink } from "@/lib/whatsapp";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Villa Movers in Dubai | 24/7 Villa Moving – Al Afnan",
-  description:
+  desc:
     "Villa movers in Dubai for family villas and townhouses. Full packing, carpenters to dismantle and refit, free written quote, 24/7 team. Call 056 7277536.",
-};
+  path: "/villa-movers-in-dubai",
+  image: { path: "/images/villa-movers-dubai-al-afnan-furniture-transfer.jpg" },
+});
 
 const WHATSAPP_VIDEO = whatsappLink(
   "Hi, I would like a free quote for a villa move in Dubai. I'm sending a video of the villa.",
@@ -222,7 +225,7 @@ export default function VillaMoversInDubaiPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/villa-moving-services.jpg"
+                    src="/images/villa-movers-dubai-al-afnan-furniture-transfer.jpg"
                     alt="Villa movers in Dubai loading furniture from a family villa"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -263,7 +266,7 @@ export default function VillaMoversInDubaiPage() {
               <figure>
                 <div className="img-wide">
                   <Image
-                    src="/packing-and-moving-services.jpg"
+                    src="/images/packing-unpacking-services-dubai-al-afnan-movers.jpg"
                     alt="Villa movers and packers in Dubai wrapping a sofa in stretch film"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -614,9 +617,6 @@ export default function VillaMoversInDubaiPage() {
                 Google. Every quote is written and all-inclusive.
               </p>
 
-              {/* TODO: add 2–3 real Google reviews from villa moves here (or a
-                  Google reviews widget filtered to villa moves). */}
-
               <h3>What to check before you book villa movers in Dubai</h3>
               <p>
                 The best villa movers in Dubai for your move are the ones that
@@ -656,7 +656,7 @@ export default function VillaMoversInDubaiPage() {
               <p>
                 We&apos;re based in Al Majaz, Sharjah, and we move villas
                 between Dubai and every emirate, including{" "}
-                <Link href="/">Sharjah</Link>,{" "}
+                <Link href="/movers-in-sharjah">Sharjah</Link>,{" "}
                 <Link href="/movers-in-ajman">Ajman</Link>, Abu Dhabi and{" "}
                 <Link href="/movers-in-ras-al-khaimah">Ras Al Khaimah</Link>. On
                 the Dubai–Sharjah route we plan the departure around the morning
@@ -680,6 +680,8 @@ export default function VillaMoversInDubaiPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         {/* ════════════════════════════════════════════
             FAQ SECTION (also outputs the FAQPage schema)

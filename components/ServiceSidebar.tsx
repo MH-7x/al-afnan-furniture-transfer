@@ -5,14 +5,14 @@ import { getServices, regionNames, type Region } from "@/lib/servicesNav";
 
 const emiratesWeCover: Record<Region, { label: string; href: string }[]> = {
   sharjah: [
-    { label: "Movers in Dubai", href: "/movers-and-packers-in-dubai" },
+    { label: "Movers in Dubai", href: "/movers-and-packer-in-dubai" },
     { label: "Movers in Ajman", href: "/movers-in-ajman" },
-    { label: "Movers in Sharjah", href: "/" },
+    { label: "Movers in Sharjah", href: "/movers-in-sharjah" },
     { label: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
   ],
   dubai: [
     { label: "Movers in Dubai", href: "/movers-and-packer-in-dubai" },
-    { label: "Movers in Sharjah", href: "/" },
+    { label: "Movers in Sharjah", href: "/movers-in-sharjah" },
     { label: "Movers in Ajman", href: "/movers-in-ajman" },
     { label: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
   ],
@@ -108,7 +108,7 @@ export function ServiceSidebar({
                     className="size-1.5 shrink-0 rounded-full bg-primary/40 transition-colors group-hover:bg-primary"
                     aria-hidden="true"
                   />
-                  {service.name} in {regionName}
+                  {service.label ?? `${service.name} in ${regionName}`}
                 </span>
                 <ArrowRight className="size-3.5 shrink-0 text-muted-foreground/40 transition-transform group-hover:translate-x-0.5 group-hover:text-primary" />
               </Link>

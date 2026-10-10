@@ -484,3 +484,84 @@
          px-2.5 py-1 text-xs font-semibold text-primary whitespace-nowrap;
 }
 /* ─────────────────────────────────────────────────────────────────────────── */
+
+/* ─── Google reviews slider ──────────────────────────────────────────────────
+   Pure CSS: a scroll-snap track (swipe / trackpad / keyboard work everywhere)
+   with native ::scroll-button() arrows where the browser supports them. */
+.g-reviews {
+  --gap: 13px;
+  --per-view: 1;
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  anchor-name: --g-reviews;
+}
+.g-reviews::-webkit-scrollbar {
+  display: none;
+}
+@media (width >= 40rem) {
+  .g-reviews {
+    --per-view: 2;
+  }
+}
+@media (width >= 64rem) {
+  .g-reviews {
+    --per-view: 3;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .g-reviews {
+    scroll-behavior: smooth;
+  }
+}
+.g-reviews__slide {
+  flex: 0 0 calc((100% - (var(--per-view) - 1) * var(--gap)) / var(--per-view));
+  scroll-snap-align: start;
+}
+
+@supports selector(::scroll-button(left)) {
+  .g-reviews::scroll-button(inline-start),
+  .g-reviews::scroll-button(inline-end) {
+    position: fixed;
+    position-anchor: --g-reviews;
+    top: anchor(center);
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .g-reviews::scroll-button(inline-start) {
+    left: anchor(left);
+    translate: -50% -50%;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m15 18-6-6 6-6'/%3E%3C/svg%3E") / "Previous reviews";
+  }
+  .g-reviews::scroll-button(inline-end) {
+    left: anchor(right);
+    translate: -50% -50%;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E") / "Next reviews";
+  }
+  .g-reviews::scroll-button(inline-start):disabled,
+  .g-reviews::scroll-button(inline-end):disabled {
+    opacity: 0.45;
+    cursor: default;
+  }
+  .g-reviews::scroll-button(inline-start):hover:enabled,
+  .g-reviews::scroll-button(inline-end):hover:enabled {
+    background: #f3f3f3;
+  }
+  .g-reviews::scroll-button(inline-start):focus-visible,
+  .g-reviews::scroll-button(inline-end):focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+  }
+}

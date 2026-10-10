@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
   Armchair,
   ArrowRight,
@@ -33,6 +33,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { FAQSection } from "@/components/FaqsSection";
 import { SiteShell } from "@/components/SiteShell";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -40,11 +41,13 @@ import { whatsappLink } from "@/lib/whatsapp";
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE DATA — SEO metadata & content
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "About Al Afnan Furniture Transfer | Sharjah Movers",
-  description:
+  desc:
     "Al Afnan Furniture Transfer is a licensed Sharjah moving company in Al Majaz since 2015, with a 20+ trained team and a 4.9/5 Google rating.",
-};
+  path: "/about-us",
+  image: { path: "/images/al-afnan-movers-crew-planning-move-with-customer.jpg" },
+});
 
 const credentials: {
   icon: LucideIcon;
@@ -429,7 +432,7 @@ export default function AboutUsPage() {
               <DotGrid className="-top-6 -left-6" />
               <div className="relative aspect-5/4 overflow-hidden rounded-3xl border border-border/80 bg-card shadow-xl">
                 <Image
-                  src="/al-afnan-furniture-transfer-sharjah.jpg"
+                  src="/images/al-afnan-movers-crew-planning-move-with-customer.jpg"
                   alt="Al Afnan Furniture Transfer movers planning a move with customers in Sharjah"
                   fill
                   priority
@@ -481,7 +484,7 @@ export default function AboutUsPage() {
             <DotGrid className="-right-6 -bottom-6" />
             <div className="relative aspect-4/3 overflow-hidden rounded-3xl border border-border/80 bg-card shadow-xl lg:aspect-4/5">
               <Image
-                src="/movers-and-packers-in-sharjah.jpg"
+                src="/images/al-afnan-movers-confirming-details-customer-sharjah.jpg"
                 alt="Al Afnan movers confirming move details with a customer outside a Sharjah villa"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -722,7 +725,7 @@ export default function AboutUsPage() {
             </h2>
             <div className="relative mt-8 aspect-4/3 overflow-hidden rounded-3xl border border-border/80 bg-card shadow-xl lg:aspect-4/5">
               <Image
-                src="/furniture-moving-transfer.jpg"
+                src="/images/al-afnan-movers-carrying-wardrobe-through-doorway.jpg"
                 alt="Al Afnan Furniture Transfer crew carrying a wrapped, padded wardrobe through a doorway"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -804,7 +807,7 @@ export default function AboutUsPage() {
             <DotGrid className="-top-6 -right-6" />
             <div className="relative aspect-4/3 overflow-hidden rounded-3xl border border-border/80 bg-card shadow-xl">
               <Image
-                src="/packing-and-moving-services.jpg"
+                src="/images/packing-unpacking-services-dubai-al-afnan-movers.jpg"
                 alt="Al Afnan movers wrapping furniture with padding, stretch film and bubble wrap"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -966,7 +969,18 @@ export default function AboutUsPage() {
                 We work across Sharjah, including Al Nahda, Al Majaz, Al Taawun,
                 Al Khan, Muwaileh, Al Qasimia, Al Qarayen, Muwafjah and the
                 Sharjah Industrial Area. Outside Sharjah, we move customers to
-                and from Dubai, Abu Dhabi, Ajman, Umm Al Quwain, Ras Al Khaimah
+                and from{" "}
+                <Link href="/movers-and-packer-in-dubai" className="font-semibold text-primary underline underline-offset-4">
+                  Dubai
+                </Link>
+                , Abu Dhabi,{" "}
+                <Link href="/movers-in-ajman" className="font-semibold text-primary underline underline-offset-4">
+                  Ajman
+                </Link>
+                , Umm Al Quwain,{" "}
+                <Link href="/movers-in-ras-al-khaimah" className="font-semibold text-primary underline underline-offset-4">
+                  Ras Al Khaimah
+                </Link>{" "}
                 and Fujairah.
               </p>
             </div>
@@ -1003,6 +1017,8 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+
+      <GoogleReviewsSection />
 
       {/* ════════════════════════════════════════════
             TALK TO OUR SHARJAH TEAM (CTA)

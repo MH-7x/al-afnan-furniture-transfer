@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
   CalendarCheck,
   Mail,
@@ -17,9 +17,10 @@ import { MovingProcess } from "@/components/MovingProcess";
 import { ContentTable } from "@/components/ContentTable";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { QuoteForm } from "@/components/QuoteForm";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
-import { EMAIL, MAPS_HREF, PHONE_DISPLAY, PHONE_HREF } from "@/lib/contact";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/contact";
 import {
   WHATSAPP_BOOK,
   WHATSAPP_CHOOSE,
@@ -40,12 +41,13 @@ import {
   uaeFaqs,
 } from "@/lib/HomeData";
 
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Movers and Packers in UAE | 24/7 Movers and Packers",
-  description:
+  desc:
     "Al Afnan movers and packers across all 7 UAE emirates. 10 years' experience, 4.9★ rated, licensed and insured, 24/7 service. Call 056 7277536 for a free quote.",
-  alternates: { canonical: "/" },
-};
+  path: "/",
+  image: { path: "/images/al-afnan-movers-and-packers-in-uae.jpg" },
+});
 
 const bodyClass = "t-body text-muted-foreground";
 
@@ -77,97 +79,6 @@ const footerSearches = [
   "emergency movers UAE",
 ];
 
-const reviews = [
-  {
-    quote:
-      "EXTREMELY helpful guys. Had to move ton of stuff from Ajman to Dubai. Most reasonable priced people also. I 100% recommend these guys.",
-    author: "Sid Java",
-    details: ["Ajman to Dubai", "October 2026"],
-  },
-  {
-    quote:
-      "Used them for a local move-in service. Very efficient. On time and Quick. I would highly recommend them. Also, very reasonable prices. Kudos to Waqar Ahmed and his team. Great Job guys. Thanks",
-    author: "MK DXB",
-    details: ["Local move in Dubai", "August 2026"],
-  },
-  {
-    quote:
-      "Thank you Ahmed for your great service from Sharjah to Dubai South. On time and efficient and very careful in handling our stuffs. 100% Effective and Hassle Free!",
-    author: "Sarah Orchid O. Fernandez",
-    details: ["Sharjah to Dubai South", "July 2026"],
-  },
-  {
-    quote:
-      "Hey it was wonderful experience and they have managed everything so well it was very easy and smooth for us to shift from Sharjah to Dubai they made every process very well",
-    author: "Murtaza Ali",
-    details: ["Sharjah to Dubai", "July 2026"],
-  },
-  {
-    quote:
-      "Excellent service! Professional movers. They came and did the job as requested and made sure to leave the place clean after they left. Well done!",
-    author: "Alice Aoun",
-    details: ["August 2026"],
-  },
-];
-
-const emiratesServed = [
-  "Dubai",
-  "Sharjah",
-  "Abu Dhabi",
-  "Ajman",
-  "Ras Al Khaimah",
-  "Fujairah",
-  "Umm Al Quwain",
-];
-
-const movingCompanySchema = {
-  "@context": "https://schema.org",
-  "@type": "MovingCompany",
-  name: "Al Afnan Furniture Transfer",
-  alternateName: "Al Afnan Movers and Packers",
-  telephone: "+971567277536",
-  email: EMAIL,
-  priceRange: "AED 800 - AED 6500+",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress:
-      "Jamal Abdul Naser St, near Al Majaz 2, Al Majaz 2 - Al Majaz",
-    addressLocality: "Sharjah",
-    addressRegion: "Sharjah",
-    addressCountry: "AE",
-  },
-  geo: { "@type": "GeoCoordinates", latitude: 25.3292, longitude: 55.3831 },
-  hasMap: MAPS_HREF,
-  areaServed: emiratesServed.map((name) => ({ "@type": "City", name })),
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-      ],
-      opens: "00:00",
-      closes: "23:59",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: "Saturday",
-      opens: "09:00",
-      closes: "17:00",
-    },
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    bestRating: "5",
-    reviewCount: "5",
-  },
-};
-
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE CONTENT
    ───────────────────────────────────────────────────────────────────────────── */
@@ -187,14 +98,6 @@ const trustBadges = [
 export default function HomePage() {
   return (
     <SiteShell region="dubai" searches={footerSearches} layout="bands">
-      <script
-        id="MovingCompanySchema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(movingCompanySchema),
-        }}
-      />
-
       {/* ════ HERO ════ */}
       <section
         id="hero"
@@ -203,7 +106,7 @@ export default function HomePage() {
         className="relative isolate flex min-h-[min(92svh,56rem)] flex-col overflow-hidden bg-ink text-fog"
       >
         <Image
-          src="/al-afnan-furniture-transfer-sharjah.jpg"
+          src="/images/al-afnan-movers-and-packers-in-uae.jpg"
           alt="Al Afnan movers and packers in UAE loading wrapped furniture and boxes into a moving truck"
           fill
           preload
@@ -755,56 +658,12 @@ export default function HomePage() {
       </section>
 
       {/* ════ REVIEWS ════ */}
-      <section
+      <GoogleReviewsSection
         id="reviews"
-        aria-labelledby="reviews-heading"
-        className="scroll-mt-28 bg-white section-y"
-      >
-        <div className="wrap">
-          <SectionHeader
-            id="reviews-heading"
-            title="What Our Customers Say About Al Afnan Movers"
-            lead="We're rated 4.9★ on Google. Reviewers keep mentioning the same things: crews who turn up on time, careful handling and fair prices. Several of the moves below crossed from one emirate to another, which is why customers recommend us as trusted movers in the UAE for inter-emirate moves."
-          />
-
-          {/*
-            Signed dockets on one ruled sheet: three narrow, two wide, which
-            closes the grid exactly. The route and month are the proof, so they
-            sit on a rule at the foot of each cell.
-          */}
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 overflow-hidden rounded-xl border-t border-s border-line">
-            {reviews.map((review, index) => (
-              <figure
-                key={review.author + index}
-                className={`reveal row-span-2 grid grid-rows-subgrid border-b border-e border-line bg-paper p-7 lg:p-8 ${
-                  index < 3 ? "lg:col-span-2" : "lg:col-span-3"
-                } ${index === 4 ? "md:col-span-2" : ""}`}
-              >
-                <blockquote className="t-body text-steel">
-                  <span
-                    className="mb-1 block t-num text-5xl leading-none text-signal"
-                    aria-hidden="true"
-                  >
-                    &ldquo;
-                  </span>
-                  {review.quote}
-                </blockquote>
-                <figcaption className="mt-6 self-end border-t border-ink pt-4 t-small text-muted-foreground">
-                  <cite className="not-italic font-semibold text-ink">
-                    {review.author}
-                  </cite>
-                  {review.details?.map((detail) => (
-                    <span key={detail}>
-                      {" · "}
-                      {detail}
-                    </span>
-                  ))}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-
-          <div className="mt-10 flex flex-wrap gap-3">
+        title="What Our Customers Say About Al Afnan Movers"
+        intro="We're rated 4.9★ on Google. Reviewers keep mentioning the same things: crews who turn up on time, careful handling and fair prices. Several of the moves below crossed from one emirate to another, which is why customers recommend us as trusted movers in the UAE for inter-emirate moves."
+        actions={
+          <>
             <Button
               variant="outline"
               render={
@@ -830,9 +689,9 @@ export default function HomePage() {
               <WhatsAppIcon />
               <span>Get a Free Quote on WhatsApp</span>
             </Button>
-          </div>
-        </div>
-      </section>
+          </>
+        }
+      />
 
       {/* ════ FREQUENTLY ASKED QUESTIONS ════ */}
       <div className="bg-paper-2">

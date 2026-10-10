@@ -13,8 +13,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
@@ -22,11 +23,13 @@ import { FAQSection } from "@/components/FaqsSection";
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Packing Services in Sharjah | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "Standalone or move-day packing in Sharjah — fragile items, furniture, full unpacking included. Licensed, 10 years' experience. Free estimate.",
-};
+  path: "/packing-services-in-sharjah",
+  image: { path: "/packing-and-moving-services.jpg" },
+});
 
 const packingFaqs = [
   {
@@ -128,7 +131,12 @@ export default function PackingServicesPage() {
                   Home
                 </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
-                <span className="text-muted-foreground">Services</span>
+                <Link
+                  href="/movers-in-sharjah"
+                  className="hover:text-primary transition-colors"
+                >
+                  Movers in Sharjah
+                </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
                 <span className="text-primary font-semibold">
                   Packing Services in Sharjah
@@ -144,7 +152,14 @@ export default function PackingServicesPage() {
               <div className="mt-5 space-y-3.5 text-muted-foreground t-body leading-relaxed">
                 <p>
                   Al Afnan Furniture Transfer packs homes and offices across
-                  Sharjah — on its own, or as part of a full move. If
+                  Sharjah — on its own, or as part of a{" "}
+                  <Link
+                    href="/house-movers-in-sharjah"
+                    className="text-primary underline underline-offset-2 hover:text-primary/80 transition-colors"
+                  >
+                    full move
+                  </Link>
+                  . If
                   you&apos;ve already booked a truck and just need someone to
                   handle the boxes, we can do that.
                 </p>
@@ -578,7 +593,10 @@ export default function PackingServicesPage() {
                 We pack homes and offices across Al Nahda, Al Majaz, Al Taawun,
                 Al Khan, Muwaileh, Al Qasimia, Al Qarayen, Muwafjah, Sharjah
                 Industrial Area, and the rest of Sharjah — including packing
-                ahead of moves to Dubai, Ajman, and the other emirates.
+                ahead of moves to Dubai, Ajman, and the other emirates. If you
+                also need the move itself, our{" "}
+                <Link href="/movers-in-sharjah">movers in Sharjah</Link> page
+                covers it.
               </p>
 
               {/* Neighborhood Badges */}
@@ -632,6 +650,8 @@ export default function PackingServicesPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
         <FAQSection
           faqs={packingFaqs}
           title="Questions  About Packing Services in Sharjah"

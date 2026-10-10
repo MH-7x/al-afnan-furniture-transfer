@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
   Armchair,
   CalendarCheck,
@@ -24,17 +24,19 @@ import { SiteShell } from "@/components/SiteShell";
 import MovingProcess from "@/components/MovingProcess";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
-import { ReviewsSection } from "@/components/ReviewsSection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ContentTable } from "@/components/ContentTable";
 import { SectionHeader } from "@/components/SectionHeader";
 import { LocationHero } from "@/components/LocationHero";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Movers and Packers in Dubai | 24/7 Moving Company – Al Afnan",
-  description:
+  desc:
     "Movers and packers in Dubai, licensed and insured. 24/7 moving company for apartments, villas and offices. Free WhatsApp estimates. Call 056 7277536.",
-};
+  path: "/movers-and-packer-in-dubai",
+  image: { path: "/images/movers-and-packers-dubai-al-afnan-hero.jpg" },
+});
 
 /* ─────────────────────────────────────────────────────────────────────────────
    LINKS & SHARED STYLES
@@ -72,25 +74,6 @@ const footerSearches = [
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   STRUCTURED DATA
-   Sharjah address only; Dubai is declared as the served area (no Dubai address).
-   ───────────────────────────────────────────────────────────────────────────── */
-const movingCompanySchema = {
-  "@context": "https://schema.org",
-  "@type": "MovingCompany",
-  name: "Al Afnan Furniture Transfer",
-  telephone: "+971567277536",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress:
-      "Jamal Abdul Naser St, near Al Majaz 2, Al Majaz 2 - Al Majaz",
-    addressLocality: "Sharjah",
-    addressCountry: "AE",
-  },
-  areaServed: { "@type": "City", name: "Dubai" },
-};
-
-/* ─────────────────────────────────────────────────────────────────────────────
    PAGE CONTENT
    ───────────────────────────────────────────────────────────────────────────── */
 const trustStrip = [
@@ -110,7 +93,7 @@ const serviceCards: {
   {
     id: "house-movers",
     title: "House Movers in Dubai",
-    image: "/house-moving-services-by-al-afnan.jpg",
+    image: "/images/house-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt:
       "House movers in Dubai carrying a stretch-wrapped sofa through a villa hall with boxes ready to load",
     body: (
@@ -130,7 +113,7 @@ const serviceCards: {
   {
     id: "apartment-movers",
     title: "Apartment Movers in Dubai",
-    image: "/flat-apartment-movers.jpg",
+    image: "/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt: "Movers in Dubai carrying wrapped furniture into a service lift",
     body: (
       <>
@@ -148,7 +131,7 @@ const serviceCards: {
   {
     id: "villa-movers",
     title: "Villa Movers in Dubai",
-    image: "/villa-moving-services.jpg",
+    image: "/images/villa-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt: "Moving company in Dubai loading furniture at a villa",
     body: (
       <>
@@ -166,7 +149,7 @@ const serviceCards: {
   {
     id: "office-movers",
     title: "Office Movers in Dubai",
-    image: "/commercial-office-movers.jpg",
+    image: "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
     imageAlt:
       "Office movers in Dubai wheeling filing boxes and a wrapped office chair out of an office",
     body: (
@@ -185,7 +168,7 @@ const serviceCards: {
   {
     id: "furniture-movers",
     title: "Furniture Movers in Dubai",
-    image: "/furniture-moving-transfer.jpg",
+    image: "/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg",
     imageAlt:
       "Furniture movers in Dubai carrying a wardrobe wrapped in a furniture pad and stretch film",
     body: (
@@ -204,7 +187,7 @@ const serviceCards: {
   {
     id: "packing-unpacking",
     title: "Packing and Unpacking Services",
-    image: "/packing-and-moving-services.jpg",
+    image: "/images/packing-unpacking-services-dubai-al-afnan-movers.jpg",
     imageAlt:
       "Packers and movers in Dubai wrapping furniture and glassware in bubble wrap and stretch film",
     body: (
@@ -223,7 +206,7 @@ const serviceRows = [
   {
     id: "other-emirates",
     title: "Moves Between Dubai and Other Emirates",
-    image: "/al-afnan-furniture-transfer-sharjah.jpg",
+    image: "/images/long-distance-inter-emirate-movers-uae-al-afnan.jpg",
     imageAlt: "Movers loading boxes into a truck for a move between Dubai and other emirates",
     body: (
       <>
@@ -232,7 +215,7 @@ const serviceRows = [
         between the two cities are straightforward for us. We also
         handle long-distance moves from Dubai to Abu Dhabi, Ajman,
         Ras Al Khaimah and the northern emirates. See our{" "}
-        <Link href="/" className={linkClass}>
+        <Link href="/movers-in-sharjah" className={linkClass}>
           movers in Sharjah
         </Link>
         ,{" "}
@@ -288,39 +271,6 @@ const chooseChecklist = [
   "Does the price include packing materials, dismantling and reassembly?",
   "Which building fees will I pay separately?",
   "Do your recent Google reviews mention moves like mine?",
-];
-
-const reviews = [
-  {
-    quote:
-      "EXTREMELY helpful guys. Had to move ton of stuff from Ajman to Dubai. Most reasonable priced people also. I 100% recommend these guys.",
-    author: "Sid Java",
-    details: ["Ajman to Dubai", "October 2026"],
-  },
-  {
-    quote:
-      "Used them for a local move-in service. Very efficient. On time and Quick. I would highly recommend them. Also, very reasonable prices. Kudos to Waqar Ahmed and his team. Great Job guys. Thanks",
-    author: "MK DXB",
-    details: ["Local move in Dubai", "August 2026"],
-  },
-  {
-    quote:
-      "Thank you Ahmed for your great service from Sharjah to Dubai South. On time and efficient and very careful in handling our stuffs. 100% Effective and Hassle Free!",
-    author: "Sarah Orchid O. Fernandez",
-    details: ["Sharjah to Dubai South", "July 2026"],
-  },
-  {
-    quote:
-      "Hey it was wonderful experience and they have managed everything so well it was very easy and smooth for us to shift from Sharjah to Dubai they made every process very well",
-    author: "Murtaza Ali",
-    details: ["Sharjah to Dubai", "July 2026"],
-  },
-  {
-    quote:
-      "Excellent service! Professional movers. They came and did the job as requested and made sure to leave the place clean after they left. Well done!",
-    author: "Alice Aoun",
-    details: ["August 2026"],
-  },
 ];
 
 const processSteps = [
@@ -590,20 +540,12 @@ const dubaiFaqs = [
 export default function MoversAndPackersInDubaiPage() {
   return (
     <SiteShell region="dubai" searches={footerSearches} layout="bands">
-      <script
-        id="MovingCompanySchema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(movingCompanySchema),
-        }}
-      />
-
       {/* ════ HERO ════ */}
       <LocationHero
         id="hero-title"
         current="Movers and Packers in Dubai"
         title="Movers and Packers in Dubai"
-        image="/studio-moving-services.jpg"
+        image="/images/movers-and-packers-dubai-al-afnan-hero.jpg"
         imageAlt="Al Afnan movers and packers in Dubai wrapping a sofa in stretch film before loading the truck"
       >
         <p className="mt-7 t-lead text-paper measure">
@@ -784,11 +726,10 @@ export default function MoversAndPackersInDubaiPage() {
       </section>
 
       {/* ════ REVIEWS ════ */}
-      <ReviewsSection
+      <GoogleReviewsSection
         id="reviews"
         title="Movers and Packers Dubai Reviews"
         intro="We're rated 4.9★ on Google. Read through the reviews and the same things keep coming up: crews arriving on time, careful packing and prices people describe as reasonable. Several come from customers moving into Dubai from Sharjah and Ajman."
-        reviews={reviews}
         actions={
           <>
             <Button

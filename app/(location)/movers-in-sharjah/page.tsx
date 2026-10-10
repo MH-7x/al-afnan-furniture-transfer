@@ -7,17 +7,20 @@ import { MovingCosts } from "@/components/MovingCosts";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { HomePageFAQs } from "@/lib/FaqsData";
 import { Phone, ArrowRight } from "lucide-react";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { PHONE_HREF } from "@/lib/contact";
 
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Trusted Movers in Sharjah | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "movers in sharjah: Al Afnan Furniture Transfer offers trusted moving & packing for homes, apartments and offices. Free estimates. Call 056 7277536.",
-};
+  path: "/movers-in-sharjah",
+  image: { path: "/al-afnan-furniture-transfer-sharjah.jpg" },
+});
 
 const homeFooterSearches = [
   "movers in Sharjah",
@@ -53,13 +56,14 @@ const homeFooterSearches = [
   "inter emirate movers Sharjah",
 ];
 
-const activeRoutes = [
-  "Dubai",
-  "Abu Dhabi",
-  "Ajman",
-  "Ras Al Khaimah",
-  "Fujairah",
-  "Umm Al Quwain",
+// Only emirates with their own location page get a link.
+const activeRoutes: { name: string; href?: string }[] = [
+  { name: "Dubai", href: "/movers-and-packer-in-dubai" },
+  { name: "Abu Dhabi" },
+  { name: "Ajman", href: "/movers-in-ajman" },
+  { name: "Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
+  { name: "Fujairah" },
+  { name: "Umm Al Quwain" },
 ];
 
 const interEmirateNotes = [
@@ -117,7 +121,29 @@ export default function Home() {
 
         <div className="wrap flex min-h-[min(84svh,52rem)] items-center py-20 lg:py-28">
           <div className="hero-stagger max-w-4xl">
-            <h1 className="t-display capitalize! text-white">
+            <nav aria-label="Breadcrumb">
+              <ol className="flex flex-wrap items-center gap-2 t-small">
+                <li className="inline-flex items-center gap-2">
+                  <Link href="/" className="hover:text-white transition-colors">
+                    Home
+                  </Link>
+                  <ArrowRight
+                    className="size-3.5 opacity-60"
+                    aria-hidden="true"
+                  />
+                </li>
+                <li>
+                  <span
+                    className="font-semibold text-signal-bright"
+                    aria-current="page"
+                  >
+                    Movers in Sharjah
+                  </span>
+                </li>
+              </ol>
+            </nav>
+
+            <h1 className="mt-5 t-display capitalize! text-white">
               <span className="block">Movers in Sharjah </span>
               <span className="block text-signal-bright">
                 Al Afnan Furniture Transfer
@@ -213,16 +239,25 @@ export default function Home() {
           <div className="mt-12">
             <span className="t-label text-signal">Active Routes:</span>
             <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 border-t border-ink">
-              {activeRoutes.map((emirate) => (
+              {activeRoutes.map(({ name, href }) => (
                 <li
-                  key={emirate}
+                  key={name}
                   className="flex items-center justify-between gap-4 border-b border-line py-4"
                 >
                   <span className="t-h4 text-ink">
                     <span className="text-muted-foreground font-medium">
                       Sharjah to
                     </span>{" "}
-                    {emirate}
+                    {href ? (
+                      <Link
+                        href={href}
+                        className="underline decoration-1 underline-offset-4 hover:text-signal transition-colors"
+                      >
+                        {name}
+                      </Link>
+                    ) : (
+                      name
+                    )}
                   </span>
                   <ArrowRight
                     className="size-5 shrink-0 text-signal"
@@ -363,6 +398,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <GoogleReviewsSection />
 
       {/* ── FAQ ── */}
       <div className="bg-paper-2">

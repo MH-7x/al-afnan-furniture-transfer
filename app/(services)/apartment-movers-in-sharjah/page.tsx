@@ -12,8 +12,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
@@ -21,11 +22,13 @@ import { FAQSection } from "@/components/FaqsSection";
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Apartment Movers in Sharjah | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "Apartment movers in Sharjah from AED 450. Licensed, 10 years' experience, transparent pricing, free estimates. Studio to 3-BR moves, all areas. Call 056 7277536.",
-};
+  path: "/apartment-movers-in-sharjah",
+  image: { path: "/flat-apartment-movers.jpg" },
+});
 
 const apartmentFaqs = [
   {
@@ -115,7 +118,12 @@ export default function ApartmentMoversPage() {
                   Home
                 </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
-                <span className="text-muted-foreground">Services</span>
+                <Link
+                  href="/movers-in-sharjah"
+                  className="hover:text-primary transition-colors"
+                >
+                  Movers in Sharjah
+                </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
                 <span className="text-primary font-semibold">
                   Apartment Movers in Sharjah
@@ -256,8 +264,9 @@ export default function ApartmentMoversPage() {
               <h3>Packing Scope — Transport-Only vs. Full Packing</h3>
               <p>
                 If you&apos;ve already boxed everything, you&apos;re paying for
-                labor and transport only. Full packing adds materials and time,
-                since our team wraps furniture, boxes up the kitchen and
+                labor and transport only.{" "}
+                <Link href="/packing-services-in-sharjah">Full packing</Link>{" "}
+                adds materials and time, since our team wraps furniture, boxes up the kitchen and
                 wardrobes, and handles anything fragile with bubble wrap and
                 stretch film. Somewhere in between — you pack the easy stuff, we
                 handle the breakables — is common too, and it&apos;s worth
@@ -491,7 +500,9 @@ export default function ApartmentMoversPage() {
               <p>
                 We move apartments across Sharjah, including Al Nahda, Al Majaz,
                 Al Taawun, Al Khan, Muwaileh, Al Qasimia, Al Qarayen, Muwafjah,
-                and the Sharjah Industrial Area.
+                and the Sharjah Industrial Area. See all our{" "}
+                <Link href="/movers-in-sharjah">movers in Sharjah</Link> for
+                house, villa, office and furniture moves too.
               </p>
               <p>
                 Whether you&apos;re in a high-rise tower near Al Majaz or a
@@ -542,6 +553,8 @@ export default function ApartmentMoversPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
         <FAQSection
           faqs={apartmentFaqs}
           title="Questions About Apartment Movers in Sharjah"

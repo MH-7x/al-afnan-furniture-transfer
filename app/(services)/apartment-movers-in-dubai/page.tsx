@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { Clock, MessageCircle, Phone, ShieldCheck, Star } from "lucide-react";
 import { SiteShell } from "@/components/SiteShell";
 import { ServiceHero } from "@/components/ServiceHero";
@@ -8,16 +8,19 @@ import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { ServiceCTAButton } from "@/components/ServiceCTAButton";
 import { FAQSection } from "@/components/FaqsSection";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { whatsappLink } from "@/lib/whatsapp";
 
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Apartment Movers in Dubai | Studio to 3BHK – Al Afnan",
-  description:
+  desc:
     "Apartment movers in Dubai for studio, 1BHK, 2BHK and 3BHK flats. Moves planned around your building's lift slot and permits. 24/7 team. Call 056 7277536.",
-};
+  path: "/apartment-movers-in-dubai",
+  image: { path: "/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg" },
+});
 
 const WHATSAPP_PHOTOS = whatsappLink(
   "Hi, I would like a free quote for an apartment move in Dubai",
@@ -195,7 +198,7 @@ export default function ApartmentMoversInDubaiPage() {
               <figure className="!mt-0">
                 <div className="img-wide">
                   <Image
-                    src="/flat-apartment-movers.jpg"
+                    src="/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg"
                     alt="Apartment movers in Dubai loading a service lift"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -280,7 +283,7 @@ export default function ApartmentMoversInDubaiPage() {
               <figure>
                 <div className="img-wide">
                   <Image
-                    src="/furniture-moving-transfer.jpg"
+                    src="/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg"
                     alt="Flat shifting in Dubai with wardrobes dismantled"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
@@ -649,9 +652,6 @@ export default function ApartmentMoversInDubaiPage() {
                 Google. Every quote is written and all-inclusive.
               </p>
 
-              {/* TODO: add 2–3 real Google reviews from apartment moves here
-                  (ideally from towers in Dubai Marina or JLT). */}
-
               <h3>Moving at the end of the month</h3>
               <p>
                 Many Dubai leases end at the end of the month, so the last few
@@ -668,7 +668,7 @@ export default function ApartmentMoversInDubaiPage() {
                 Dubai Marina, JVC, JLT, Dubai Silicon Oasis, Business Bay, Downtown Dubai, Al Barsha, International City,
                 Al Nahda Dubai and Dubai Creek Harbour. We&apos;re based in Al
                 Majaz, Sharjah, and also move flats between Dubai and{" "}
-                <Link href="/">Sharjah</Link>,{" "}
+                <Link href="/movers-in-sharjah">Sharjah</Link>,{" "}
                 <Link href="/movers-in-ajman">Ajman</Link> and the other
                 emirates. Moving a villa instead? See{" "}
                 <Link href="/villa-movers-in-dubai">villa movers in Dubai</Link>
@@ -691,6 +691,8 @@ export default function ApartmentMoversInDubaiPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         {/* ════════════════════════════════════════════
             FAQ SECTION (also outputs the FAQPage schema)

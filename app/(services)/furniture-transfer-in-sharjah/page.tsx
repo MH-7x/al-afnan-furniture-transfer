@@ -13,8 +13,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
@@ -22,11 +23,13 @@ import { FAQSection } from "@/components/FaqsSection";
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Furniture Transfer & Movers in Sharjah | Al Afnan",
-  description:
+  desc:
     "Single item or a full room — Al Afnan moves furniture across Sharjah and the UAE. Free assessment, transparent pricing, 10 years' experience. Call 056 7277536.",
-};
+  path: "/furniture-transfer-in-sharjah",
+  image: { path: "/furniture-moving-transfer.jpg" },
+});
 
 const furnitureFaqs = [
   {
@@ -132,7 +135,12 @@ export default function FurnitureTransferPage() {
                   Home
                 </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
-                <span className="text-muted-foreground">Services</span>
+                <Link
+                  href="/movers-in-sharjah"
+                  className="hover:text-primary transition-colors"
+                >
+                  Movers in Sharjah
+                </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
                 <span className="text-primary font-semibold">
                   Furniture Transfer &amp; Movers in Sharjah
@@ -249,7 +257,8 @@ export default function FurnitureTransferPage() {
               <p>
                 A few pieces at once, or a full room&apos;s worth — a bedroom
                 set, a living room set, a mix of furniture and boxes. Bigger
-                than a single item, smaller than a full house move.
+                than a single item, smaller than a{" "}
+                <Link href="/house-movers-in-sharjah">full house move</Link>.
               </p>
 
               <h3>New Purchases, Showroom Pickups, and Used Furniture</h3>
@@ -578,8 +587,11 @@ export default function FurnitureTransferPage() {
               <p>
                 Al Nahda, Al Majaz, Al Taawun, Al Khan, Muwaileh, Al Qasimia, Al
                 Qarayen, Muwafjah, and Sharjah Industrial Area — plus
-                inter-emirate transfer to Dubai, Abu Dhabi, Ajman, Ras Al
-                Khaimah, Fujairah, and Umm Al Quwain.
+                inter-emirate transfer to Dubai, Abu Dhabi, Ajman,{" "}
+                <Link href="/movers-in-ras-al-khaimah">Ras Al Khaimah</Link>,
+                Fujairah, and Umm Al Quwain. Need a full home or office move
+                instead? See our{" "}
+                <Link href="/movers-in-sharjah">movers in Sharjah</Link> page.
               </p>
 
               {/* Neighborhood Badges */}
@@ -623,6 +635,8 @@ export default function FurnitureTransferPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         <FAQSection
           faqs={furnitureFaqs}

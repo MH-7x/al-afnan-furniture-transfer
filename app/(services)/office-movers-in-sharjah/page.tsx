@@ -11,8 +11,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
+import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
-import { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
 import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
@@ -20,11 +21,13 @@ import { FAQSection } from "@/components/FaqsSection";
 /* ─────────────────────────────────────────────────────────────────────────────
    PAGE METADATA & SEO DATA
    ───────────────────────────────────────────────────────────────────────────── */
-export const metadata: Metadata = {
+export const metadata = MetadataTemplate({
   title: "Office Movers in Sharjah | Al Afnan Furniture Transfer",
-  description:
+  desc:
     "Office movers in Sharjah with 10 years' experience, licensed across all 7 emirates. Free estimates, careful IT handling. Call 056 7277536.",
-};
+  path: "/office-movers-in-sharjah",
+  image: { path: "/commercial-office-movers.jpg" },
+});
 
 const officeFaqs = [
   {
@@ -131,7 +134,12 @@ export default function OfficeMoversPage() {
                   Home
                 </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
-                <span className="text-muted-foreground">Services</span>
+                <Link
+                  href="/movers-in-sharjah"
+                  className="hover:text-primary transition-colors"
+                >
+                  Movers in Sharjah
+                </Link>
                 <ArrowRight className="size-3 text-muted-foreground/40 shrink-0" />
                 <span className="text-primary font-semibold">
                   Office Movers in Sharjah
@@ -242,7 +250,11 @@ export default function OfficeMoversPage() {
               <h3>Office Furniture Moving</h3>
               <p>
                 Desks, chairs, filing cabinets, meeting tables, reception
-                furniture — office furniture is often bulkier and heavier than
+                furniture —{" "}
+                <Link href="/furniture-transfer-in-sharjah">
+                  office furniture
+                </Link>{" "}
+                is often bulkier and heavier than
                 home furniture, and a lot of it is modular, built to be taken
                 apart and reassembled rather than carried as one piece. Our team
                 handles the disassembly, the move itself, and the reassembly at
@@ -298,7 +310,8 @@ export default function OfficeMoversPage() {
               <h3>Office Moves From Sharjah to Other Emirates</h3>
               <p>
                 Some businesses relocate across emirate lines — Sharjah to
-                Dubai, Sharjah to Ajman, and further afield. We cover this too.
+                Dubai, Sharjah to <Link href="/movers-in-ajman">Ajman</Link>,
+                and further afield. We cover this too.
                 It&apos;s a longer job with more moving parts, so it&apos;s
                 worth reading further down for how inter-emirate pricing differs
                 from a local move.
@@ -369,7 +382,12 @@ export default function OfficeMoversPage() {
                 </li>
                 <li>
                   <div>
-                    <strong>Protective packing options.</strong> Bubble wrap,
+                    <strong>
+                      <Link href="/packing-services-in-sharjah">
+                        Protective packing options.
+                      </Link>
+                    </strong>{" "}
+                    Bubble wrap,
                     stretch film, and dedicated boxes for anything that
                     shouldn&apos;t be treated like the rest of the load.
                   </div>
@@ -661,7 +679,9 @@ export default function OfficeMoversPage() {
                 We move offices across Sharjah, including Al Nahda, Al Majaz, Al
                 Taawun, Al Khan, Muwaileh, Al Qasimia, Al Qarayen, Muwafjah, and
                 Sharjah Industrial Area. If your office is somewhere else in the
-                city, call us — coverage isn&apos;t limited to this list.
+                city, call us — coverage isn&apos;t limited to this list. For
+                homes and furniture as well as offices, see our{" "}
+                <Link href="/movers-in-sharjah">movers in Sharjah</Link> page.
               </p>
 
               {/* Neighborhood Badges */}
@@ -685,7 +705,8 @@ export default function OfficeMoversPage() {
               <p>
                 Not every relocation stays inside Sharjah. Businesses expand,
                 downsize, or simply find better rent elsewhere in the UAE, and
-                that often means an inter-emirate move — Sharjah to Dubai being
+                that often means an inter-emirate move — Sharjah to{" "}
+                <Link href="/movers-and-packer-in-dubai">Dubai</Link> being
                 the most common route we see, along with moves to Ajman and Abu
                 Dhabi.
               </p>
@@ -731,6 +752,8 @@ export default function OfficeMoversPage() {
             </div>
           </div>
         </section>
+
+        <GoogleReviewsSection />
 
         <FAQSection
           faqs={officeFaqs}
