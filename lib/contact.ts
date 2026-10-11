@@ -5,7 +5,7 @@ export const PHONE_HREF = "tel:+971567277536";
 export const WHATSAPP_NUMBER = "971567277536";
 export const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}`;
 
-export const EMAIL = "alalafnanfurnituretransfer@gmail.com";
+export const EMAIL = "alafnanfurnituretransfer@gmail.com";
 
 export const ADDRESS =
   "Jamal Abdul Naser St, near Al Majaz 2 - Al Majaz 2 - Al Majaz, Sharjah";

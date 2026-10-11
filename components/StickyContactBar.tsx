@@ -6,7 +6,7 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from "@/lib/contact";
 
 /**
- * Mobile-only Call + WhatsApp bar pinned to the bottom of the screen.
+ * Floating Call + WhatsApp circular buttons pinned to the right edge of the screen.
  * Slides away while the quote form (#estimate) is on screen so it never covers it.
  */
 export function StickyContactBar() {
@@ -15,38 +15,44 @@ export function StickyContactBar() {
   useEffect(() => {
     const form = document.getElementById("estimate");
     if (!form) return;
-    const io = new IntersectionObserver(([entry]) => setHidden(entry.isIntersecting), {
-      threshold: 0.15,
-    });
+    const io = new IntersectionObserver(
+      ([entry]) => setHidden(entry.isIntersecting),
+      {
+        threshold: 0.15,
+      },
+    );
     io.observe(form);
     return () => io.disconnect();
   }, []);
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-40 border-t border-line bg-white/95 px-3 pt-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))] shadow-xl lg:hidden motion-safe:transition-transform motion-safe:duration-200 ${
-        hidden ? "translate-y-full" : "translate-y-0"
+      className={`fixed right-3 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-40 flex flex-col gap-3 sm:right-5 sm:bottom-6 sm:gap-4 motion-safe:transition-transform motion-safe:duration-200 ${
+        hidden ? "translate-x-24" : "translate-x-0"
       }`}
       inert={hidden}
     >
-      <div className="grid grid-cols-2 gap-2.5">
-        <a
-          href={PHONE_HREF}
-          className="flex min-h-13 items-center justify-center gap-2 rounded-md bg-ink px-3 font-semibold text-white"
-        >
-          <Phone className="size-4.5 shrink-0" aria-hidden="true" />
-          <span>Call {PHONE_DISPLAY}</span>
-        </a>
-        <a
-          href={WHATSAPP_HREF}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex min-h-13 items-center justify-center gap-2 rounded-md bg-signal px-3 font-semibold text-white"
-        >
-          <WhatsAppIcon className="size-5 shrink-0" />
-          <span>WhatsApp Us</span>
-        </a>
-      </div>
+      <a
+        href={PHONE_HREF}
+        aria-label={`Call ${PHONE_DISPLAY}`}
+        title={`Call ${PHONE_DISPLAY}`}
+        className="flex size-14 items-center justify-center rounded-full bg-blue-600 text-white shadow-lg sm:size-16"
+      >
+        <Phone className="size-6 shrink-0 sm:size-7" aria-hidden="true" />
+      </a>
+      <a
+        href={WHATSAPP_HREF}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        title="WhatsApp Us"
+        className="relative flex size-14 items-center justify-center rounded-full bg-green-600 text-white shadow-lg sm:size-16"
+      >
+        <WhatsAppIcon className="size-6 shrink-0 sm:size-7" />
+        <span className="absolute -top-1 -right-1 flex size-4 items-center justify-center rounded-full bg-red-500 ring-2 ring-white motion-safe:animate-pulse sm:size-4.5">
+          <span className="sr-only">New message</span>
+        </span>
+      </a>
     </div>
   );
 }

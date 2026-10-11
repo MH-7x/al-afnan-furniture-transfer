@@ -351,7 +351,7 @@ Fill in your move details for an upfront quote with no hidden fees.
 &#91;quote form here\]\
 Submit button: Get My Free Quote
 
-**Al Afnan Furniture Transfer** · Jamal Abdul Naser St, near Al Majaz 2, Al Majaz, Sharjah · 056 7277536 · alalafnanfurnituretransfer@gmail.com
+**Al Afnan Furniture Transfer** · Jamal Abdul Naser St, near Al Majaz 2, Al Majaz, Sharjah · 056 7277536 · alafnanfurnituretransfer@gmail.com
 
 ## Publishing notes
 
