@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
 import { movingCompanySchemaJson } from "@/lib/MovingCompanySchema";
 import "./globals.css";
+import GTM from "@/components/GTM";
 
 // Body / UI face
 const barlow = Barlow({
@@ -55,6 +56,7 @@ export default function RootLayout({
       dir="ltr"
       className={`antialiased ${barlow.variable} ${barlowCondensed.variable}`}
     >
+      <GTM />
       <body
         id="top"
         className="min-h-screen flex flex-col bg-background text-foreground"
