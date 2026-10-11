@@ -13,9 +13,8 @@ import { EditorialRows } from "@/components/EditorialRows";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const metadata = MetadataTemplate({
-  title: "Movers in Ras Al Khaimah | Professional House, Villa & Office Moving",
-  desc:
-    "Movers in Ras Al Khaimah from Al Afnan Furniture Transfer. House, villa, apartment & office moving. Licensed, insured, free quotes. Call 056 7277536.",
+  title: "Movers in Ras Al Khaimah | House, Villa & Office Moving",
+  desc: "Movers in Ras Al Khaimah from Al Afnan Furniture Transfer. House, villa, apartment & office moving. Licensed, insured, free quotes. Call 056 7277536.",
   path: "/movers-in-ras-al-khaimah",
   image: { path: "/images/movers-in-ras-al-khaimah-al-afnan.jpg" },
 });
@@ -242,6 +241,7 @@ export default function RasAlKhaimahPage() {
       <LocationHero
         id="hero-title"
         current="Movers in Ras Al Khaimah"
+        path="/movers-in-ras-al-khaimah"
         title={
           <>
             Movers in Ras Al Khaimah{" "}
@@ -282,7 +282,7 @@ export default function RasAlKhaimahPage() {
             <WhatsAppIcon />
             <span>Get Your Free Moving Quote</span>
           </Button>
-          <Button variant="outline-light" render={<a href="tel:0567277536" />}>
+          <Button variant="outline-light" render={<a href="tel:+971567277536" />}>
             <Phone aria-hidden="true" />
             <span>Call 056 7277536</span>
           </Button>
@@ -318,7 +318,8 @@ export default function RasAlKhaimahPage() {
               {
                 id: "villa",
                 title: "Villa Moving in Ras Al Khaimah",
-                image: "/images/villa-movers-dubai-al-afnan-furniture-transfer.jpg",
+                image:
+                  "/images/villa-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt: "Villa Moving in Ras Al Khaimah",
                 body: (
                   <>
@@ -343,7 +344,8 @@ export default function RasAlKhaimahPage() {
               {
                 id: "apartment",
                 title: "Apartment, Flat & Studio Moving in Ras Al Khaimah",
-                image: "/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg",
+                image:
+                  "/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt: "Apartment, Flat & Studio Moving in Ras Al Khaimah",
                 body: (
                   <>
@@ -397,7 +399,8 @@ export default function RasAlKhaimahPage() {
               {
                 id: "office",
                 title: "Office Relocation in Ras Al Khaimah",
-                image: "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
+                image:
+                  "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt:
                   "Office Relocation in Ras Al Khaimah by Al Afnan Furniture Transfer",
                 body: (
@@ -425,7 +428,8 @@ export default function RasAlKhaimahPage() {
               {
                 id: "warehouse",
                 title: "Warehouse & RAKEZ Commercial Moves",
-                image: "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
+                image:
+                  "/images/office-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt:
                   "Warehouse & RAKEZ Commercial Moves in Ras Al Khaimah",
                 body: (
@@ -483,7 +487,8 @@ export default function RasAlKhaimahPage() {
                 id: "dismantling",
                 title:
                   "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
-                image: "/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg",
+                image:
+                  "/images/furniture-dismantling-reassembly-dubai-al-afnan-movers.jpg",
                 imageAlt:
                   "Furniture Dismantling, Assembly & Reassembly in Ras Al Khaimah",
                 body: (
@@ -510,7 +515,8 @@ export default function RasAlKhaimahPage() {
               {
                 id: "sofa-bed",
                 title: "Sofa, Bed & Wardrobe Moving in Ras Al Khaimah",
-                image: "/images/house-movers-dubai-al-afnan-furniture-transfer.jpg",
+                image:
+                  "/images/house-movers-dubai-al-afnan-furniture-transfer.jpg",
                 imageAlt: "Sofa, Bed & Wardrobe Moving in Ras Al Khaimah",
                 body: (
                   <>
@@ -531,7 +537,8 @@ export default function RasAlKhaimahPage() {
               {
                 id: "packing",
                 title: "Professional Packing Services in Ras Al Khaimah",
-                image: "/images/packing-unpacking-services-dubai-al-afnan-movers.jpg",
+                image:
+                  "/images/packing-unpacking-services-dubai-al-afnan-movers.jpg",
                 imageAlt: "Professional Packing Services in Ras Al Khaimah",
                 body: (
                   <>
@@ -614,7 +621,7 @@ export default function RasAlKhaimahPage() {
                   If you&apos;re heading out of RAK, whether it&apos;s movers
                   from Ras Al Khaimah to{" "}
                   <Link
-                    href="/movers-and-packer-in-dubai"
+                    href="/movers-and-packers-in-dubai"
                     className="font-semibold text-signal underline underline-offset-4"
                   >
                     Dubai
@@ -737,7 +744,7 @@ export default function RasAlKhaimahPage() {
                 pricing.
               </p>
             </div>
-            <Button render={<a href="tel:0567277536" />} className="shrink-0">
+            <Button render={<a href="tel:+971567277536" />} className="shrink-0">
               <Phone aria-hidden="true" />
               <span>Call 056 7277536</span>
             </Button>

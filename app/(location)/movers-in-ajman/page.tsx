@@ -16,9 +16,8 @@ import { LocationHero } from "@/components/LocationHero";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const metadata = MetadataTemplate({
-  title: "Movers in Ajman Services By Al Afnan Furniture Transfer",
-  desc:
-    "Trusted movers in ajman. Al Afnan Furniture Transfer provide moving services for houses, offices & furniture. Call 056 7277536 for a free moving quote.",
+  title: "Movers in Ajman | Moving & Packing Services – Al Afnan",
+  desc: "Trusted movers in Ajman. Al Afnan Furniture Transfer provides moving services for houses, offices & furniture. Call 056 7277536 for a free moving quote.",
   path: "/movers-in-ajman",
   image: { path: "/images/movers-in-ajman-al-afnan.jpg" },
 });
@@ -247,6 +246,7 @@ export default function AjmanPage() {
       <LocationHero
         id="hero-title"
         current="Movers in Ajman"
+        path="/movers-in-ajman"
         title={
           <>
             Movers in Ajman{" "}
@@ -285,7 +285,7 @@ export default function AjmanPage() {
             <WhatsAppIcon />
             <span>Get Your Free Moving Quote</span>
           </Button>
-          <Button variant="outline-light" render={<a href="tel:0567277536" />}>
+          <Button variant="outline-light" render={<a href="tel:+971567277536" />}>
             <Phone aria-hidden="true" />
             <span>Call 056 7277536</span>
           </Button>
@@ -494,7 +494,7 @@ export default function AjmanPage() {
                 transparent pricing.
               </p>
             </div>
-            <Button render={<a href="tel:0567277536" />} className="shrink-0">
+            <Button render={<a href="tel:+971567277536" />} className="shrink-0">
               <Phone aria-hidden="true" />
               <span>Call 056 7277536</span>
             </Button>
@@ -548,7 +548,7 @@ export default function AjmanPage() {
                   </Link>{" "}
                   base means Ajman to{" "}
                   <Link
-                    href="/movers-and-packer-in-dubai"
+                    href="/movers-and-packers-in-dubai"
                     className="font-semibold text-signal underline underline-offset-4"
                   >
                     Dubai

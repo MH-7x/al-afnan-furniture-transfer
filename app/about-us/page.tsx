@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import Link from "next/link";
 import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
@@ -43,10 +44,11 @@ import { whatsappLink } from "@/lib/whatsapp";
    ───────────────────────────────────────────────────────────────────────────── */
 export const metadata = MetadataTemplate({
   title: "About Al Afnan Furniture Transfer | Sharjah Movers",
-  desc:
-    "Al Afnan Furniture Transfer is a licensed Sharjah moving company in Al Majaz since 2015, with a 20+ trained team and a 4.9/5 Google rating.",
+  desc: "Al Afnan Furniture Transfer is a licensed Sharjah moving company in Al Majaz since 2015, with a 20+ trained team and a 4.9/5 Google rating.",
   path: "/about-us",
-  image: { path: "/images/al-afnan-movers-crew-planning-move-with-customer.jpg" },
+  image: {
+    path: "/images/al-afnan-movers-crew-planning-move-with-customer.jpg",
+  },
 });
 
 const credentials: {
@@ -142,7 +144,7 @@ const expectations: { icon: LucideIcon; lead: string; text: string }[] = [
   {
     icon: Clock,
     lead: "Hours that fit your schedule.",
-    text: "We're open 24 hours from Sunday to Friday, and from 9 AM to 5 PM on Saturday. Same-day and emergency moves can also be arranged. Call us to check availability.",
+    text: "We're open 24 hours a day, 7 days a week. Same-day and emergency moves can also be arranged. Call us to check availability.",
   },
 ];
 
@@ -268,7 +270,7 @@ const aboutFaqs = [
   {
     question: "What are your working hours?",
     answer:
-      "We're open 24 hours from Sunday to Friday, and from 9 AM to 5 PM on Saturday. Same-day and emergency moves can be arranged, so call to check availability.",
+      "We're open 24 hours a day, 7 days a week. Same-day and emergency moves can be arranged, so call to check availability.",
   },
   {
     question: "What payment methods do you accept?",
@@ -361,6 +363,7 @@ export default function AboutUsPage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-14">
             {/* Copy */}
             <div className={`lg:col-span-7 ${enter}`}>
+              <BreadcrumbSchema items={[{ name: "About Us", path: "/about-us" }]} />
               <nav
                 aria-label="Breadcrumb"
                 className="mb-6 flex flex-wrap items-center gap-1.5 text-xs font-medium text-muted-foreground"
@@ -413,7 +416,7 @@ export default function AboutUsPage() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  render={<a href="tel:0567277536" />}
+                  render={<a href="tel:+971567277536" />}
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="ml-1.5 size-4" aria-hidden="true" />
@@ -435,7 +438,7 @@ export default function AboutUsPage() {
                   src="/images/al-afnan-movers-crew-planning-move-with-customer.jpg"
                   alt="Al Afnan Furniture Transfer movers planning a move with customers in Sharjah"
                   fill
-                  priority
+                  preload
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   className="object-cover"
                 />
@@ -861,7 +864,7 @@ export default function AboutUsPage() {
                   We don&apos;t publish our licence number online, but
                   you&apos;re welcome to see the licence before you book. Ask
                   our team by phone or WhatsApp on{" "}
-                  <a href="tel:0567277536" className={phoneLink}>
+                  <a href="tel:+971567277536" className={phoneLink}>
                     056 7277536
                   </a>
                   .
@@ -876,7 +879,7 @@ export default function AboutUsPage() {
                   any damage that happens during handling. If something is
                   damaged during your move, we repair it or replace it. Report
                   it to our team on{" "}
-                  <a href="tel:0567277536" className={phoneLink}>
+                  <a href="tel:+971567277536" className={phoneLink}>
                     056 7277536
                   </a>{" "}
                   and we&apos;ll arrange the next step.
@@ -970,15 +973,24 @@ export default function AboutUsPage() {
                 Al Khan, Muwaileh, Al Qasimia, Al Qarayen, Muwafjah and the
                 Sharjah Industrial Area. Outside Sharjah, we move customers to
                 and from{" "}
-                <Link href="/movers-and-packer-in-dubai" className="font-semibold text-primary underline underline-offset-4">
+                <Link
+                  href="/movers-and-packers-in-dubai"
+                  className="font-semibold text-primary underline underline-offset-4"
+                >
                   Dubai
                 </Link>
                 , Abu Dhabi,{" "}
-                <Link href="/movers-in-ajman" className="font-semibold text-primary underline underline-offset-4">
+                <Link
+                  href="/movers-in-ajman"
+                  className="font-semibold text-primary underline underline-offset-4"
+                >
                   Ajman
                 </Link>
                 , Umm Al Quwain,{" "}
-                <Link href="/movers-in-ras-al-khaimah" className="font-semibold text-primary underline underline-offset-4">
+                <Link
+                  href="/movers-in-ras-al-khaimah"
+                  className="font-semibold text-primary underline underline-offset-4"
+                >
                   Ras Al Khaimah
                 </Link>{" "}
                 and Fujairah.
@@ -1029,7 +1041,7 @@ export default function AboutUsPage() {
           <div className="space-y-3.5">
             <p>
               Call or WhatsApp{" "}
-              <a href="tel:0567277536" className={phoneLink}>
+              <a href="tel:+971567277536" className={phoneLink}>
                 056 7277536
               </a>{" "}
               for a free, no-obligation estimate. To get an accurate quote
@@ -1044,7 +1056,7 @@ export default function AboutUsPage() {
               <strong className="font-semibold text-foreground">
                 Opening hours:
               </strong>{" "}
-              Sunday to Friday, open 24 hours. Saturday, 9 AM to 5 PM.
+              Open 24 hours, 7 days a week.
             </p>
           </div>
         }

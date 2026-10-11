@@ -17,5 +17,6 @@ export const generateFAQSchema = (faqs: PlainFAQ[]) => {
     })),
   };
 
-  return JSON.stringify(schema, null, 2);
+  // "<" is escaped so the payload can't close the <script> tag.
+  return JSON.stringify(schema).replace(/</g, "\\u003c");
 };

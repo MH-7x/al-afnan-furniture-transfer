@@ -26,7 +26,7 @@ const homePage: Page = {
 // Location (emirate) landing pages — most likely to change as coverage/pricing updates.
 const locationPages: Page[] = [
   {
-    path: "/movers-and-packer-in-dubai",
+    path: "/movers-and-packers-in-dubai",
     image: "/images/movers-and-packers-dubai-al-afnan-hero.jpg",
     changeFrequency: "weekly",
     priority: 0.9,

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 /**
  * Full-bleed photo hero for location pages: breadcrumb, H1 and the page's own
@@ -10,6 +11,7 @@ import { ArrowRight } from "lucide-react";
 export function LocationHero({
   id,
   current,
+  path,
   title,
   image,
   imageAlt,
@@ -19,6 +21,8 @@ export function LocationHero({
   id: string;
   /** Breadcrumb label for this page */
   current: string;
+  /** Route path of this page, for the BreadcrumbList JSON-LD */
+  path: string;
   title: React.ReactNode;
   image: string;
   imageAlt: string;
@@ -45,6 +49,7 @@ export function LocationHero({
 
       <div className="wrap flex min-h-[min(80svh,50rem)] items-center py-16 lg:py-24 w-full">
         <div className="hero-stagger max-w-6xl">
+          <BreadcrumbSchema items={[{ name: current, path }]} />
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2 t-small">
               <li className="inline-flex items-center gap-2">

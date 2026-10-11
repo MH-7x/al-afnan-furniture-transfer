@@ -301,6 +301,7 @@ export default function PrivacyPolicyPage() {
       <LegalPage
         id="privacy-heading"
         current="Privacy Policy"
+        path="/privacy-policy"
         title="Privacy Policy"
         updated="9 October 2026"
         intro={

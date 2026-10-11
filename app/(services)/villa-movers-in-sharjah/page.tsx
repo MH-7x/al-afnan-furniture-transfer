@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -7,7 +8,6 @@ import {
   Award,
   ShieldCheck,
   CheckCircle2,
-  Home as HomeIcon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
@@ -15,7 +15,6 @@ import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
-import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -93,17 +92,8 @@ const footerSearches = [
 ];
 
 export default function VillaMoversPage() {
-  const faqSchema = generateFAQSchema(villaFaqs);
-
   return (
     <SiteShell searches={footerSearches}>
-      {/* FAQ Schema for Google Rich Results */}
-      <script
-        id="villa-movers-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: faqSchema }}
-      />
-
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -126,6 +116,12 @@ export default function VillaMoversPage() {
 
             <div className="relative z-10 px-4 sm:px-10 md:px-16 lg:px-20 max-w-6xl">
               {/* Breadcrumb */}
+              <BreadcrumbSchema
+                items={[
+                  { name: "Movers in Sharjah", path: "/movers-in-sharjah" },
+                  { name: "Villa Movers in Sharjah", path: "/villa-movers-in-sharjah" },
+                ]}
+              />
               <nav
                 aria-label="Breadcrumb"
                 className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground font-medium"
@@ -174,7 +170,7 @@ export default function VillaMoversPage() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  render={<a href="tel:0567277536" />}
+                  render={<a href="tel:+971567277536" />}
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -223,7 +219,7 @@ export default function VillaMoversPage() {
                     alt="Villa movers in Sharjah professionally handling furniture and household belongings during a residential move — Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
-                    priority
+                    preload
                   />
                 </div>
                 <figcaption>
@@ -572,7 +568,7 @@ export default function VillaMoversPage() {
               <p>
                 Call{" "}
                 <a
-                  href="tel:0567277536"
+                  href="tel:+971567277536"
                   className="font-semibold text-primary hover:underline"
                 >
                   056 7277536
@@ -661,7 +657,10 @@ export default function VillaMoversPage() {
 
         <GoogleReviewsSection />
 
-        <FAQSection title="Questions About Villa Movers in Sharjah" />
+        <FAQSection
+          title="Questions About Villa Movers in Sharjah"
+          faqs={villaFaqs}
+        />
         {/* ════════════════════════════════════════════
             CTA SECTION
         ════════════════════════════════════════════ */}

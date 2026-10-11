@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 export interface ServiceHeroCta {
   label: string;
@@ -14,6 +15,8 @@ export interface ServiceHeroProps {
   breadcrumb: { label: string; href?: string }[];
   /** Current page name, shown as the last crumb. */
   current: string;
+  /** Route path of this page, for the BreadcrumbList JSON-LD. */
+  path: string;
   /** The page H1. */
   title: string;
   /** Bold line directly under the H1. */
@@ -57,6 +60,7 @@ function CtaButton({
 export function ServiceHero({
   breadcrumb,
   current,
+  path,
   title,
   tagline,
   badges,
@@ -84,6 +88,14 @@ export function ServiceHero({
 
         <div className="relative z-10 px-4 sm:px-10 md:px-16 lg:px-20 max-w-6xl">
           {/* Breadcrumb */}
+          <BreadcrumbSchema
+            items={[
+              ...breadcrumb.flatMap((crumb) =>
+                crumb.href ? [{ name: crumb.label, path: crumb.href }] : [],
+              ),
+              { name: current, path },
+            ]}
+          />
           <nav
             aria-label="Breadcrumb"
             className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground font-medium"

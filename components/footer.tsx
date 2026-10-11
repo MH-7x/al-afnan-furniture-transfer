@@ -53,20 +53,21 @@ export function Footer({
             <Link
               href="/"
               className="inline-block rounded-sm"
-              aria-label="Al Afan Furniture Transfer Home"
+              aria-label="Al Afnan Movers and Packers Home"
             >
               <Image
                 src="/logo-white.svg"
-                alt="Al Afan Furniture Transfer"
+                alt="Al Afnan Movers and Packers"
                 width={240}
                 height={52}
                 className="h-11 w-auto"
               />
             </Link>
             <p className="mt-5 max-w-sm t-small">
-              Quam pharetra lobortis integer magna aliquam rhoncus arcu
-              porttitor eget augue. Maximus fusce pharetra molestie accumsan
-              habitant metus tincidunt.
+              Al Afnan Movers and Packers is a licensed and insured moving
+              company based in Al Majaz, Sharjah. Since 2015, our crews have
+              moved homes, villas and offices across all 7 UAE emirates, 24
+              hours a day.
             </p>
 
             <div className="mt-8">
@@ -145,7 +146,7 @@ export function Footer({
             <h3 className={colTitle}>Locations</h3>
             <ul className="mt-5 space-y-3 t-small">
               <li>
-                <Link href="/movers-and-packer-in-dubai" className={colLink}>
+                <Link href="/movers-and-packers-in-dubai" className={colLink}>
                   Movers in Dubai
                 </Link>
               </li>

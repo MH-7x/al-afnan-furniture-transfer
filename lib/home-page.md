@@ -160,7 +160,7 @@ We're licensed to move in all seven emirates from our base on Jamal Abdul Naser 
 
 ### H3: Movers and Packers in Dubai
 
-Our [movers and packers in Dubai](https://alafnanmovers.vercel.app/movers-and-packer-in-dubai) handle tower moves in Dubai Marina, JLT and Business Bay, where service lift slots set the pace, and villa moves in Mirdif and Dubai Hills, where gate passes and community moving hours apply. We also cover JVC, Palm Jumeirah, Dubai Silicon Oasis, Al Barsha, Downtown Dubai and Deira.
+Our [movers and packers in Dubai](https://alafnanmovers.vercel.app/movers-and-packers-in-dubai) handle tower moves in Dubai Marina, JLT and Business Bay, where service lift slots set the pace, and villa moves in Mirdif and Dubai Hills, where gate passes and community moving hours apply. We also cover JVC, Palm Jumeirah, Dubai Silicon Oasis, Al Barsha, Downtown Dubai and Deira.
 
 ### H3: Movers and Packers in Sharjah
 

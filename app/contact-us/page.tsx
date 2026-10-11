@@ -1,4 +1,5 @@
 import React from "react";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import Link from "next/link";
 import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
@@ -8,7 +9,6 @@ import {
   ArrowRight,
   ExternalLink,
   MessageSquare,
-  ShieldCheck,
 } from "lucide-react";
 import { CTASection } from "@/components/CTASection";
 import { SiteShell } from "@/components/SiteShell";
@@ -50,6 +50,7 @@ export default function ContactUsPage() {
 
         <div className="relative z-10 max-w-4xl mx-auto text-center flex items-center flex-col justify-center ">
           {/* Breadcrumb Navigation */}
+          <BreadcrumbSchema items={[{ name: "Contact Us", path: "/contact-us" }]} />
           <nav
             aria-label="Breadcrumb"
             className="mb-4 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground font-medium"
@@ -66,7 +67,7 @@ export default function ContactUsPage() {
 
           {/* H1 Heading */}
           <h1 id="contact-hero-heading" className="text-foreground">
-            Contact Afnan Furniture Transfer
+            Contact Al Afnan Movers and Packers
           </h1>
 
           {/* Introductory Paragraph */}
@@ -92,7 +93,7 @@ export default function ContactUsPage() {
               </span>
               <h3 className="text-foreground mt-1 mb-2">
                 <a
-                  href="tel:0567277536"
+                  href="tel:+971567277536"
                   className="hover:text-primary transition-colors focus:outline-hidden focus-visible:underline"
                 >
                   056 7277536
@@ -107,7 +108,7 @@ export default function ContactUsPage() {
 
             <div className="mt-6 pt-4 border-t border-border/60 flex items-center gap-3">
               <a
-                href="tel:0567277536"
+                href="tel:+971567277536"
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
               >
                 <span>Call Directly</span>
@@ -173,14 +174,8 @@ export default function ContactUsPage() {
 
               <div className="space-y-1.5 text-sm text-muted-foreground leading-relaxed">
                 <p className="flex items-center justify-between text-foreground font-medium">
-                  <span>Sunday – Friday:</span>
+                  <span>Sunday – Saturday:</span>
                   <span className="font-bold text-primary">Open 24 Hours</span>
-                </p>
-                <p className="flex items-center justify-between">
-                  <span>Saturday:</span>
-                  <span className="font-semibold text-foreground">
-                    9:00 AM – 5:00 PM
-                  </span>
                 </p>
               </div>
             </div>
@@ -202,7 +197,7 @@ export default function ContactUsPage() {
             LIVE GOOGLE MAPS EMBED SECTION
         ════════════════════════════════════════════ */}
       <section
-        aria-label="Al Afan Office Location on Google Maps"
+        aria-label="Al Afnan Office Location on Google Maps"
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-12 sm:mb-16"
       >
         <div className="overflow-hidden rounded-2xl sm:rounded-3xl border border-border/80 bg-card shadow-sm">
@@ -214,7 +209,7 @@ export default function ContactUsPage() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
-            title="Al Afan Furniture Transfer Office Location"
+            title="Al Afnan Movers and Packers Office Location"
             className="w-full h-[360px] sm:h-[450px] block"
           />
         </div>
@@ -236,7 +231,7 @@ export default function ContactUsPage() {
             </Link>
             ,{" "}
             <Link
-              href="/movers-and-packer-in-dubai"
+              href="/movers-and-packers-in-dubai"
               className="font-semibold text-white underline underline-offset-4 hover:text-signal-bright transition-colors"
             >
               Dubai

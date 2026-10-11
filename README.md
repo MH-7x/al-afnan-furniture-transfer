@@ -42,7 +42,7 @@ website
 ├─ AGENTS.md
 ├─ app
 │  ├─ (location)
-│  │  ├─ movers-and-packer-in-dubai
+│  │  ├─ movers-and-packers-in-dubai
 │  │  │  └─ page.tsx
 │  │  ├─ movers-in-ajman
 │  │  │  └─ page.tsx

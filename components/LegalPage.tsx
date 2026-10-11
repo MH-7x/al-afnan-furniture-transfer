@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 
 export interface LegalSection {
   id: string;
@@ -28,6 +29,7 @@ export function UL({ children }: { children: React.ReactNode }) {
 export function LegalPage({
   id,
   current,
+  path,
   title,
   updated,
   intro,
@@ -37,6 +39,8 @@ export function LegalPage({
   id: string;
   /** Breadcrumb label */
   current: string;
+  /** Route path of this page, for the BreadcrumbList JSON-LD */
+  path: string;
   title: string;
   /** Human-readable "last updated" date */
   updated: string;
@@ -48,6 +52,7 @@ export function LegalPage({
       <section aria-labelledby={id} data-surface="dark" className="bg-ink text-fog">
         <div className="wrap py-14 lg:py-20">
           <div className="hero-stagger max-w-4xl">
+            <BreadcrumbSchema items={[{ name: current, path }]} />
             <nav aria-label="Breadcrumb">
               <ol className="flex flex-wrap items-center gap-2 t-small">
                 <li className="inline-flex items-center gap-2">

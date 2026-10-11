@@ -119,7 +119,7 @@ export const HomePageFAQs = [
         </p>
         <p>
           Call Al Afnan Furniture Transfer at{" "}
-          <a href="tel:+9710567277536">056 7277536</a> to get one sorted.
+          <a href="tel:+971567277536">056 7277536</a> to get one sorted.
         </p>
       </>
     ),
@@ -158,7 +158,7 @@ export const AjmanFaqs = [
           move is different.
         </p>
         <p>
-          Call us at <a href="tel:0567277536">056 7277536</a> or use our website
+          Call us at <a href="tel:+971567277536">056 7277536</a> or use our website
           to get an accurate, no-obligation estimate for your specific
           situation.
         </p>

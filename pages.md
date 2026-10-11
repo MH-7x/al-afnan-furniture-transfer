@@ -2,7 +2,7 @@
 - `/about-us` - About Us
 - `/contact-us` - Contact Us
 - `/design-system` - Design System
-- `/movers-and-packer-in-dubai` - Movers and Packer in Dubai
+- `/movers-and-packers-in-dubai` - Movers and Packer in Dubai
 - `/movers-in-ajman` - Movers in Ajman
 - `/movers-in-ras-al-khaimah` - Movers in Ras Al Khaimah
 - `/apartment-movers-in-dubai` - Apartment Movers in Dubai

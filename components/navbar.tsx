@@ -8,7 +8,7 @@ import { HOURS, PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from "@/lib/contact";
 import type { Region } from "@/lib/servicesNav";
 
 const locations = [
-  { name: "Movers in Dubai", href: "/movers-and-packer-in-dubai" },
+  { name: "Movers in Dubai", href: "/movers-and-packers-in-dubai" },
   { name: "Movers in Sharjah", href: "/movers-in-sharjah" },
   { name: "Movers in Ajman", href: "/movers-in-ajman" },
   { name: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
@@ -52,11 +52,11 @@ export function Navbar({ region = "sharjah" }: { region?: Region }) {
           <Link
             href="/"
             className="shrink-0 flex items-center rounded-sm"
-            aria-label="Al Afan Furniture Transfer Home"
+            aria-label="Al Afnan Movers and Packers Home"
           >
             <Image
               src="/logo.svg"
-              alt="Al Afan Furniture Transfer"
+              alt="Al Afnan Movers and Packers"
               width={260}
               height={57}
               loading="eager"

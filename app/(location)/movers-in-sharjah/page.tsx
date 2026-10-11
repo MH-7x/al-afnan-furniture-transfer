@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Services } from "@/components/Services";
@@ -16,8 +17,7 @@ import { PHONE_HREF } from "@/lib/contact";
 
 export const metadata = MetadataTemplate({
   title: "Trusted Movers in Sharjah | Al Afnan Furniture Transfer",
-  desc:
-    "movers in sharjah: Al Afnan Furniture Transfer offers trusted moving & packing for homes, apartments and offices. Free estimates. Call 056 7277536.",
+  desc: "Movers in Sharjah: Al Afnan Furniture Transfer offers trusted moving & packing for homes, apartments and offices. Free estimates. Call 056 7277536.",
   path: "/movers-in-sharjah",
   image: { path: "/al-afnan-furniture-transfer-sharjah.jpg" },
 });
@@ -58,7 +58,7 @@ const homeFooterSearches = [
 
 // Only emirates with their own location page get a link.
 const activeRoutes: { name: string; href?: string }[] = [
-  { name: "Dubai", href: "/movers-and-packer-in-dubai" },
+  { name: "Dubai", href: "/movers-and-packers-in-dubai" },
   { name: "Abu Dhabi" },
   { name: "Ajman", href: "/movers-in-ajman" },
   { name: "Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
@@ -121,6 +121,7 @@ export default function Home() {
 
         <div className="wrap flex min-h-[min(84svh,52rem)] items-center py-20 lg:py-28">
           <div className="hero-stagger max-w-4xl">
+            <BreadcrumbSchema items={[{ name: "Movers in Sharjah", path: "/movers-in-sharjah" }]} />
             <nav aria-label="Breadcrumb">
               <ol className="flex flex-wrap items-center gap-2 t-small">
                 <li className="inline-flex items-center gap-2">

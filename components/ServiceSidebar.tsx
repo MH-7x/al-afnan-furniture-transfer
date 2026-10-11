@@ -5,13 +5,13 @@ import { getServices, regionNames, type Region } from "@/lib/servicesNav";
 
 const emiratesWeCover: Record<Region, { label: string; href: string }[]> = {
   sharjah: [
-    { label: "Movers in Dubai", href: "/movers-and-packer-in-dubai" },
+    { label: "Movers in Dubai", href: "/movers-and-packers-in-dubai" },
     { label: "Movers in Ajman", href: "/movers-in-ajman" },
     { label: "Movers in Sharjah", href: "/movers-in-sharjah" },
     { label: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
   ],
   dubai: [
-    { label: "Movers in Dubai", href: "/movers-and-packer-in-dubai" },
+    { label: "Movers in Dubai", href: "/movers-and-packers-in-dubai" },
     { label: "Movers in Sharjah", href: "/movers-in-sharjah" },
     { label: "Movers in Ajman", href: "/movers-in-ajman" },
     { label: "Movers in Ras Al Khaimah", href: "/movers-in-ras-al-khaimah" },
@@ -79,7 +79,7 @@ export function ServiceSidebar({
         <p className="mt-2 text-sm text-white/80 leading-relaxed">{ctaDesc}</p>
 
         <a
-          href="tel:0567277536"
+          href="tel:+971567277536"
           className="mt-5 inline-flex w-full items-center justify-center gap-2.5 rounded-xl bg-white px-5 py-3.5 text-sm font-semibold text-primary shadow-xs transition-all hover:bg-white/90 active:scale-95"
         >
           <Phone className="size-4 shrink-0" />

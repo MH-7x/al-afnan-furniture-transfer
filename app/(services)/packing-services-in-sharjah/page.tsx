@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -6,9 +7,7 @@ import {
   Clock,
   Award,
   ShieldCheck,
-  ChevronDown,
   CheckCircle2,
-  Package,
   Boxes,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,6 @@ import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
-import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -90,17 +88,8 @@ const footerSearches = [
 ];
 
 export default function PackingServicesPage() {
-  const faqSchema = generateFAQSchema(packingFaqs);
-
   return (
     <SiteShell searches={footerSearches}>
-      {/* FAQ Schema for Google Rich Results */}
-      <script
-        id="packing-services-faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: faqSchema }}
-      />
-
         {/* ════════════════════════════════════════════
             HERO SECTION
         ════════════════════════════════════════════ */}
@@ -123,6 +112,12 @@ export default function PackingServicesPage() {
 
             <div className="relative z-10 px-4 sm:px-10 md:px-16 lg:px-20 max-w-5xl">
               {/* Breadcrumb */}
+              <BreadcrumbSchema
+                items={[
+                  { name: "Movers in Sharjah", path: "/movers-in-sharjah" },
+                  { name: "Packing Services in Sharjah", path: "/packing-services-in-sharjah" },
+                ]}
+              />
               <nav
                 aria-label="Breadcrumb"
                 className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground font-medium"
@@ -183,7 +178,7 @@ export default function PackingServicesPage() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  render={<a href="tel:0567277536" />}
+                  render={<a href="tel:+971567277536" />}
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -244,7 +239,7 @@ export default function PackingServicesPage() {
                     alt="Professional packing services in Sharjah by Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
-                    priority
+                    preload
                   />
                 </div>
                 <figcaption>
@@ -618,7 +613,7 @@ export default function PackingServicesPage() {
               <p className="mt-4">
                 Call{" "}
                 <a
-                  href="tel:0567277536"
+                  href="tel:+971567277536"
                   className="font-semibold text-primary hover:underline"
                 >
                   056 7277536
@@ -630,7 +625,7 @@ export default function PackingServicesPage() {
               <div className="callout mt-8">
                 <strong>Need packing help today?</strong> Call our team on{" "}
                 <a
-                  href="tel:0567277536"
+                  href="tel:+971567277536"
                   className="font-semibold text-primary hover:underline"
                 >
                   056 7277536

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BreadcrumbSchema } from "@/components/BreadcrumbSchema";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -6,9 +7,7 @@ import {
   Clock,
   Award,
   ShieldCheck,
-  ChevronDown,
   CheckCircle2,
-  Building2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/CTASection";
@@ -16,7 +15,6 @@ import { GoogleReviewsSection } from "@/components/GoogleReviewsSection";
 import { ServiceSidebar } from "@/components/ServiceSidebar";
 import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import { SiteShell } from "@/components/SiteShell";
-import { generateFAQSchema } from "@/lib/GenerateFaqSchema";
 import { FAQSection } from "@/components/FaqsSection";
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -84,8 +82,6 @@ const footerSearches = [
 ];
 
 export default function ApartmentMoversPage() {
-  const faqSchema = generateFAQSchema(apartmentFaqs);
-
   return (
     <SiteShell searches={footerSearches}>
         {/* ════════════════════════════════════════════
@@ -110,6 +106,12 @@ export default function ApartmentMoversPage() {
 
             <div className="relative z-10 px-4 sm:px-10 md:px-16 lg:px-20 max-w-6xl">
               {/* Breadcrumb */}
+              <BreadcrumbSchema
+                items={[
+                  { name: "Movers in Sharjah", path: "/movers-in-sharjah" },
+                  { name: "Apartment Movers in Sharjah", path: "/apartment-movers-in-sharjah" },
+                ]}
+              />
               <nav
                 aria-label="Breadcrumb"
                 className="mb-6 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground font-medium"
@@ -164,7 +166,7 @@ export default function ApartmentMoversPage() {
                 <Button
                   variant="secondary"
                   size="lg"
-                  render={<a href="tel:0567277536" />}
+                  render={<a href="tel:+971567277536" />}
                 >
                   <span>Call 056 7277536</span>
                   <Phone className="size-4 ml-1.5" />
@@ -213,7 +215,7 @@ export default function ApartmentMoversPage() {
                     alt="Apartment movers in Sharjah handling flat and apartment relocation — Al Afnan Furniture Transfer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 65vw, 740px"
-                    priority
+                    preload
                   />
                 </div>
                 <figcaption>
@@ -533,7 +535,7 @@ export default function ApartmentMoversPage() {
                 <strong>Need a quick estimate for your apartment move?</strong>{" "}
                 Call our team on{" "}
                 <a
-                  href="tel:0567277536"
+                  href="tel:+971567277536"
                   className="font-semibold text-primary hover:underline"
                 >
                   056 7277536

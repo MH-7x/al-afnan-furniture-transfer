@@ -306,6 +306,7 @@ export default function TermsPage() {
       <LegalPage
         id="terms-heading"
         current="Terms and Conditions"
+        path="/terms-and-conditions"
         title="Terms and Conditions"
         updated="9 October 2026"
         intro={

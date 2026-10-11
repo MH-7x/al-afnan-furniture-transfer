@@ -242,7 +242,7 @@ export const emirateCards: { title: string; body: React.ReactNode }[] = [
     body: (
       <>
         Our{" "}
-        <Link href="/movers-and-packer-in-dubai" className={linkClass}>
+        <Link href="/movers-and-packers-in-dubai" className={linkClass}>
           movers and packers in Dubai
         </Link>{" "}
         handle tower moves in Dubai Marina, JLT and Business Bay, where service

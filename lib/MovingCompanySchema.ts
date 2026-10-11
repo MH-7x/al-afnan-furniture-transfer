@@ -21,7 +21,7 @@ const EMIRATES = [
   "Umm Al Quwain",
 ];
 
-// Kept in step with the hours shown in the footer and lib/contact.ts (HOURS).
+// Open 24/7; kept in step with lib/contact.ts (HOURS) and the Google Business Profile.
 const OPENING_HOURS = [
   {
     "@type": "OpeningHoursSpecification",
@@ -32,15 +32,10 @@ const OPENING_HOURS = [
       "Wednesday",
       "Thursday",
       "Friday",
+      "Saturday",
     ],
     opens: "00:00",
     closes: "23:59",
-  },
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: "Saturday",
-    opens: "09:00",
-    closes: "17:00",
   },
 ];
 
@@ -66,13 +61,16 @@ const movingCompany = {
   // Absolute identifiers need the public origin; they appear once NEXT_PUBLIC_SITE_URL is set.
   ...(siteUrl && { "@id": BUSINESS_ID, url: `${siteUrl}/` }),
   name: APP.name,
-  alternateName: "Al Afnan Movers and Packers",
+  legalName: APP.legalName,
+  alternateName: APP.legalName,
   description:
     "Licensed and insured movers and packers based in Sharjah and serving all seven UAE emirates, with house, villa, apartment, office and furniture moving and packing services.",
   ...(siteUrl && {
     logo: {
       "@type": "ImageObject",
-      url: abs("/logo.svg"),
+      url: abs("/logo.png"),
+      width: 1864,
+      height: 468,
     },
     image: [abs("/images/al-afnan-movers-and-packers-in-uae.jpg")],
   }),

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { MetadataTemplate } from "@/lib/MetadataTemplate";
 import {
   CalendarCheck,
-  Mail,
   MapPin,
   Phone,
   ShieldCheck,
@@ -42,7 +41,7 @@ import {
 } from "@/lib/HomeData";
 
 export const metadata = MetadataTemplate({
-  title: "Movers and Packers in UAE | 24/7 Movers and Packers",
+  title: "Al Afnan Movers and Packers in UAE | Licensed & Insured",
   desc:
     "Al Afnan movers and packers across all 7 UAE emirates. 10 years' experience, 4.9★ rated, licensed and insured, 24/7 service. Call 056 7277536 for a free quote.",
   path: "/",

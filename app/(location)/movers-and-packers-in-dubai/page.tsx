@@ -32,9 +32,8 @@ import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const metadata = MetadataTemplate({
   title: "Movers and Packers in Dubai | 24/7 Moving Company – Al Afnan",
-  desc:
-    "Movers and packers in Dubai, licensed and insured. 24/7 moving company for apartments, villas and offices. Free WhatsApp estimates. Call 056 7277536.",
-  path: "/movers-and-packer-in-dubai",
+  desc: "Movers and packers in Dubai, licensed and insured. 24/7 moving company for apartments, villas and offices. Free WhatsApp estimates. Call 056 7277536.",
+  path: "/movers-and-packers-in-dubai",
   image: { path: "/images/movers-and-packers-dubai-al-afnan-hero.jpg" },
 });
 
@@ -207,14 +206,14 @@ const serviceRows = [
     id: "other-emirates",
     title: "Moves Between Dubai and Other Emirates",
     image: "/images/long-distance-inter-emirate-movers-uae-al-afnan.jpg",
-    imageAlt: "Movers loading boxes into a truck for a move between Dubai and other emirates",
+    imageAlt:
+      "Movers loading boxes into a truck for a move between Dubai and other emirates",
     body: (
       <>
-        We&apos;re licensed to move across all seven emirates. Our
-        base is in Sharjah, right next door to Dubai, so moves
-        between the two cities are straightforward for us. We also
-        handle long-distance moves from Dubai to Abu Dhabi, Ajman,
-        Ras Al Khaimah and the northern emirates. See our{" "}
+        We&apos;re licensed to move across all seven emirates. Our base is in
+        Sharjah, right next door to Dubai, so moves between the two cities are
+        straightforward for us. We also handle long-distance moves from Dubai to
+        Abu Dhabi, Ajman, Ras Al Khaimah and the northern emirates. See our{" "}
         <Link href="/movers-in-sharjah" className={linkClass}>
           movers in Sharjah
         </Link>
@@ -544,23 +543,31 @@ export default function MoversAndPackersInDubaiPage() {
       <LocationHero
         id="hero-title"
         current="Movers and Packers in Dubai"
+        path="/movers-and-packers-in-dubai"
         title="Movers and Packers in Dubai"
         image="/images/movers-and-packers-dubai-al-afnan-hero.jpg"
         imageAlt="Al Afnan movers and packers in Dubai wrapping a sofa in stretch film before loading the truck"
       >
         <p className="mt-7 t-lead text-paper measure">
-          24-hour movers in Dubai for apartments, villas and offices.
-          Send a few photos of your place on WhatsApp and we&apos;ll
-          reply with a free quote that already covers packing, transport
-          and setup.
+          24-hour movers in Dubai for apartments, villas and offices. Send a few
+          photos of your place on WhatsApp and we&apos;ll reply with a free
+          quote that already covers packing, transport and setup.
         </p>
 
         <div className="mt-9 flex flex-wrap gap-3">
-          <Button render={<a href={WHATSAPP_QUOTE} target="_blank" rel="noopener noreferrer" />}>
+          <Button
+            render={
+              <a
+                href={WHATSAPP_QUOTE}
+                target="_blank"
+                rel="noopener noreferrer"
+              />
+            }
+          >
             <WhatsAppIcon />
             <span>Get a Free Quote on WhatsApp</span>
           </Button>
-          <Button variant="outline-light" render={<a href="tel:0567277536" />}>
+          <Button variant="outline-light" render={<a href="tel:+971567277536" />}>
             <Phone aria-hidden="true" />
             <span>Call 056 7277536</span>
           </Button>
@@ -576,10 +583,18 @@ export default function MoversAndPackersInDubaiPage() {
         {/* Trust strip */}
         <ul className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-4 border-t border-white/20 pt-6">
           {trustStrip.map(({ icon: Icon, text, lead }) => (
-            <li key={text} className="flex items-start gap-2.5 t-small text-paper">
-              <Icon className="mt-0.5 size-4 shrink-0 text-signal-bright" aria-hidden="true" />
+            <li
+              key={text}
+              className="flex items-start gap-2.5 t-small text-paper"
+            >
+              <Icon
+                className="mt-0.5 size-4 shrink-0 text-signal-bright"
+                aria-hidden="true"
+              />
               <span>
-                {lead && <strong className="font-semibold text-white">{lead} </strong>}
+                {lead && (
+                  <strong className="font-semibold text-white">{lead} </strong>
+                )}
                 {text}
               </span>
             </li>
@@ -592,34 +607,37 @@ export default function MoversAndPackersInDubaiPage() {
         <div className="wrap grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <p className="lg:col-span-5 border-t-4 border-signal pt-6 t-pull text-ink">
             Al Afnan Furniture Transfer is a licensed and insured moving
-            company. Our team of movers in Dubai works around the clock, and
-            we provide moving services across Dubai and the rest of the UAE.
+            company. Our team of movers in Dubai works around the clock, and we
+            provide moving services across Dubai and the rest of the UAE.
           </p>
           <div className="lg:col-span-7 space-y-5 t-body text-muted-foreground measure">
             <p className="t-lead text-steel">
-              As movers and packers in Dubai, we take on the whole job. We
-              wrap and box your belongings, take apart beds and wardrobes,
-              load the truck, and our carpenters put everything back together
-              at your new place.
+              As movers and packers in Dubai, we take on the whole job. We wrap
+              and box your belongings, take apart beds and wardrobes, load the
+              truck, and our carpenters put everything back together at your new
+              place.
             </p>
             <p>
-              Moving in Dubai usually means booking a service lift, finding
-              the loading bay and getting building approval before anything
-              leaves the flat. We plan around those details with you before
-              moving day. Ten years of moving homes and offices across the UAE
-              has taught us to sort them out early.
+              Moving in Dubai usually means booking a service lift, finding the
+              loading bay and getting building approval before anything leaves
+              the flat. We plan around those details with you before moving day.
+              Ten years of moving homes and offices across the UAE has taught us
+              to sort them out early.
             </p>
             <p>
               For a price, send photos or a short video of your home on
-              WhatsApp. You&apos;ll get a written quote with everything
-              included and no hidden fees.
+              WhatsApp. You&apos;ll get a written quote with everything included
+              and no hidden fees.
             </p>
           </div>
         </div>
       </section>
 
       {/* ════ MOVING SERVICES IN DUBAI ════ */}
-      <section aria-labelledby="dubai-services-heading" className="bg-white section-y">
+      <section
+        aria-labelledby="dubai-services-heading"
+        className="bg-white section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="dubai-services-heading"
@@ -646,7 +664,9 @@ export default function MoversAndPackersInDubaiPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className={`md:col-span-7 ${index % 2 ? "md:order-1" : ""}`}>
+                <div
+                  className={`md:col-span-7 ${index % 2 ? "md:order-1" : ""}`}
+                >
                   <span
                     className="t-num block text-4xl font-bold leading-none text-signal before:content-[counter(service,decimal-leading-zero)]"
                     aria-hidden="true"
@@ -663,7 +683,9 @@ export default function MoversAndPackersInDubaiPage() {
             <span>
               Not sure which service fits your move?{" "}
               <a
-                href={whatsapp("Hi, I need help choosing a moving service in Dubai")}
+                href={whatsapp(
+                  "Hi, I need help choosing a moving service in Dubai",
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={linkClass}
@@ -697,10 +719,12 @@ export default function MoversAndPackersInDubaiPage() {
           {/* How to choose */}
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 rounded-xl bg-paper-2 p-7 sm:p-10">
             <div className="lg:col-span-5">
-              <h3 className="text-ink">How to Choose the Best Moving Company in Dubai</h3>
+              <h3 className="text-ink">
+                How to Choose the Best Moving Company in Dubai
+              </h3>
               <p className="mt-4 t-body text-muted-foreground">
-                The best moving company in Dubai for your move is the one
-                that can answer these clearly:
+                The best moving company in Dubai for your move is the one that
+                can answer these clearly:
               </p>
             </div>
             <div className="lg:col-span-7">
@@ -710,10 +734,15 @@ export default function MoversAndPackersInDubaiPage() {
                     key={question}
                     className="grid grid-cols-[2.5rem_1fr] gap-x-3 border-b border-line py-4"
                   >
-                    <span className="t-num text-2xl font-bold leading-none text-signal" aria-hidden="true">
+                    <span
+                      className="t-num text-2xl font-bold leading-none text-signal"
+                      aria-hidden="true"
+                    >
                       {index + 1}
                     </span>
-                    <span className="t-body font-medium text-ink">{question}</span>
+                    <span className="t-body font-medium text-ink">
+                      {question}
+                    </span>
                   </li>
                 ))}
               </ol>
@@ -734,11 +763,25 @@ export default function MoversAndPackersInDubaiPage() {
           <>
             <Button
               variant="outline"
-              render={<a href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer" />}
+              render={
+                <a
+                  href={GOOGLE_REVIEWS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
             >
               <span>Read All Reviews on Google</span>
             </Button>
-            <Button render={<a href={WHATSAPP_QUOTE} target="_blank" rel="noopener noreferrer" />}>
+            <Button
+              render={
+                <a
+                  href={WHATSAPP_QUOTE}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              }
+            >
               <WhatsAppIcon />
               <span>Get a Free Quote on WhatsApp</span>
             </Button>
@@ -756,7 +799,10 @@ export default function MoversAndPackersInDubaiPage() {
       />
 
       {/* ════ AVAILABLE 24 HOURS ════ */}
-      <section aria-labelledby="available-24-hours-heading" className="bg-paper-2 section-y">
+      <section
+        aria-labelledby="available-24-hours-heading"
+        className="bg-paper-2 section-y"
+      >
         <div className="wrap grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
             <h2 id="available-24-hours-heading" className="text-ink">
@@ -798,7 +844,10 @@ export default function MoversAndPackersInDubaiPage() {
       </section>
 
       {/* ════ BUILDING PERMITS, SERVICE LIFTS & ACCESS ════ */}
-      <section aria-labelledby="building-permits" className="bg-white section-y">
+      <section
+        aria-labelledby="building-permits"
+        className="bg-white section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="building-permits"
@@ -807,8 +856,8 @@ export default function MoversAndPackersInDubaiPage() {
               <>
                 A move can be fully packed and still stuck in the lobby because
                 the building hasn&apos;t approved it. In Dubai, building and
-                community rules decide when your move can happen and how long the
-                crew has, so sort them out before you book a date.
+                community rules decide when your move can happen and how long
+                the crew has, so sort them out before you book a date.
               </>
             }
           />
@@ -826,8 +875,14 @@ export default function MoversAndPackersInDubaiPage() {
                 </p>
                 <ul className="border-t border-line">
                   {permitDocuments.map((item) => (
-                    <li key={item} className="flex items-start gap-3 border-b border-line py-3">
-                      <Check className="mt-1 size-4.5 shrink-0 text-signal" aria-hidden="true" />
+                    <li
+                      key={item}
+                      className="flex items-start gap-3 border-b border-line py-3"
+                    >
+                      <Check
+                        className="mt-1 size-4.5 shrink-0 text-signal"
+                        aria-hidden="true"
+                      />
                       <span className="font-medium text-ink">{item}</span>
                     </li>
                   ))}
@@ -844,7 +899,9 @@ export default function MoversAndPackersInDubaiPage() {
 
             {/* Service lift */}
             <article className="lg:col-span-5 rounded-xl bg-paper-2 p-7 sm:p-9">
-              <h3 className="text-ink">Booking the Service Lift and Loading Bay</h3>
+              <h3 className="text-ink">
+                Booking the Service Lift and Loading Bay
+              </h3>
               <p className={`mt-4 ${bodyClass}`}>
                 Most buildings don&apos;t allow furniture in the passenger
                 lifts, so you&apos;ll book the service lift through building
@@ -858,7 +915,9 @@ export default function MoversAndPackersInDubaiPage() {
 
           {/* Towers vs villa communities */}
           <div className="mt-16">
-            <h3 className="text-ink">High-Rise Towers vs Gated Villa Communities</h3>
+            <h3 className="text-ink">
+              High-Rise Towers vs Gated Villa Communities
+            </h3>
             <ContentTable
               label="High-rise towers compared with gated villa communities"
               headers={[
@@ -878,7 +937,9 @@ export default function MoversAndPackersInDubaiPage() {
               <Button
                 render={
                   <a
-                    href={whatsapp("Hi, here are my building's moving rules for a move in Dubai")}
+                    href={whatsapp(
+                      "Hi, here are my building's moving rules for a move in Dubai",
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                   />
@@ -894,7 +955,11 @@ export default function MoversAndPackersInDubaiPage() {
       </section>
 
       {/* ════ HOW WE PROTECT YOUR BELONGINGS ════ */}
-      <section aria-labelledby="protect-heading" data-surface="dark" className="bg-ink text-fog section-y">
+      <section
+        aria-labelledby="protect-heading"
+        data-surface="dark"
+        className="bg-ink text-fog section-y"
+      >
         <div className="wrap">
           <SectionHeader
             id="protect-heading"
@@ -906,7 +971,10 @@ export default function MoversAndPackersInDubaiPage() {
           <ul className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-10">
             {protectionItems.map(({ icon: Icon, text }) => (
               <li key={text} className="reveal border-t border-ink-3 pt-6">
-                <Icon className="size-7 text-signal-bright" aria-hidden="true" />
+                <Icon
+                  className="size-7 text-signal-bright"
+                  aria-hidden="true"
+                />
                 <p className="mt-4 t-body font-medium text-white">{text}</p>
               </li>
             ))}
@@ -939,7 +1007,10 @@ export default function MoversAndPackersInDubaiPage() {
                       key={area}
                       className="flex items-center gap-2.5 border-b border-line py-3 font-semibold text-ink"
                     >
-                      <span className="size-1.5 shrink-0 bg-signal" aria-hidden="true" />
+                      <span
+                        className="size-1.5 shrink-0 bg-signal"
+                        aria-hidden="true"
+                      />
                       {area}
                     </li>
                   ))}
@@ -985,7 +1056,9 @@ export default function MoversAndPackersInDubaiPage() {
                 ])}
                 className="[&_table]:min-w-0"
               />
-              <p className="mt-3 t-small text-muted-foreground">Updated October 2026</p>
+              <p className="mt-3 t-small text-muted-foreground">
+                Updated October 2026
+              </p>
             </div>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-10">
@@ -1002,7 +1075,10 @@ export default function MoversAndPackersInDubaiPage() {
                 <ul className="mt-2 space-y-2">
                   {priceChangers.map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
-                      <span className="mt-2.5 size-1.5 shrink-0 bg-signal" aria-hidden="true" />
+                      <span
+                        className="mt-2.5 size-1.5 shrink-0 bg-signal"
+                        aria-hidden="true"
+                      />
                       <span className={bodyClass}>{item}</span>
                     </li>
                   ))}
@@ -1019,7 +1095,9 @@ export default function MoversAndPackersInDubaiPage() {
               </article>
 
               <article className="border-t-2 border-signal pt-6">
-                <h3 className="t-h4 text-ink">Affordable Movers in Dubai Without Hidden Fees</h3>
+                <h3 className="t-h4 text-ink">
+                  Affordable Movers in Dubai Without Hidden Fees
+                </h3>
                 <p className={`mt-2 ${bodyClass}`}>
                   Comparing cheap movers and packers in Dubai? A low price only
                   saves you money if it holds on moving day. Our written quote
