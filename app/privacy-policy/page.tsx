@@ -68,7 +68,8 @@ const sections: LegalSection[] = [
             <strong className="text-ink">Technical data.</strong> Like most
             websites, our hosting provider may log basic information such as IP
             address, browser type and the pages requested, for security and to
-            keep the site running.
+            keep the site running, and our analytics tools (see Cookies and
+            tracking) record how the site is used.
           </li>
         </UL>
       </>
@@ -80,16 +81,19 @@ const sections: LegalSection[] = [
     body: (
       <>
         <P>
-          Our estimate form does not send your details to a server on this
-          website. When you press the submit button, it opens WhatsApp with your
-          details pre-filled in a message addressed to our team, and you choose
-          whether to send it.
+          When you submit our estimate form, the details you enter (your name,
+          phone number, where you are moving from and to, your moving date and
+          your message) are sent by email to our team so we can prepare your
+          quote. The email is delivered through an email service provider that
+          works on our behalf. We use these details only to reply to you and to
+          plan your move. Please do not include sensitive information, such as ID
+          numbers or payment details, in the form.
         </P>
         <P>
-          Once you send a message, it is handled through WhatsApp and is subject
-          to WhatsApp&apos;s own terms and privacy policy. We recommend you do not
-          include sensitive information, such as ID numbers or payment details, in
-          that first message.
+          If you contact us on WhatsApp instead, your message is handled through
+          WhatsApp and is subject to WhatsApp&apos;s own terms and privacy
+          policy. We recommend you do not include sensitive information in that
+          first message.
         </P>
       </>
     ),
@@ -188,15 +192,31 @@ const sections: LegalSection[] = [
     body: (
       <>
         <P>
-          This website does not currently use advertising or analytics cookies.
-          We may use strictly necessary technologies to make the site load and
-          work. If we add analytics or marketing tools in the future, we will
-          update this policy and, where required, ask for your consent first.
+          This website uses Google Tag Manager and Google Analytics to understand
+          how visitors use the site, such as which pages are viewed and how
+          people find us. These tools may set cookies and collect information
+          such as your IP address, device and browser type, and the pages you
+          view. We use this information to improve the website and our services.
+          We also use Google Search Console, which reports how our pages perform
+          in Google search.
         </P>
         <P>
-          Our pages link to third-party services such as Google Maps and
-          WhatsApp. If you follow those links, the third party may set its own
-          cookies and its own privacy policy applies.
+          You can block or delete cookies in your browser settings, or opt out of
+          Google Analytics with Google&apos;s browser add-on at{" "}
+          <a
+            href="https://tools.google.com/dlpage/gaoptout"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={link}
+          >
+            tools.google.com/dlpage/gaoptout
+          </a>
+          . Blocking cookies will not stop the website from working.
+        </P>
+        <P>
+          Our pages link to or embed third-party services such as Google Maps and
+          WhatsApp. These providers may set their own cookies, and their own
+          privacy policies apply.
         </P>
       </>
     ),
@@ -303,7 +323,7 @@ export default function PrivacyPolicyPage() {
         current="Privacy Policy"
         path="/privacy-policy"
         title="Privacy Policy"
-        updated="9 October 2026"
+        updated="12 October 2026"
         intro={
           <p>
             This policy explains what personal information Al Afnan Furniture

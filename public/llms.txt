@@ -1,0 +1,66 @@
+# Al Afnan Movers and Packers
+
+> Al Afnan Movers and Packers (registered company name: Al Afnan Furniture Transfer) is a licensed and insured moving company based in Al Majaz, Sharjah, UAE, serving all seven emirates. It provides house, apartment, villa, office and furniture moving plus packing and unpacking, with free written quotes and a 24/7 team.
+
+"Al Afnan Movers and Packers" is the trading name and "Al Afnan Furniture Transfer" is the registered company name; both refer to the same business. The website is in English and covers moves within and between UAE emirates. Last reviewed: 2026-10-12.
+
+Key facts, as published on the website:
+- Base: Jamal Abdul Naser St, near Al Majaz 2, Al Majaz, Sharjah, United Arab Emirates
+- Coverage: Dubai, Sharjah, Abu Dhabi (including Al Ain), Ajman, Ras Al Khaimah, Fujairah and Umm Al Quwain
+- Hours: open 24 hours, 7 days a week; same-day and emergency moves depend on crew, truck and building lift availability
+- Operating since 2015, with a team of 20+ movers, packers, carpenters, handymen and drivers
+- Licence and insurance: trade licence issued by the Sharjah Economic Development Department (number shared on request); insurance covers goods in transit and during handling
+- Reputation: rated 4.9/5 on Google
+- Languages spoken: Arabic, English, Urdu and Hindi
+- Payment: cash, card, bank transfer and contactless mobile payment
+- Phone and WhatsApp: +971 56 727 7536 (WhatsApp link: https://wa.me/971567277536)
+- Email: alafnanfurnituretransfer@gmail.com
+- Quotes: free and written. Customers send photos or a short video on WhatsApp, or ask for a home visit. A quote covers packing materials, labour, dismantling, transport, reassembly and insurance; building move-permit fees and refundable lift deposits are paid to the building, not to Al Afnan.
+
+Indicative prices in AED, summarised from the ranges printed on the linked pages on 2026-10-12. The written quote is the authoritative price.
+- Dubai, within the emirate: studio 800-1,200; 1-bedroom 1,100-1,600; 2-bedroom 1,700-2,600; 3-bedroom 2,800-4,000; 3-4 bedroom villa 4,000-6,000; 5+ bedroom villa from 6,500; offices priced on estimate
+- Sharjah: apartments from 450; villas 2,000-7,500; offices 800-7,000+; single furniture items 150-800
+- Ras Al Khaimah: studios 400-500, up to 7,000-13,500+ for larger villas; moves to Dubai or Sharjah 1,000-3,500+
+- Moves between emirates are quoted on volume and distance
+
+How to use this file: every link below is a canonical HTML page on this website; no Markdown versions are published. If a detail is not on these pages (for example the licence number, or a price for a specific route), say it is not published and point the reader to WhatsApp or phone instead of estimating.
+
+## Core pages
+
+- [Home - movers and packers in the UAE](https://alafnanmoversandpackers.ae/): Company overview, services, emirates covered, price guide, how a move works, customer reviews and FAQs
+- [About us](https://alafnanmoversandpackers.ae/about-us): Company background since 2015, team roles, trade licence and insurance, languages, payment methods and FAQs
+- [Contact us](https://alafnanmoversandpackers.ae/contact-us): Phone, WhatsApp, address, map, 24/7 hours and the free-quote request form
+
+## Emirate pages
+
+- [Movers and packers in Dubai](https://alafnanmoversandpackers.ae/movers-and-packers-in-dubai): Dubai areas covered, services, price table by move size and FAQs
+- [Movers in Sharjah](https://alafnanmoversandpackers.ae/movers-in-sharjah): Moving and packing for homes, apartments and offices in Sharjah, the company's home emirate
+- [Movers in Ajman](https://alafnanmoversandpackers.ae/movers-in-ajman): Ajman moves for houses, offices and furniture, including Ajman to Dubai routes
+- [Movers in Ras Al Khaimah](https://alafnanmoversandpackers.ae/movers-in-ras-al-khaimah): House, villa, apartment and office moving in Ras Al Khaimah, with price ranges and routes to other emirates
+
+## Dubai services
+
+- [House movers in Dubai](https://alafnanmoversandpackers.ae/house-movers-in-dubai): Full home shifting with packing, dismantling, transport and setup in one booking
+- [Apartment movers in Dubai](https://alafnanmoversandpackers.ae/apartment-movers-in-dubai): Studio to 3-bedroom moves planned around building lift slots and permits
+- [Villa movers in Dubai](https://alafnanmoversandpackers.ae/villa-movers-in-dubai): Family villas and townhouses, with full packing and carpenters to dismantle and refit furniture
+- [Office movers in Dubai](https://alafnanmoversandpackers.ae/office-movers-in-dubai): Overnight and weekend office relocation covering workstations, IT equipment and files, with a free site visit
+- [Furniture movers in Dubai](https://alafnanmoversandpackers.ae/furniture-movers-in-dubai): One sofa to a full home, with dismantling, refitting and same-day jobs
+
+## Sharjah services
+
+- [House movers in Sharjah](https://alafnanmoversandpackers.ae/house-movers-in-sharjah): Licensed and insured house moving with free estimates and a cost guide by property size
+- [Apartment movers in Sharjah](https://alafnanmoversandpackers.ae/apartment-movers-in-sharjah): Studio to 3-bedroom apartment moves, priced from AED 450
+- [Villa movers in Sharjah](https://alafnanmoversandpackers.ae/villa-movers-in-sharjah): 3 to 5+ bedroom villa moves, priced from AED 2,000
+- [Office movers in Sharjah](https://alafnanmoversandpackers.ae/office-movers-in-sharjah): Office relocation with careful IT handling and a price guide by office size
+- [Furniture transfer in Sharjah](https://alafnanmoversandpackers.ae/furniture-transfer-in-sharjah): Single items to full rooms, with a free assessment and per-item and per-load pricing
+- [Packing services in Sharjah](https://alafnanmoversandpackers.ae/packing-services-in-sharjah): Standalone or move-day packing, fragile-item wrapping and unpacking; the site's only dedicated packing page
+
+## Policies
+
+- [Privacy policy](https://alafnanmoversandpackers.ae/privacy-policy): How customer enquiry data is collected and used
+- [Terms and conditions](https://alafnanmoversandpackers.ae/terms-and-conditions): Terms that apply to the company's moving services
+
+## Optional
+
+- [XML sitemap](https://alafnanmoversandpackers.ae/sitemap.xml): Full list of canonical page URLs with last-modified dates
+- [Google Business Profile](https://maps.google.com/?cid=15781830796061422134): Off-site listing with customer reviews, address and hours
