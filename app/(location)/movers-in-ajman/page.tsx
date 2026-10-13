@@ -285,7 +285,10 @@ export default function AjmanPage() {
             <WhatsAppIcon />
             <span>Get Your Free Moving Quote</span>
           </Button>
-          <Button variant="outline-light" render={<a href="tel:+971567277536" />}>
+          <Button
+            variant="outline-light"
+            render={<a href="tel:+971567277536" />}
+          >
             <Phone aria-hidden="true" />
             <span>Call 056 7277536</span>
           </Button>
@@ -494,7 +497,10 @@ export default function AjmanPage() {
                 transparent pricing.
               </p>
             </div>
-            <Button render={<a href="tel:+971567277536" />} className="shrink-0">
+            <Button
+              render={<a href="tel:+971567277536" />}
+              className="shrink-0"
+            >
               <Phone aria-hidden="true" />
               <span>Call 056 7277536</span>
             </Button>
@@ -705,6 +711,7 @@ export default function AjmanPage() {
           faqs={AjmanFaqs}
           title="Questions About Moving in Ajman"
           layout="split"
+          subtitle="Find clear answers to common questions about moving, packing, and relocation services in ajman."
         />
       </div>
       <CTASection
