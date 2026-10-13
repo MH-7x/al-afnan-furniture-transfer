@@ -51,6 +51,8 @@ website
 │  │  └─ movers-in-sharjah
 │  │     └─ page.tsx
 │  ├─ (services)
+│  │  ├─ affordable-movers-in-dubai
+│  │  │  └─ page.tsx
 │  │  ├─ apartment-movers-in-dubai
 │  │  │  └─ page.tsx
 │  │  ├─ apartment-movers-in-sharjah

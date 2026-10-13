@@ -45,6 +45,7 @@ const SERVICES: { name: string; path: string }[] = [
   { name: "Villa Movers in Dubai", path: "/villa-movers-in-dubai" },
   { name: "Office Movers in Dubai", path: "/office-movers-in-dubai" },
   { name: "Furniture Movers in Dubai", path: "/furniture-movers-in-dubai" },
+  { name: "Affordable Movers in Dubai", path: "/affordable-movers-in-dubai" },
   { name: "House Movers in Sharjah", path: "/house-movers-in-sharjah" },
   { name: "Apartment Movers in Sharjah", path: "/apartment-movers-in-sharjah" },
   { name: "Villa Movers in Sharjah", path: "/villa-movers-in-sharjah" },

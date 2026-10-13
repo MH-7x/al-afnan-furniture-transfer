@@ -5,6 +5,7 @@
 - `/movers-and-packers-in-dubai` - Movers and Packer in Dubai
 - `/movers-in-ajman` - Movers in Ajman
 - `/movers-in-ras-al-khaimah` - Movers in Ras Al Khaimah
+- `/affordable-movers-in-dubai` - Affordable Movers in Dubai
 - `/apartment-movers-in-dubai` - Apartment Movers in Dubai
 - `/apartment-movers-in-sharjah` - Apartment Movers in Sharjah
 - `/furniture-movers-in-dubai` - Furniture Movers in Dubai

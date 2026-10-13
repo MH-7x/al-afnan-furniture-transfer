@@ -58,6 +58,13 @@ const locationPages: Page[] = [
 // Individual service pages — stable content, updated occasionally.
 const servicePages: Page[] = [
   {
+    path: "/affordable-movers-in-dubai",
+    image: "/images/studio-movers-dubai-al-afnan-furniture-transfer.jpg",
+    changeFrequency: "monthly",
+    priority: 0.8,
+    lastModified: "2026-10-13",
+  },
+  {
     path: "/apartment-movers-in-dubai",
     image: "/images/apartment-movers-dubai-al-afnan-furniture-transfer.jpg",
     changeFrequency: "monthly",

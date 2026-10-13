@@ -1102,7 +1102,14 @@ export default function MoversAndPackersInDubaiPage() {
                   Comparing cheap movers and packers in Dubai? A low price only
                   saves you money if it holds on moving day. Our written quote
                   is all-inclusive and stays the same unless you add items to
-                  the move.
+                  the move. See our{" "}
+                  <Link
+                    href="/affordable-movers-in-dubai"
+                    className={linkClass}
+                  >
+                    affordable movers in Dubai
+                  </Link>{" "}
+                  page for prices from AED 800.
                 </p>
               </article>
 
