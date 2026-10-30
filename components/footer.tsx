@@ -76,7 +76,7 @@ export function Footer({
               </span>
               <div className="mt-3 flex items-center gap-2.5">
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/alafnanmoversandpackers.ae"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -91,7 +91,7 @@ export function Footer({
                   </svg>
                 </a>
                 <a
-                  href="https://x.com"
+                  href="https://x.com/alafnanmovers"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="X (Twitter)"
@@ -106,7 +106,7 @@ export function Footer({
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/alafnanmoversandpackers.ae/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -123,18 +123,20 @@ export function Footer({
                   </svg>
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="https://www.pinterest.com/alafnanmoversandpackers/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="YouTube"
+                  aria-label="Pinterest"
                   className={social}
                 >
                   <svg
-                    className="size-4 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
                     viewBox="0 0 24 24"
-                    aria-hidden="true"
+                    fill="currentColor"
                   >
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.399.165-1.495-.697-2.433-2.881-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.223 7.462-1.214 0-2.35-.63-2.74-1.379l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z" />
                   </svg>
                 </a>
               </div>
@@ -282,7 +284,13 @@ export function Footer({
             reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-            <span>Dev. by Mashal Huraira</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://mashalhuraira.vercel.app"
+            >
+              Dev. by Mashal Huraira
+            </a>
             <span className="text-ink-3" aria-hidden="true">
               |
             </span>
